@@ -1,5 +1,8 @@
 # Casama gallery
 
+The public catalog is [stackwares/casama-gallery](https://github.com/stackwares/casama-gallery).
+A pull request there is how a theme, color scheme, wallpaper or skill reaches every app.
+
 Themes, color schemes, wallpapers and skills for Casama. A pull request is how someone contributes.
 Casama reviews it, and a merge is what every app sees, without an app release.
 
