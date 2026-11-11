@@ -93,6 +93,29 @@
       ]
     },
     {
+      "id": "dusk",
+      "type": "wallpaper",
+      "name": "Dusk",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "photo"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "sha256": "c678b5cca5b149613189a35bd9e3afbbe2200bccfa1965bcb942908892bf9a65",
+      "size": 5812,
+      "files": [
+        "wallpapers/dusk/dusk.jpg",
+        "wallpapers/dusk/item.json",
+        "wallpapers/dusk/wallpaper.json"
+      ]
+    },
+    {
       "id": "tide",
       "type": "wallpaper",
       "name": "Tide",
