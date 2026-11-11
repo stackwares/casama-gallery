@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "ember",
+      "type": "scheme",
+      "name": "Ember",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "sha256": "879e05b408cc1e5de1df140e481ecdf9b8bbaba517e36899861646561920469a",
+      "size": 339,
+      "files": [
+        "schemes/ember/item.json",
+        "schemes/ember/scheme.json"
+      ]
+    },
+    {
+      "id": "lagoon",
+      "type": "scheme",
+      "name": "Lagoon",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "teal"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "sha256": "1674540712616c377d55abe1266a9ba1e04ac9ea24826c764942874c769b0c53",
+      "size": 339,
+      "files": [
+        "schemes/lagoon/item.json",
+        "schemes/lagoon/scheme.json"
+      ]
+    },
+    {
+      "id": "meeting-notes",
+      "type": "skill",
+      "name": "Meeting notes",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "work"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "sha256": "084c7c93c2b0ed33b56081b7c3aba2e4b798becead8a04576d0c0a99616f7478",
+      "size": 1286,
+      "category": "work",
+      "files": [
+        "skills/meeting-notes/LICENSE.txt",
+        "skills/meeting-notes/SKILL.md",
+        "skills/meeting-notes/item.json"
+      ]
+    },
+    {
+      "id": "lagoon",
+      "type": "theme",
+      "name": "Lagoon",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "teal",
+        "calm"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "sha256": "1afff5b410ab1fa48725b496aff0020e33b06983ad5f8da0ca9fc9a2a4f0c45f",
+      "size": 508,
+      "files": [
+        "themes/lagoon/item.json",
+        "themes/lagoon/theme.json"
+      ]
+    },
+    {
+      "id": "tide",
+      "type": "wallpaper",
+      "name": "Tide",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "sea"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "sha256": "ec7c0424f42263485ac524bd2c103046d778d6b61d48ea718af1e284d724ace1",
+      "size": 248,
+      "files": [
+        "wallpapers/tide/item.json",
+        "wallpapers/tide/wallpaper.json"
+      ]
+    }
+  ]
+}
