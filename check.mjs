@@ -130,6 +130,11 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
     for (const t of tags) if (typeof t !== "string" || !TAG.test(t)) errors.push(`${where}: bad tag ${t}`);
     if (type === "skill" && (typeof meta.category !== "string" || meta.category.length > 40))
       errors.push(`${where}: a skill needs a category`);
+    if (meta.icon != null && (typeof meta.icon !== "string" || !/^[a-z0-9][a-z0-9-]{0,39}$/.test(meta.icon)))
+      errors.push(`${where}: icon must be a Lucide icon name such as notebook-pen`);
+    // What a gallery card needs to draw its preview, so a list needs no request per item.
+    let document;
+    let description;
 
     const readJson = (file) => {
       const found = files.find((f) => f.relative === file);
@@ -146,6 +151,7 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
     };
     if (type === "theme") {
       const doc = readJson("theme.json");
+      document = doc ?? undefined;
       if (doc) {
         if (doc.v !== 2) errors.push(`${where}: theme.json v must be 2`);
         if (typeof doc.scheme === "string") {
@@ -163,24 +169,29 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
       }
     } else if (type === "scheme") {
       const doc = readJson("scheme.json");
+      document = doc ?? undefined;
       if (doc) {
         seeds(`${where} light`, doc.light, errors);
         seeds(`${where} dark`, doc.dark, errors);
       }
     } else if (type === "wallpaper") {
       const doc = readJson("wallpaper.json");
+      document = doc ?? undefined;
+      const image = (key, limit) => {
+        const file = doc[key];
+        if (typeof file !== "string" || !/^[A-Za-z0-9._-]+\.(webp|jpe?g)$/.test(file))
+          return errors.push(`${where}: ${key} must be a webp or jpeg in this folder`);
+        const found = files.find((f) => f.relative === file);
+        if (!found) errors.push(`${where}: missing ${file}`);
+        else if (found.bytes.byteLength > limit) errors.push(`${where}: ${file} is over ${limit / 1024} KB`);
+      };
       if (doc?.kind === "pattern") {
         const local = [];
         wallpaperFields(doc, local);
         for (const e of local) errors.push(`${where}: ${e}`);
       } else if (doc?.kind === "image") {
-        if (typeof doc.file !== "string" || !/^[A-Za-z0-9._-]+\.(webp|jpe?g)$/.test(doc.file))
-          errors.push(`${where}: image file must be a webp or jpeg in this folder`);
-        else {
-          const found = files.find((f) => f.relative === doc.file);
-          if (!found) errors.push(`${where}: missing ${doc.file}`);
-          else if (found.bytes.byteLength > 2 * 1024 * 1024) errors.push(`${where}: ${doc.file} is over 2 MB`);
-        }
+        image("file", 2 * 1024 * 1024);
+        if (doc.thumb !== undefined) image("thumb", 200 * 1024);
       } else if (doc) errors.push(`${where}: wallpaper kind must be "pattern" or "image"`);
     } else {
       const skill = files.find((f) => f.relative === "SKILL.md");
@@ -191,6 +202,8 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
         const named = fm && /^name:\s*(\S+)\s*$/m.exec(fm[1]);
         if (!fm) errors.push(`${where}: SKILL.md must start with front matter`);
         else if (!named || named[1] !== id) errors.push(`${where}: SKILL.md name must be ${id}`);
+        const said = fm && /^description:\s*(.+?)\s*$/m.exec(fm[1]);
+        if (said) description = said[1].replace(/^(["'])(.*)\1$/, "$2");
       }
     }
 
@@ -207,6 +220,9 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
       sha256: hash(files.map((f) => ({ path: f.relative, bytes: f.bytes }))),
       size: files.reduce((n, f) => n + f.bytes.byteLength, 0),
       ...(typeof meta.category === "string" ? { category: meta.category } : {}),
+      ...(typeof meta.icon === "string" ? { icon: meta.icon } : {}),
+      ...(description ? { description } : {}),
+      ...(document !== undefined ? { document } : {}),
       files: files.map((f) => `${dir}/${id}/${f.relative}`).sort(),
     });
   }

@@ -1,8 +1,13 @@
 {
   "name": "Tide",
-  "author": { "name": "Casama", "url": "https://casama.ai" },
+  "author": {
+    "name": "Casama",
+    "url": "https://casama.ai"
+  },
   "license": "CC0-1.0",
-  "tags": ["sea"],
+  "tags": [
+    "sea"
+  ],
   "featured": true,
-  "version": 1
+  "version": 2
 }
