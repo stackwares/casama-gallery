@@ -2,14 +2,24 @@
 (function () {
   "use strict";
   var G = window.CasamaGallery;
-  var TYPES = ["theme", "scheme", "wallpaper", "skill"];
-  var PLURAL = { theme: "Themes", scheme: "Colors", wallpaper: "Wallpapers", skill: "Skills" };
-  var NOUN = { theme: ["theme", "themes"], scheme: ["color scheme", "color schemes"], wallpaper: ["wallpaper", "wallpapers"], skill: ["skill", "skills"] };
-  var SINGULAR = { theme: "Theme", scheme: "Color scheme", wallpaper: "Wallpaper", skill: "Skill" };
+  var TYPES = ["theme", "scheme", "wallpaper", "skill", "app", "bot", "routine", "plugin"];
+  var PLURAL = { theme: "Themes", scheme: "Colors", wallpaper: "Wallpapers", skill: "Skills", app: "Apps", bot: "Bots", routine: "Routines", plugin: "Plugins" };
+  var NOUN = { theme: ["theme", "themes"], scheme: ["color scheme", "color schemes"], wallpaper: ["wallpaper", "wallpapers"], skill: ["skill", "skills"], app: ["app", "apps"], bot: ["starter bot", "starter bots"], routine: ["routine idea", "routine ideas"], plugin: ["plugin", "plugins"] };
+  var SINGULAR = { theme: "Theme", scheme: "Color scheme", wallpaper: "Wallpaper", skill: "Skill", app: "App", bot: "Starter bot", routine: "Routine idea", plugin: "Plugin" };
+  // Starter bots, routine ideas and reviewed plugins (D-241) read as lists, like skills.
+  var LISTED = ["skill", "app", "bot", "routine", "plugin"];
+  var BOT_CATEGORY = { work: "Work", research: "Research", build: "Build", create: "Create", life: "Life" };
+  var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var APP_CATEGORY = { developer: "Developer", productivity: "Productivity", payments: "Payments", design: "Design", sales: "Sales", data: "Data", automation: "Automation" };
+  var AUTH = { oauth: "Sign in with the vendor", api_key: "An API key", none: "Nothing, it's public" };
   var CATEGORY_ICON = { work: "briefcase", writing: "pen-line", research: "telescope", data: "table-2", money: "coins", build: "code", life: "compass" };
   var CATEGORY = { work: "Work", writing: "Writing", research: "Research", data: "Data", money: "Money", build: "Build", life: "Life" };
 
   var state = { items: null, failed: false, type: null, q: "", dark: matchMedia("(prefers-color-scheme: dark)").matches, open: null };
+  function applyChrome() {
+    document.documentElement.setAttribute("data-theme", state.dark ? "dark" : "light");
+  }
+  applyChrome();
   var $ = function (id) { return document.getElementById(id); };
   var content = $("content");
   var dialog = $("detail");
@@ -32,10 +42,25 @@
   function load() {
     state.failed = false;
     render();
-    fetch("index.json", { cache: "no-cache" })
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (data) {
+    var get = function (file) {
+      return fetch(file, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    };
+    // Apps live in their own file (D-239); the looks and skills still show if it can't be read.
+    var optional = function (file) { return get(file).catch(function () { return { items: [] }; }); };
+    Promise.all([get("index.json"), optional("apps.json"), optional("bots.json"), optional("routines.json"), optional("plugins.json")])
+      .then(function (files) {
+        var data = { items: files.reduce(function (all, f) { return all.concat(f.items || []); }, []) };
         state.items = (data.items || []).filter(function (i) { return !i.retired; });
+        // Icons a listed item names that the page doesn't embed load once, then the list redraws.
+        var missing = state.items.some(function (i) {
+          var name = (i.document || {}).icon || i.icon;
+          return name && !G.hasIcon(name);
+        });
+        if (missing)
+          fetch("assets/lucide/icon-nodes.json").then(function (r) { return r.json(); }).then(function (nodes) {
+            G.addIcons(nodes);
+            render();
+          }).catch(function () {});
         summary();
         route();
       })
@@ -132,8 +157,77 @@
     ])]);
   }
 
+  // An app's mark, tinted on its brand color like the app draws it; its initial without one.
+  function appLogo(item, size) {
+    var doc = item.document || {};
+    var hex = /^[0-9A-Fa-f]{6}$/.test(doc.color || "") ? doc.color : "6B7280";
+    var n = parseInt(hex, 16);
+    var light = (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255 > 0.6;
+    var ink = light ? "#1B1B1F" : "#FFFFFF";
+    var tile = el("span", { class: "app-logo", "aria-hidden": "true" });
+    tile.style.cssText = "width:" + size + "px;height:" + size + "px;border-radius:" + Math.round(size * 0.28) + "px;background:#" + hex;
+    var logo = "apps/" + item.id + "/logo.svg";
+    if ((item.files || []).indexOf(logo) !== -1) {
+      var mark = el("i");
+      mark.style.cssText = "background:" + ink + ";-webkit-mask:url(" + logo + ") center/contain no-repeat;mask:url(" + logo + ") center/contain no-repeat";
+      tile.appendChild(mark);
+    } else {
+      var letter = el("b", { text: (item.name || "?").charAt(0).toUpperCase() });
+      letter.style.cssText = "color:" + ink + ";font-size:" + Math.round(size * 0.44) + "px";
+      tile.appendChild(letter);
+    }
+    return tile;
+  }
+
+  function appRow(item) {
+    var cat = APP_CATEGORY[(item.document || {}).category] || "";
+    return el("li", null, [el("a", { class: "skill app-row", href: "#app/" + item.id }, [
+      appLogo(item, 32),
+      el("span", null, [
+        el("span", { class: "skill-name", text: item.name }),
+        el("span", { class: "skill-desc", text: item.description || "" }),
+        el("span", { class: "skill-meta-line", text: cat }),
+      ]),
+      el("span", { class: "skill-meta", text: community(item) ? "By " + item.author.name : cat }),
+      el("span", { class: "skill-meta", text: cat }),
+      el("span", { class: "skill-go" }, [G.icon("chevron-right", { size: 18 })]),
+    ])]);
+  }
+
+  // A cron schedule in words, for the common shapes; the expression itself otherwise.
+  function when(cron) {
+    var f = String(cron || "").trim().split(/\s+/);
+    if (f.length !== 5) return cron || "";
+    var m = +f[0], h = +f[1];
+    if (isNaN(m) || isNaN(h)) return cron;
+    var t = (h % 12 || 12) + (m ? ":" + (m < 10 ? "0" + m : m) : "") + (h < 12 ? " am" : " pm");
+    if (f[2] === "*" && f[3] === "*" && f[4] === "*") return "Every day at " + t;
+    if (f[2] === "*" && f[3] === "*" && f[4] === "1-5") return "Weekdays at " + t;
+    if (f[2] === "*" && f[3] === "*" && /^[0-6]$/.test(f[4])) return "Every " + DAYS[+f[4]] + " at " + t;
+    if (/^\d+$/.test(f[2]) && f[3] === "*" && f[4] === "*") return "Monthly on day " + f[2] + " at " + t;
+    return cron;
+  }
+
+  function contentRow(item) {
+    var doc = item.document || {};
+    var meta = item.type === "routine" ? when(doc.schedule_cron) : item.type === "plugin" ? (doc.adds || []).length + " things" : BOT_CATEGORY[doc.category] || "";
+    return el("li", null, [el("a", { class: "skill", href: "#" + item.type + "/" + item.id }, [
+      G.icon(doc.icon || (item.type === "plugin" ? "puzzle" : item.type === "routine" ? "repeat" : "bot")),
+      el("span", null, [
+        el("span", { class: "skill-name", text: item.name }),
+        el("span", { class: "skill-desc", text: item.description || "" }),
+        el("span", { class: "skill-meta-line", text: meta }),
+      ]),
+      el("span", { class: "skill-meta", text: community(item) ? "By " + item.author.name : BOT_CATEGORY[doc.category] || "" }),
+      el("span", { class: "skill-meta", text: item.type === "routine" ? when(doc.schedule_cron) : item.license }),
+      el("span", { class: "skill-go" }, [G.icon("chevron-right", { size: 18 })]),
+    ])]);
+  }
+
   function cardsFor(type, list) {
     if (type === "skill") return el("ul", { class: "skills" }, list.map(skillRow));
+    if (type === "app") return el("ul", { class: "skills" }, list.map(appRow));
+    if (LISTED.indexOf(type) !== -1) return el("ul", { class: "skills" }, list.map(contentRow));
     var cards = list.map(card);
     var grid = el("div", { class: "grid" }, cards);
     grid.style.setProperty("--cols", columns(type));
@@ -224,7 +318,7 @@
       var list = found.filter(function (i) { return i.type === type; });
       if (!list.length) return;
       // A phone shows two rows of each kind; wider screens one.
-      var visible = type === "skill" ? list.slice(0, 4) : list.slice(0, columns(type) * (phone() ? 2 : 1));
+      var visible = LISTED.indexOf(type) !== -1 ? list.slice(0, 4) : list.slice(0, columns(type) * (phone() ? 2 : 1));
       content.appendChild(section(PLURAL[type], list.length, cardsFor(type, visible), function () { setType(type); }));
     });
   }
@@ -260,6 +354,23 @@
       row("Dark", swatchChips(doc, true));
     } else if (item.type === "wallpaper") {
       row("Kind", document.createTextNode(G.describeWallpaper(doc)));
+    } else if (item.type === "bot") {
+      row("Category", document.createTextNode(BOT_CATEGORY[doc.category] || "-"));
+      row("Asks first", document.createTextNode(doc.autonomy === "ask_always" ? "Before every action" : "Before risky actions"));
+      var comes = (doc.skills || []).map(function (k) { return "Skill: " + k.name; }).concat((doc.routines || []).map(function (r) { return "Routine: " + r.name + " (" + when(r.schedule_cron) + ")"; }));
+      if (comes.length) row("Comes with", document.createTextNode(comes.join(" · ")));
+    } else if (item.type === "routine") {
+      row("When", document.createTextNode(when(doc.schedule_cron)));
+      row("Category", document.createTextNode(BOT_CATEGORY[doc.category] || "-"));
+    } else if (item.type === "plugin") {
+      row("Adds", document.createTextNode((doc.adds || []).join(" · ")));
+      var at = String(doc.url || "").replace(/\/tree\/[^/]+/, "/tree/" + doc.commit);
+      row("Reviewed code", el("a", { href: at, rel: "noopener", text: String(doc.commit || "").slice(0, 7) + " on GitHub" }));
+    } else if (item.type === "app") {
+      row("Category", document.createTextNode(APP_CATEGORY[doc.category] || "-"));
+      row("Connects to", el("code", { text: doc.url || "-" }));
+      row("Needs", document.createTextNode((doc.auth || []).map(function (a) { return AUTH[a] || a; }).join(" or ")));
+      if (doc.homepage) row("Website", el("a", { href: doc.homepage, rel: "noopener", text: doc.homepage.replace(/^https:\/\//, "") }));
     } else {
       row("Category", document.createTextNode(CATEGORY[item.category] || item.category || "-"));
     }
@@ -283,6 +394,35 @@
     var pic = el("div", { class: "detail-pic" });
     function drawPic() {
       pic.textContent = "";
+      if (item.type === "bot" || item.type === "routine") {
+        var d = item.document || {};
+        var text = el("pre", { class: "instructions", "aria-label": "Instructions", text: item.type === "bot" ? d.persona : d.instructions_md });
+        text.style.maxHeight = "none";
+        text.style.width = "100%";
+        text.style.margin = "0";
+        pic.appendChild(text);
+        if (item.type === "bot" && (d.starters || []).length)
+          pic.appendChild(el("ul", { class: "app-can" }, d.starters.map(function (s) { return el("li", null, [G.icon("message-circle", { size: 16 }), s]); })));
+        return;
+      }
+      if (item.type === "plugin") {
+        var pd = item.document || {};
+        pic.appendChild(el("div", { class: "app-hero" }, [
+          G.icon(pd.icon || "puzzle", { size: 72 }),
+          el("ul", { class: "app-can" }, (pd.adds || []).map(function (c) { return el("li", null, [G.icon("check", { size: 16 }), c]); })),
+        ]));
+        return;
+      }
+      if (item.type === "app") {
+        var doc = item.document || {};
+        var hero = el("div", { class: "app-hero" }, [
+          appLogo(item, 88),
+          el("ul", { class: "app-can" }, (doc.capabilities || []).map(function (c) { return el("li", null, [G.icon("check", { size: 16 }), c]); })),
+          doc.note ? el("p", { class: "small", text: doc.note }) : null,
+        ]);
+        pic.appendChild(hero);
+        return;
+      }
       if (item.type === "skill") {
         var pre = el("pre", { class: "instructions", "aria-label": "Instructions", text: "Loading the instructions…" });
         pre.style.maxHeight = "none";
@@ -328,10 +468,17 @@
       (item.tags || []).length ? el("div", { class: "tags" }, item.tags.map(function (tag) {
         return el("button", { class: "tag", type: "button", onclick: function () { dialog.close(); setQuery(tag); setType(null); }, text: tag });
       })) : null,
-      el("div", { class: "actions" }, [
-        el("a", { class: "btn primary", href: G.appLink(item) }, [G.icon("external-link"), item.type === "skill" ? "Install in Casama" : "Open in Casama"]),
-        copy,
-      ]),
+      item.type === "app" || item.type === "bot" || item.type === "routine" || item.type === "plugin"
+        ? el("p", { class: "small", text: {
+          app: "Connect it in Casama from Settings → Connections.",
+          bot: "Pick it in Casama when you make a new bot.",
+          routine: "Find it under Ideas when you add a routine to a bot.",
+          plugin: "Add it in Casama from a bot's Plugins page, at the reviewed version.",
+        }[item.type] })
+        : el("div", { class: "actions" }, [
+          el("a", { class: "btn primary", href: G.appLink(item) }, [G.icon("external-link"), item.type === "skill" ? "Install in Casama" : "Open in Casama"]),
+          copy,
+        ]),
     ]);
     var close = el("button", { class: "detail-close", type: "button", "aria-label": "Close", autofocus: "", onclick: function () { dialog.close(); } }, [G.icon("x")]);
     dialog.appendChild(el("div", { class: "detail-inner" }, [pic, info]));
@@ -379,6 +526,7 @@
     b.setAttribute("aria-pressed", String((b.dataset.mode === "dark") === state.dark));
     b.addEventListener("click", function () {
       state.dark = b.dataset.mode === "dark";
+      applyChrome();
       document.querySelectorAll(".toolbar .seg button").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
       render();
     });
