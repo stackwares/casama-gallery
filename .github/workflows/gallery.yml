@@ -39,6 +39,9 @@ jobs:
           fi
           node sign.mjs
           if [ -n "${{ vars.GALLERY_PUBLIC_KEY }}" ]; then node sign.mjs --verify "${{ vars.GALLERY_PUBLIC_KEY }}"; fi
+      # gallery.casama.ai is published from the Casama monorepo (scripts/deploy-web.sh), which this
+      # repository is synced from (scripts/sync-gallery.sh). Setting CLOUDFLARE_API_TOKEN here makes
+      # merges publish straight away instead; then the monorepo must sync back before its next deploy.
       - name: Deploy when a Cloudflare token is configured
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -46,7 +49,10 @@ jobs:
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
             echo "CLOUDFLARE_API_TOKEN is not set, so this merge was checked and signed but not published."
-            echo "Deploy from a machine that is logged in: cd gallery && GALLERY_SIGNING_KEY=... node sign.mjs && wrangler deploy"
+            echo "Casama publishes it from the monorepo with scripts/deploy-web.sh after the next sync."
             exit 0
           fi
-          npx wrangler deploy
+          # Item and author pages, share images and the sitemap, as deploy-web.sh builds them.
+          npm install --no-save --no-package-lock @resvg/resvg-js@2.6.2
+          node build-pages.mjs
+          npx --yes wrangler@4 deploy

@@ -3,3 +3,5 @@
 /by/
 /og.png
 /sitemap.xml
+# Signed at deploy time from manifest.json (D-315); the key never enters the repo.
+/manifest.sig
