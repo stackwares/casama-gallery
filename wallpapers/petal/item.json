@@ -2,7 +2,8 @@
   "name": "Petal",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "CC0-1.0",
   "tags": [
@@ -10,5 +11,7 @@
     "calm"
   ],
   "featured": true,
-  "version": 1
+  "pick": "A soft pink mesh that changes gently from light to dark.",
+  "version": 1,
+  "added": "2026-11-12"
 }

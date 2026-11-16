@@ -9,7 +9,19 @@
     "work"
   ],
   "category": "work",
+  "icon": "clipboard-list",
   "featured": false,
   "version": 1,
-  "icon": "clipboard-list"
+  "added": "2026-11-13",
+  "examples": [
+    "Write a spec for adding dark mode to our app",
+    "Turn this feature request into a PRD",
+    "Scope a first version of team invitations"
+  ],
+  "access": {
+    "reads": [
+      "what you share"
+    ],
+    "credits": "medium"
+  }
 }

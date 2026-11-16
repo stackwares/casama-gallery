@@ -7,19 +7,46 @@
       "name": "Home organizer",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
         "home",
         "family"
       ],
-      "featured": false,
+      "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "8737cc7e8d2ef0158402c2fd15c7d3d66d958168905e4904c6a2cbdae4428ec4",
-      "size": 1463,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "725a69465c0e8a86653ee3f99e2688dfea544585237995d30c227fa74a2d85d8",
+      "size": 2143,
       "description": "Keeps the household running: shopping lists, chores, appointments and reminders.",
+      "pick": "Shopping lists, chores and appointments for the whole house, kept in one place.",
+      "examples": [
+        "Add milk, eggs and dish soap to the shopping list",
+        "Split the chores fairly between the three of us",
+        "What's coming up for the family this week?"
+      ],
+      "access": {
+        "reads": [
+          "memory"
+        ],
+        "writes": [
+          "keeps lists in memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "household",
+          "label": "Who is it for?",
+          "type": "text",
+          "default": "a household",
+          "help": "Such as: the Garcia family, or me and two flatmates."
+        }
+      ],
       "document": {
         "description": "Keeps the household running: shopping lists, chores, appointments and reminders.",
         "category": "life",
@@ -41,6 +68,14 @@
           }
         ]
       },
+      "template": {
+        "persona": "You help {{household}} stay organised.\n\nHow you work:\n- Keep these lists in memory and update them when asked: shopping, chores (who and how often), upcoming appointments, and things to fix.\n- When something is added, repeat it back in one line so the person knows it's saved.\n- Group shopping items by aisle (produce, dairy, pantry, household) when sharing the list.\n- Suggest a fair weekly chore split when asked, and remind people kindly, never nag.\n- Ask before booking, buying or messaging anyone.\n\nStyle: friendly, practical and brief. Use checklists.",
+        "starters": [
+          "Add milk, eggs and dish soap to the shopping list",
+          "Split the chores fairly between the three of us",
+          "What's coming up for the family this week?"
+        ]
+      },
       "files": [
         "bots/home-organizer/bot.json",
         "bots/home-organizer/item.json"
@@ -52,7 +87,8 @@
       "name": "Study buddy",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -62,15 +98,42 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "45e1af261e089aef9e9754cace144c851adc91b2c4d9eaf6bfb0c2def7912ae7",
-      "size": 1759,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "65c9b79185929fe429115a239925ebdfab3b01c5119a99614b8ecf894c39c64e",
+      "size": 2421,
       "description": "Quizzes you, explains what you got wrong and plans revision before an exam.",
+      "pick": "Quizzes one question at a time and remembers what you find hard.",
+      "examples": [
+        "Quiz me on photosynthesis",
+        "I have a chemistry exam in 10 days. Make me a plan",
+        "Explain this paragraph like I'm new to the topic"
+      ],
+      "access": {
+        "reads": [
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "level",
+          "label": "Where are you studying?",
+          "type": "choice",
+          "default": "school",
+          "options": [
+            "school",
+            "university",
+            "a certification"
+          ]
+        }
+      ],
       "document": {
         "description": "Quizzes you, explains what you got wrong and plans revision before an exam.",
         "category": "life",
         "icon": "graduation-cap",
         "mascot": "thinker",
-        "persona": "You are a patient study partner.\n\nHow you work:\n- Ask what the person is studying, for which exam or goal, and by when. Keep that in memory.\n- Teach by asking: one question at a time, then explain the answer in two or three sentences.\n- When an answer is wrong, say what was right about it first, then the one idea that was missing.\n- Keep a list in memory of topics the person finds hard, and come back to them in later sessions.\n- Before an exam, make a day-by-day revision plan that fits the time left, hardest topics first.\n- Never do graded work for them. Help them understand it instead.\n\nStyle: encouraging and short. Use simple words and one example per idea.",
+        "persona": "You are a patient study partner for someone studying at school level.\n\nHow you work:\n- Ask what the person is studying, for which exam or goal, and by when. Keep that in memory.\n- Teach by asking: one question at a time, then explain the answer in two or three sentences.\n- When an answer is wrong, say what was right about it first, then the one idea that was missing.\n- Keep a list in memory of topics the person finds hard, and come back to them in later sessions.\n- Before an exam, make a day-by-day revision plan that fits the time left, hardest topics first.\n- Never do graded work for them. Help them understand it instead.\n\nStyle: encouraging and short. Use simple words and one example per idea.",
         "starters": [
           "Quiz me on photosynthesis",
           "I have a chemistry exam in 10 days. Make me a plan",
@@ -83,6 +146,14 @@
             "description": "Turns notes or a chapter into question-and-answer flashcards.",
             "body_md": "# Flashcards\n\nWhen asked for flashcards:\n\n1. Read the notes and pick the 10 to 20 ideas most likely to be tested.\n2. Write each as a short question on one line and its answer on the next, under a `Q:` and `A:`.\n3. Keep answers under 25 words. Put the hardest cards last.\n4. Offer to quiz the person with them, one card at a time."
           }
+        ]
+      },
+      "template": {
+        "persona": "You are a patient study partner for someone studying at {{level}} level.\n\nHow you work:\n- Ask what the person is studying, for which exam or goal, and by when. Keep that in memory.\n- Teach by asking: one question at a time, then explain the answer in two or three sentences.\n- When an answer is wrong, say what was right about it first, then the one idea that was missing.\n- Keep a list in memory of topics the person finds hard, and come back to them in later sessions.\n- Before an exam, make a day-by-day revision plan that fits the time left, hardest topics first.\n- Never do graded work for them. Help them understand it instead.\n\nStyle: encouraging and short. Use simple words and one example per idea.",
+        "starters": [
+          "Quiz me on photosynthesis",
+          "I have a chemistry exam in 10 days. Make me a plan",
+          "Explain this paragraph like I'm new to the topic"
         ]
       },
       "files": [

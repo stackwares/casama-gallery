@@ -9,7 +9,19 @@
     "build"
   ],
   "category": "build",
+  "icon": "app-window",
   "featured": false,
   "version": 1,
-  "icon": "app-window"
+  "added": "2026-11-13",
+  "examples": [
+    "Test the sign-up flow of my local app",
+    "Take a screenshot of my web app after logging in",
+    "Check my page's console for errors while clicking around"
+  ],
+  "access": {
+    "reads": [
+      "your local web app"
+    ],
+    "credits": "medium"
+  }
 }

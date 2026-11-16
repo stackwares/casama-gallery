@@ -2,10 +2,20 @@
   "name": "Bill reminders",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "Apache-2.0",
-  "tags": ["money"],
+  "tags": [
+    "money"
+  ],
   "featured": false,
-  "version": 1
+  "version": 1,
+  "added": "2026-11-13",
+  "access": {
+    "reads": [
+      "memory"
+    ],
+    "credits": "low"
+  }
 }

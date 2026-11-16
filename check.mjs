@@ -1,7 +1,9 @@
 /**
- * Checks this gallery and writes index.json. No app toolchain: pull requests run `node check.mjs`.
- *   node check.mjs          write index.json
- *   node check.mjs --check  fail if index.json is stale or an item is wrong
+ * Checks this gallery and writes index.json, the other kinds' files, authors.json and manifest.json.
+ * No app toolchain: pull requests run `node check.mjs`.
+ *   node check.mjs          write the derived files
+ *   node check.mjs --check  fail if a derived file is stale or an item is wrong
+ * manifest.sig is written by `node sign.mjs` in CI, never here.
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
@@ -483,9 +485,358 @@ function pluginDocument(raw, errors) {
   return { description, url, commit, ...(icon ? { icon } : {}), adds };
 }
 
+
+// ---------------------------------------------------------------- gallery v2 (D-315)
+// Mirrors packages/domain/src/gallery.ts (parseGalleryMeta) and gallery-catalog.ts.
+const KINDS = ["theme", "scheme", "wallpaper", "skill", "app", "bot", "routine", "plugin", "set"];
+const SET_ITEM_TYPES = ["app", "skill", "routine", "bot", "theme", "scheme", "wallpaper", "plugin"];
+const CREDIT_LEVELS = ["none", "low", "medium", "high"];
+const EXAMPLE_KINDS = ["skill", "app", "bot"];
+const ACCESS_KINDS = ["skill", "app", "routine", "bot", "plugin"];
+const NEEDS_KINDS = ["routine", "bot"];
+const INPUT_KINDS = ["routine", "bot"];
+const INPUT_TYPES = ["text", "choice", "time", "timezone"];
+const TEMPLATE_FIELDS = { routine: ["instructions_md", "schedule_cron"], bot: ["persona", "starters"] };
+// Built-in app ids (packages/domain/src/apps.ts APP_CATALOG), so `needs.apps` can name them.
+// packages/domain/test/gallery-catalog.test.ts keeps this list in step.
+const BUILT_IN_APPS = [
+  "gmail", "google_calendar", "google_drive", "google_docs", "google_sheets", "google_contacts", "google_slides",
+  "notion", "slack", "asana", "monday", "box", "atlassian", "exa", "airtable", "zapier", "composio", "pipedream",
+  "figma", "webflow", "hubspot", "intercom", "stripe", "github", "linear", "sentry", "vercel", "supabase", "neon",
+  "cloudflare", "context7", "posthog", "huggingface",
+];
+const MANIFEST_FILES = ["index.json", "apps.json", "bots.json", "routines.json", "plugins.json", "sets.json", "authors.json"];
+const DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
+const SEMVER = /^\d{1,4}\.\d{1,4}\.\d{1,4}$/;
+const HANDLE = /^[a-z0-9][a-z0-9-]{0,38}$/;
+const INPUT_KEY = /^[a-z][a-z0-9_]{0,31}$/;
+const TIME = /^([01]\d|2[0-3]):[0-5]\d$/;
+const TIMEZONE = /^(UTC|[A-Za-z]+(\/[A-Za-z0-9_+-]+){1,2})$/;
+const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const PLACEHOLDER = /\{\{\s*([a-z][a-z0-9_]{0,31}(?:\.(?:hour|minute))?)\s*\}\}/g;
+
+function isDate(v) {
+  if (typeof v !== "string") return false;
+  const m = DATE.exec(v);
+  if (!m) return false;
+  const [y, mo, d] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  const date = new Date(Date.UTC(y, mo - 1, d));
+  return date.getUTCFullYear() === y && date.getUTCMonth() === mo - 1 && date.getUTCDate() === d;
+}
+function isMonthDay(v) {
+  const m = typeof v === "string" ? /^(\d{2})-(\d{2})$/.exec(v) : null;
+  if (!m) return false;
+  const mo = Number(m[1]);
+  const d = Number(m[2]);
+  return mo >= 1 && mo <= 12 && d >= 1 && d <= DAYS_IN_MONTH[mo - 1];
+}
+const hasScripts = (paths) => paths.some((p) => /\.(py|sh|bash|zsh|js|mjs|cjs|ts|mts|rb|pl|ps1|php|go)$/i.test(p));
+
+function shortList(raw, label, max, minItems, maxItems, errors) {
+  if (!Array.isArray(raw) || raw.length < minItems || raw.length > maxItems || !raw.every((x) => typeof x === "string" && x.trim().length >= 1 && x.trim().length <= max)) {
+    errors.push(`${label} must be ${minItems} to ${maxItems} lines of at most ${max} characters`);
+    return undefined;
+  }
+  return raw.map((x) => x.trim());
+}
+function itemRef(raw, label, errors) {
+  if (!isRecord(raw) || !KINDS.includes(raw.type) || typeof raw.id !== "string" || !ID.test(raw.id) || Object.keys(raw).some((k) => k !== "type" && k !== "id")) {
+    errors.push(`${label} must be { "type": kind, "id": gallery id }`);
+    return undefined;
+  }
+  return { type: raw.type, id: raw.id };
+}
+function inputValueError(type, value, options) {
+  if (value.length < 1 || value.length > 120) return "must be 1 to 120 characters";
+  if (type === "time" && !TIME.test(value)) return "must be a time such as 07:30";
+  if (type === "timezone" && !TIMEZONE.test(value)) return "must be a time zone such as Europe/Berlin";
+  if (type === "choice" && !(options ?? []).includes(value)) return "must be one of the options";
+  if (/[{}]/.test(value)) return "can't contain { or }";
+  return undefined;
+}
+
+function parseChangelog(raw, version, errors) {
+  if (!Array.isArray(raw) || raw.length < 1 || raw.length > 50) return errors.push("changelog must be 1 to 50 entries, newest first"), undefined;
+  const out = [];
+  raw.forEach((e, i) => {
+    const at = `changelog[${i}]`;
+    if (!isRecord(e)) return errors.push(`${at} must be an object`);
+    for (const k of Object.keys(e)) if (!["version", "date", "note", "breaking"].includes(k)) errors.push(`${at} can't have ${k}`);
+    if (!Number.isInteger(e.version) || e.version < 1) errors.push(`${at}.version must be a positive integer`);
+    if (!isDate(e.date)) errors.push(`${at}.date must be YYYY-MM-DD`);
+    const note = typeof e.note === "string" ? e.note.trim() : "";
+    if (note.length < 1 || note.length > 160) errors.push(`${at}.note must be 1 to 160 characters`);
+    if (e.breaking !== undefined && typeof e.breaking !== "boolean") errors.push(`${at}.breaking must be true or false`);
+    out.push({ version: e.version, date: e.date, note, ...(e.breaking === true ? { breaking: true } : {}) });
+  });
+  for (let i = 1; i < out.length; i++) {
+    if (!(out[i].version < out[i - 1].version)) errors.push("changelog versions must go strictly down, newest first");
+    if (out[i].date > out[i - 1].date) errors.push("changelog dates must not go up, newest first");
+  }
+  if (out[0] && out[0].version !== version) errors.push(`changelog's top entry must be version ${version}`);
+  return out;
+}
+function parseAccess(raw, errors) {
+  if (!isRecord(raw)) return errors.push("access must be an object"), undefined;
+  for (const k of Object.keys(raw)) if (!["reads", "writes", "runs_code", "computer", "credits"].includes(k)) errors.push(`access can't have ${k}`);
+  const out = {};
+  for (const key of ["reads", "writes"]) {
+    if (raw[key] === undefined) continue;
+    const list = shortList(raw[key], `access.${key}`, 40, 1, 8, errors);
+    if (list) out[key] = list;
+  }
+  for (const key of ["runs_code", "computer"]) {
+    if (raw[key] === undefined) continue;
+    if (typeof raw[key] !== "boolean") errors.push(`access.${key} must be true or false`);
+    else out[key] = raw[key];
+  }
+  if (raw.credits !== undefined) {
+    if (!CREDIT_LEVELS.includes(raw.credits)) errors.push(`access.credits must be one of ${CREDIT_LEVELS.join(", ")}`);
+    else out.credits = raw.credits;
+  }
+  return out;
+}
+function parseNeeds(raw, errors) {
+  if (!isRecord(raw)) return errors.push("needs must be an object"), undefined;
+  const out = {};
+  for (const k of Object.keys(raw)) if (k !== "apps" && k !== "skills") errors.push(`needs can't have ${k}`);
+  for (const key of ["apps", "skills"]) {
+    const list = raw[key];
+    if (list === undefined) continue;
+    if (!Array.isArray(list) || list.length < 1 || list.length > 10 || !list.every((x) => typeof x === "string" && /^[a-z0-9][a-z0-9_-]{0,62}$/.test(x)) || new Set(list).size !== list.length)
+      errors.push(`needs.${key} must be 1 to 10 different ids`);
+    else out[key] = list;
+  }
+  return out;
+}
+function parseInputs(raw, errors) {
+  if (!Array.isArray(raw) || raw.length < 1 || raw.length > 6) return errors.push("inputs must be 1 to 6 questions"), undefined;
+  const out = [];
+  raw.forEach((q, i) => {
+    const at = `inputs[${i}]`;
+    if (!isRecord(q)) return errors.push(`${at} must be an object`);
+    const start = errors.length;
+    for (const k of Object.keys(q)) if (!["key", "label", "type", "default", "options", "help"].includes(k)) errors.push(`${at} can't have ${k}`);
+    const key = typeof q.key === "string" && INPUT_KEY.test(q.key) ? q.key : undefined;
+    if (!key) errors.push(`${at}.key must be lowercase letters, digits or _ (up to 32)`);
+    else if (out.some((x) => x.key === key)) errors.push(`${at}.key ${key} is used twice`);
+    const label = typeof q.label === "string" ? q.label.trim() : "";
+    if (label.length < 1 || label.length > 60) errors.push(`${at}.label must be 1 to 60 characters`);
+    const type = INPUT_TYPES.find((t) => t === q.type);
+    if (!type) errors.push(`${at}.type must be one of ${INPUT_TYPES.join(", ")}`);
+    let options;
+    if (type === "choice") options = shortList(q.options, `${at}.options`, 60, 2, 8, errors);
+    else if (q.options !== undefined) errors.push(`${at}.options are only for choice`);
+    const help = q.help === undefined ? undefined : typeof q.help === "string" ? q.help.trim() : "";
+    if (help !== undefined && (help.length < 1 || help.length > 120)) errors.push(`${at}.help must be 1 to 120 characters`);
+    const def = typeof q.default === "string" ? q.default.trim() : undefined;
+    if (def === undefined || def.length < 1 || def.length > 120) errors.push(`${at}.default must be 1 to 120 characters (what older servers use)`);
+    else if (type) {
+      const why = inputValueError(type, def, options);
+      if (why) errors.push(`${at}.default ${why}`);
+    }
+    if (errors.length === start) out.push({ key, label, type, default: def, ...(options ? { options } : {}), ...(help ? { help } : {}) });
+  });
+  return out;
+}
+
+// The newer item.json fields; `kind` gates the kind-only ones.
+function metaV2(meta, kind, errors) {
+  const version = meta.version == null ? 1 : meta.version;
+  const out = {};
+  if (meta.author && meta.author.handle !== undefined) {
+    if (typeof meta.author.handle !== "string" || !HANDLE.test(meta.author.handle)) errors.push("author.handle must be lowercase letters, digits and dashes (up to 39)");
+    else out.handle = meta.author.handle;
+  }
+  if (meta.added === undefined) errors.push("added must be the YYYY-MM-DD it was added");
+  else if (!isDate(meta.added)) errors.push("added must be a YYYY-MM-DD date");
+  else out.added = meta.added;
+  if (meta.changelog !== undefined && Number.isInteger(version)) out.changelog = parseChangelog(meta.changelog, version, errors);
+  else if (Number.isInteger(version) && version > 1) errors.push("changelog is required once version is above 1");
+  let updated;
+  if (meta.updated !== undefined) {
+    if (!isDate(meta.updated)) errors.push("updated must be a YYYY-MM-DD date");
+    else updated = meta.updated;
+  }
+  updated = updated ?? out.changelog?.[0]?.date ?? out.added;
+  if (updated && out.added && updated < out.added) errors.push("updated can't be before added");
+  if (updated && out.changelog?.[0] && updated < out.changelog[0].date) errors.push("updated can't be before the latest changelog entry");
+  if (updated) out.updated = updated;
+  if (meta.pick !== undefined) {
+    const pick = typeof meta.pick === "string" ? meta.pick.trim() : "";
+    if (meta.featured !== true) errors.push("pick is only for featured items");
+    if (pick.length < 1 || pick.length > 140) errors.push("pick must be 1 to 140 characters");
+    out.pick = pick;
+  }
+  if (meta.examples !== undefined) {
+    if (!EXAMPLE_KINDS.includes(kind)) errors.push(`examples aren't for a ${kind}`);
+    out.examples = shortList(meta.examples, "examples", 160, 1, 3, errors);
+  }
+  if (meta.access !== undefined) {
+    if (!ACCESS_KINDS.includes(kind)) errors.push(`access isn't for a ${kind}`);
+    out.access = parseAccess(meta.access, errors);
+  }
+  if (meta.needs !== undefined) {
+    if (!NEEDS_KINDS.includes(kind)) errors.push(`needs aren't for a ${kind}`);
+    out.needs = parseNeeds(meta.needs, errors);
+  }
+  if (meta.inputs !== undefined) {
+    if (!INPUT_KINDS.includes(kind)) errors.push(`inputs aren't for a ${kind}`);
+    out.inputs = parseInputs(meta.inputs, errors);
+  }
+  if (meta.remix_of !== undefined) out.remix_of = itemRef(meta.remix_of, "remix_of", errors);
+  if (meta.replaced_by !== undefined) out.replaced_by = itemRef(meta.replaced_by, "replaced_by", errors);
+  for (const key of ["min_app", "min_server"]) {
+    if (meta[key] === undefined) continue;
+    if (typeof meta[key] !== "string" || !SEMVER.test(meta[key])) errors.push(`${key} must be a version such as 0.2.0`);
+    else out[key] = meta[key];
+  }
+  if (meta.season !== undefined) {
+    const s = meta.season;
+    if (!isRecord(s) || !isMonthDay(s.from) || !isMonthDay(s.to) || s.from === s.to || Object.keys(s).some((k) => k !== "from" && k !== "to"))
+      errors.push('season must be { "from": "MM-DD", "to": "MM-DD" }');
+    else out.season = { from: s.from, to: s.to };
+  }
+  return out;
+}
+
+const placeholders = (text) => [...text.matchAll(PLACEHOLDER)].map((m) => m[1]);
+function fillText(text, values) {
+  return text.replace(PLACEHOLDER, (whole, name) => {
+    const [key, part] = name.split(".");
+    const value = values[key];
+    if (value === undefined) return whole;
+    if (!part) return value;
+    const [hh, mm] = value.split(":");
+    return String(Number(part === "hour" ? hh : mm));
+  });
+}
+function templateTexts(kind, doc) {
+  const out = [];
+  for (const field of TEMPLATE_FIELDS[kind]) {
+    const v = doc[field];
+    if (typeof v === "string") out.push({ field, text: v });
+    else if (Array.isArray(v)) for (const x of v) if (typeof x === "string") out.push({ field, text: x });
+  }
+  return out;
+}
+function inputsUsage(kind, inputs, raw) {
+  if (!TEMPLATE_FIELDS[kind] || !isRecord(raw)) return [];
+  const errors = [];
+  const byKey = new Map((inputs ?? []).map((i) => [i.key, i]));
+  const used = new Set();
+  for (const { field, text } of templateTexts(kind, raw)) {
+    for (const name of placeholders(text)) {
+      const [key, part] = name.split(".");
+      used.add(key);
+      const input = byKey.get(key);
+      if (!input) errors.push(`{{${name}}} in ${field} has no input`);
+      else if (part && (key !== "time" || input.type !== "time")) errors.push(`{{${name}}} needs a time input named time`);
+      else if (field === "schedule_cron" && !part) errors.push("schedule_cron can only use {{time.minute}} and {{time.hour}}");
+    }
+  }
+  for (const key of byKey.keys()) if (!used.has(key)) errors.push(`input ${key} isn't used`);
+  return errors;
+}
+function fillDocument(kind, raw, values) {
+  if (!TEMPLATE_FIELDS[kind] || !isRecord(raw)) return raw;
+  const out = { ...raw };
+  for (const field of TEMPLATE_FIELDS[kind]) {
+    const v = out[field];
+    if (typeof v === "string") out[field] = fillText(v, values);
+    else if (Array.isArray(v)) out[field] = v.map((x) => (typeof x === "string" ? fillText(x, values) : x));
+  }
+  return out;
+}
+function templateOf(kind, raw) {
+  if (!TEMPLATE_FIELDS[kind] || !isRecord(raw)) return undefined;
+  const out = {};
+  for (const field of TEMPLATE_FIELDS[kind]) if (raw[field] !== undefined) out[field] = raw[field];
+  return out;
+}
+
+function testsFile(raw, errors) {
+  if (!isRecord(raw) || !Array.isArray(raw.cases)) return errors.push('tests.json must be { "cases": [{ "prompt", "expect" }] }');
+  for (const k of Object.keys(raw)) if (k !== "cases") errors.push(`tests.json can't have ${k}`);
+  if (raw.cases.length < 1 || raw.cases.length > 5) errors.push("tests.json needs 1 to 5 cases");
+  raw.cases.forEach((c, i) => {
+    const at = `tests.json cases[${i}]`;
+    if (!isRecord(c)) return errors.push(`${at} must be an object`);
+    for (const k of Object.keys(c)) if (k !== "prompt" && k !== "expect") errors.push(`${at} can't have ${k}`);
+    const prompt = typeof c.prompt === "string" ? c.prompt.trim() : "";
+    const expect = typeof c.expect === "string" ? c.expect.trim() : "";
+    if (prompt.length < 1 || prompt.length > 500) errors.push(`${at}.prompt must be 1 to 500 characters`);
+    if (expect.length < 1 || expect.length > 300) errors.push(`${at}.expect must be 1 to 300 characters`);
+  });
+}
+
+function setDocument(raw, errors) {
+  if (!isRecord(raw)) return errors.push("set.json must be an object"), undefined;
+  const start = errors.length;
+  for (const k of Object.keys(raw)) if (!["description", "icon", "items"].includes(k)) errors.push(`set.json can't have ${k}`);
+  const description = typeof raw.description === "string" ? raw.description.trim() : "";
+  if (description.length < 1 || description.length > 200) errors.push("description must be 1 to 200 characters");
+  const icon = typeof raw.icon === "string" && ICON_NAME.test(raw.icon) ? raw.icon : "";
+  if (!icon) errors.push("icon must be a Lucide icon name such as rocket");
+  const items = [];
+  if (!Array.isArray(raw.items) || raw.items.length < 2 || raw.items.length > 12) errors.push("items must be 2 to 12 gallery items");
+  else
+    raw.items.forEach((x, i) => {
+      if (!isRecord(x) || !SET_ITEM_TYPES.includes(x.type) || typeof x.id !== "string" || !ID.test(x.id) || Object.keys(x).some((k) => k !== "type" && k !== "id"))
+        return errors.push(`items[${i}] must be { "type": ${SET_ITEM_TYPES.join("|")}, "id" }`);
+      if (items.some((y) => y.type === x.type && y.id === x.id)) errors.push(`items[${i}] ${x.type}/${x.id} is listed twice`);
+      items.push({ type: x.type, id: x.id });
+    });
+  if (errors.length > start) return undefined;
+  return { description, icon, items };
+}
+
+function authorSlug(name) {
+  const slug = name.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 39).replace(/-+$/, "");
+  return slug || "unknown";
+}
+const cmp = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
+function buildAuthors(all) {
+  const sorted = all.filter((i) => !i.retired).sort((a, b) => (a.type === b.type ? cmp(a.id, b.id) : cmp(a.type, b.type)));
+  const byHandle = new Map();
+  for (const i of sorted) {
+    const handle = i.author.handle ?? authorSlug(i.author.name);
+    let entry = byHandle.get(handle);
+    if (!entry) byHandle.set(handle, (entry = { handle, name: i.author.name, items: [] }));
+    if (!entry.url && i.author.url) entry.url = i.author.url;
+    entry.items.push({ type: i.type, id: i.id });
+  }
+  const authors = [...byHandle.values()].sort((a, b) => cmp(a.handle, b.handle)).map((a) => ({ handle: a.handle, name: a.name, ...(a.url ? { url: a.url } : {}), items: a.items }));
+  return { schema: 1, authors };
+}
+
+let tested = {};
+try {
+  const raw = JSON.parse(readFileSync(join(root, "tested.json"), "utf8"));
+  if (!isRecord(raw)) throw new Error();
+  for (const [id, e] of Object.entries(raw)) {
+    if (!isRecord(e) || !Number.isInteger(e.version) || e.version < 1 || typeof e.passed !== "boolean" || !isDate(e.date)) {
+      console.error(`tested.json ${id} must be { version, passed, date }`);
+      process.exit(1);
+    }
+    tested[id] = e;
+  }
+} catch (err) {
+  if (err?.code !== "ENOENT") {
+    console.error("tested.json must be an object of { version, passed, date }");
+    process.exit(1);
+  }
+  tested = {};
+}
+const testedFor = (id, version) => {
+  const e = Object.hasOwn(tested, id) ? tested[id] : undefined;
+  return e?.passed && e.version === version ? { version: e.version, date: e.date } : undefined;
+};
+
 const errors = [];
 const items = [];
-for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpapers", "wallpaper"], ["skills", "skill"], ["apps", "app"], ["bots", "bot"], ["routines", "routine"], ["plugins", "plugin"]]) {
+const refs = [];
+for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpapers", "wallpaper"], ["skills", "skill"], ["apps", "app"], ["bots", "bot"], ["routines", "routine"], ["plugins", "plugin"], ["sets", "set"]]) {
   const parent = join(root, dir);
   let ids = [];
   try {
@@ -516,6 +867,11 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
       continue;
     }
     const licenses = type === "skill" ? SKILL : type === "app" ? APP : type === "plugin" ? APP : type === "bot" || type === "routine" ? WRITING : LOOK;
+    const v2 = [];
+    const extra = metaV2(meta, type, v2);
+    for (const e of v2) errors.push(`${where}: ${e}`);
+    let template;
+    let setItems;
     const name = typeof meta.name === "string" ? meta.name.trim() : "";
     if (name.length < 1 || name.length > 60) errors.push(`${where}: name must be 1 to 60 characters`);
     const authorName = meta.author && typeof meta.author.name === "string" ? meta.author.name.trim() : "";
@@ -557,8 +913,10 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
         if (f.relative !== "item.json" && f.relative !== docName) errors.push(`${where}: ${f.relative} isn't allowed (only item.json and ${docName})`);
       const raw = readJson(docName);
       if (raw) {
-        const local = [];
-        document = type === "bot" ? botDocument(raw, local) : type === "routine" ? routineDocument(raw, local) : pluginDocument(raw, local);
+        const local = [...inputsUsage(type, extra.inputs, raw)];
+        const filled = fillDocument(type, raw, Object.fromEntries((extra.inputs ?? []).map((i) => [i.key, i.default])));
+        if (extra.inputs) template = templateOf(type, raw);
+        document = type === "bot" ? botDocument(filled, local) : type === "routine" ? routineDocument(filled, local) : pluginDocument(filled, local);
         description = document?.description;
         for (const e of local) errors.push(`${where}: ${e}`);
       }
@@ -576,6 +934,16 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
       if (logo) {
         const local = [];
         appLogo(logo.bytes.toString("utf8"), logo.bytes.byteLength, local);
+        for (const e of local) errors.push(`${where}: ${e}`);
+      }
+    } else if (type === "set") {
+      for (const f of files) if (f.relative !== "item.json" && f.relative !== "set.json") errors.push(`${where}: ${f.relative} isn't allowed (only item.json and set.json)`);
+      const raw = readJson("set.json");
+      if (raw) {
+        const local = [];
+        document = setDocument(raw, local);
+        description = document?.description;
+        setItems = document?.items;
         for (const e of local) errors.push(`${where}: ${e}`);
       }
     } else if (type === "theme") {
@@ -640,27 +1008,79 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
         const said = fm && /^description:\s*(.+?)\s*$/m.exec(fm[1]);
         if (said) description = said[1].replace(/^(["'])(.*)\1$/, "$2");
       }
+      if (files.some((f) => f.relative === "tests.json")) {
+        const raw = readJson("tests.json");
+        const local = [];
+        if (raw) testsFile(raw, local);
+        for (const e of local) errors.push(`${where}: ${e}`);
+      }
     }
+
+    let access = extra.access;
+    if (type === "skill" && hasScripts(files.map((f) => f.relative))) {
+      if (access?.runs_code === false || access?.computer === false) errors.push(`${where}: access says no code or computer, but the skill brings scripts`);
+      access = { ...access, runs_code: true, computer: true };
+    }
+    const version = Number.isInteger(meta.version) ? meta.version : 1;
+    const testedNow = type === "skill" ? testedFor(id, version) : undefined;
+    refs.push({ type, id, retired: meta.retired === true, needs: extra.needs, remix_of: extra.remix_of, replaced_by: extra.replaced_by, setItems });
 
     items.push({
       id,
       type,
       name,
-      author: { name: authorName, ...(url ? { url } : {}) },
+      author: { name: authorName, ...(url ? { url } : {}), ...(extra.handle ? { handle: extra.handle } : {}) },
       license: meta.license,
       tags,
       featured: meta.featured === true,
       retired: meta.retired === true,
-      version: Number.isInteger(meta.version) ? meta.version : 1,
+      version,
+      added: extra.added,
+      updated: extra.updated,
       sha256: hash(files.map((f) => ({ path: f.relative, bytes: f.bytes }))),
       size: files.reduce((n, f) => n + f.bytes.byteLength, 0),
       ...(typeof meta.category === "string" ? { category: meta.category } : {}),
       ...(typeof meta.icon === "string" ? { icon: meta.icon } : {}),
       ...(description ? { description } : {}),
       ...(document !== undefined && requiresOf(type, document).length ? { requires: requiresOf(type, document) } : {}),
+      ...(extra.changelog ? { changelog: extra.changelog } : {}),
+      ...(extra.pick ? { pick: extra.pick } : {}),
+      ...(extra.examples ? { examples: extra.examples } : {}),
+      ...(access ? { access } : {}),
+      ...(extra.needs ? { needs: extra.needs } : {}),
+      ...(extra.inputs ? { inputs: extra.inputs } : {}),
+      ...(extra.remix_of ? { remix_of: extra.remix_of } : {}),
+      ...(extra.replaced_by ? { replaced_by: extra.replaced_by } : {}),
+      ...(extra.min_app ? { min_app: extra.min_app } : {}),
+      ...(extra.min_server ? { min_server: extra.min_server } : {}),
+      ...(extra.season ? { season: extra.season } : {}),
+      ...(testedNow ? { tested: testedNow } : {}),
       ...(document !== undefined ? { document: indexDocument(type, document) } : {}),
+      ...(template ? { template } : {}),
       files: files.map((f) => `${dir}/${id}/${f.relative}`).sort(),
     });
+  }
+}
+
+// References that need the whole catalog: needs, remix_of, replaced_by and sets' items.
+const known = new Map(refs.map((r) => [`${r.type}/${r.id}`, r]));
+const builtInApps = new Set(BUILT_IN_APPS);
+for (const r of refs) {
+  const where = `${r.type}/${r.id}`;
+  for (const id of r.needs?.skills ?? []) if (!known.has(`skill/${id}`)) errors.push(`${where}: needs skill ${id}, which isn't in the gallery`);
+  for (const id of r.needs?.apps ?? [])
+    if (!builtInApps.has(id) && !builtInApps.has(id.replaceAll("-", "_")) && !known.has(`app/${id}`)) errors.push(`${where}: needs app ${id}, which isn't a gallery or built-in app`);
+  for (const field of ["remix_of", "replaced_by"]) {
+    const ref = r[field];
+    if (!ref) continue;
+    if (ref.type === r.type && ref.id === r.id) errors.push(`${where}: ${field} can't be itself`);
+    else if (!known.has(`${ref.type}/${ref.id}`)) errors.push(`${where}: ${field} ${ref.type}/${ref.id} isn't in the gallery`);
+  }
+  if (r.replaced_by && !r.retired) errors.push(`${where}: replaced_by is only for retired items`);
+  for (const ref of r.setItems ?? []) {
+    const found = known.get(`${ref.type}/${ref.id}`);
+    if (!found) errors.push(`${where}: ${ref.type}/${ref.id} isn't in the gallery`);
+    else if (found.retired) errors.push(`${where}: ${ref.type}/${ref.id} is retired`);
   }
 }
 
@@ -677,10 +1097,23 @@ const outputs = [
   { file: "bots.json", items: items.filter((i) => i.type === "bot") },
   { file: "routines.json", items: items.filter((i) => i.type === "routine") },
   { file: "plugins.json", items: items.filter((i) => i.type === "plugin") },
+  // Starter sets (D-315): a new kind, so its own file.
+  { file: "sets.json", items: items.filter((i) => i.type === "set") },
 ];
+const bodies = outputs.map((out) => ({ file: out.file, body: `${JSON.stringify({ schema: 1, items: out.items }, null, 2)}\n`, count: `${out.items.length} items` }));
+const authors = buildAuthors(items);
+bodies.push({ file: "authors.json", body: `${JSON.stringify(authors, null, 2)}\n`, count: `${authors.authors.length} authors` });
+// The manifest's date is the newest change in the catalog, so it only moves when the catalog does.
+const created = items.reduce((max, i) => (i.updated > max ? i.updated : max), "");
+const manifest = {
+  schema: 1,
+  created,
+  files: Object.fromEntries(MANIFEST_FILES.map((file) => [file, createHash("sha256").update(bodies.find((b) => b.file === file).body).digest("hex")])),
+};
+bodies.push({ file: "manifest.json", body: `${JSON.stringify(manifest, null, 2)}\n`, count: `${MANIFEST_FILES.length} files` });
 let stale = false;
-for (const out of outputs) {
-  const body = `${JSON.stringify({ schema: 1, items: out.items }, null, 2)}\n`;
+for (const out of bodies) {
+  const body = out.body;
   const path = join(root, out.file);
   if (checkOnly) {
     let current = "";
@@ -695,7 +1128,7 @@ for (const out of outputs) {
     }
   } else {
     writeFileSync(path, body);
-    console.log(`wrote ${out.file} (${out.items.length} items)`);
+    console.log(`wrote ${out.file} (${out.count})`);
   }
 }
 if (stale) process.exit(1);

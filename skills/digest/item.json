@@ -9,7 +9,19 @@
     "work"
   ],
   "category": "work",
+  "icon": "newspaper",
   "featured": false,
   "version": 1,
-  "icon": "newspaper"
+  "added": "2026-11-13",
+  "examples": [
+    "Catch me up on what happened while I was away",
+    "Give me a digest of today across my connected apps",
+    "What changed this week in email, chat and tickets?"
+  ],
+  "access": {
+    "reads": [
+      "connected apps"
+    ],
+    "credits": "medium"
+  }
 }

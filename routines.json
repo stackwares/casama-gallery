@@ -7,7 +7,8 @@
       "name": "Bill reminders",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -16,9 +17,17 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "3c1b9a8a1c0b56e6fac25215a0f5f4238dc237d69490e05220890f6977fc473b",
-      "size": 559,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "3a90705f119ba5bde556c2d4ca74eeb1d3ed53112a74f7a1d04d9d3169873e1b",
+      "size": 693,
       "description": "On the 25th of each month: the bills and subscriptions due next month.",
+      "access": {
+        "reads": [
+          "memory"
+        ],
+        "credits": "low"
+      },
       "document": {
         "description": "On the 25th of each month: the bills and subscriptions due next month.",
         "category": "life",
@@ -37,7 +46,8 @@
       "name": "Meeting notes",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -48,9 +58,31 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "4f47970c9c65c9ee9d09cf484565cef1e5662f9cc8ad8d5fbad090fd16be484b",
-      "size": 928,
+      "added": "2026-11-14",
+      "updated": "2026-11-14",
+      "sha256": "ce855896e2b1a2b1625aeca281fa58f757201a65b565e0d94237dadd97311d71",
+      "size": 1369,
       "description": "Each weekday evening: today's meeting notes filed, with decisions and who does what next.",
+      "pick": "Every meeting filed each evening, with decisions and who does what.",
+      "access": {
+        "reads": [
+          "calendar",
+          "meeting notes apps",
+          "memory"
+        ],
+        "writes": [
+          "saves notes to the team folder"
+        ],
+        "credits": "medium"
+      },
+      "needs": {
+        "apps": [
+          "google_calendar"
+        ],
+        "skills": [
+          "meeting-notes"
+        ]
+      },
       "document": {
         "description": "Each weekday evening: today's meeting notes filed, with decisions and who does what next.",
         "category": "work",
@@ -69,7 +101,8 @@
       "name": "Morning plan",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -79,15 +112,47 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "8e86cb84d651f1dc0de53a415488cf1eda6b955e7f7baf5a539a964daa203cc3",
-      "size": 616,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "b8fa9218aa92965c530c645b2ccc75bd613114750ba3dd1fa1be49ab94e92e87",
+      "size": 1343,
       "description": "Each weekday morning: today's meetings, deadlines and the one thing to get done first.",
+      "pick": "Five lines each morning: meetings, deadlines, weather, and where to start.",
+      "access": {
+        "reads": [
+          "calendar",
+          "tickets",
+          "memory",
+          "the web"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "time",
+          "label": "What time should it arrive?",
+          "type": "time",
+          "default": "07:30",
+          "help": "Weekdays, in your workspace's time zone."
+        },
+        {
+          "key": "city",
+          "label": "Your city, for the weather",
+          "type": "text",
+          "default": "my city",
+          "help": "Leave it as is and the bot uses what it knows."
+        }
+      ],
       "document": {
         "description": "Each weekday morning: today's meetings, deadlines and the one thing to get done first.",
         "category": "work",
         "icon": "sunrise",
-        "instructions_md": "Plan my day. Look at today's calendar (if it's connected), open tickets and anything due in memory. Give me today's meetings with times, the deadlines, and the one task to start with. Five lines at most.",
+        "instructions_md": "Plan my day. Look at today's calendar (if it's connected), open tickets and anything due in memory. Give me today's meetings with times, the deadlines, today's weather in my city, and the one task to start with. Five lines at most.",
         "schedule_cron": "30 7 * * 1-5"
+      },
+      "template": {
+        "instructions_md": "Plan my day. Look at today's calendar (if it's connected), open tickets and anything due in memory. Give me today's meetings with times, the deadlines, today's weather in {{city}}, and the one task to start with. Five lines at most.",
+        "schedule_cron": "{{time.minute}} {{time.hour}} * * 1-5"
       },
       "files": [
         "routines/morning-plan/item.json",
@@ -100,7 +165,8 @@
       "name": "Reading digest",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -110,14 +176,36 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "455b72f5635f5de92160a68297bab6c6bdb97fb7191309941998d3b8b8e69675",
-      "size": 625,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "67233eb2fb4bfbe710339bb8072588f69e51061542e56b230e7a14ccba2c91cd",
+      "size": 987,
       "description": "Saturday mornings: five worthwhile articles on the topics you follow, one line each.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "topics",
+          "label": "Topics to follow",
+          "type": "text",
+          "default": "the topics in your memory",
+          "help": "A few words, such as climate tech and design."
+        }
+      ],
       "document": {
         "description": "Saturday mornings: five worthwhile articles on the topics you follow, one line each.",
         "category": "research",
         "icon": "book-open",
         "instructions_md": "Find five worthwhile articles from the past week on the topics in your memory. For each, give the title, the source, a link and one sentence on why it's worth reading. Skip anything paywalled or older than a week.",
+        "schedule_cron": "0 9 * * 6"
+      },
+      "template": {
+        "instructions_md": "Find five worthwhile articles from the past week on {{topics}}. For each, give the title, the source, a link and one sentence on why it's worth reading. Skip anything paywalled or older than a week.",
         "schedule_cron": "0 9 * * 6"
       },
       "files": [
@@ -131,7 +219,8 @@
       "name": "Weekly review",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -140,15 +229,38 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "f88ccca16ebe73d511f92988993ec1c84693fc2e4cbdcdce9c1522cbacb13879",
-      "size": 656,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "499faca71ae7eb60e740af87c79edc5cf58e0cf7982a6a1ac141efbec15ae20f",
+      "size": 1070,
       "description": "Every Friday afternoon: what got done, what slipped, and the three priorities for next week.",
+      "pick": "A calm Friday wrap-up: done, slipped, and next week's three priorities.",
+      "access": {
+        "reads": [
+          "chats",
+          "tickets",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "time",
+          "label": "What time on Friday?",
+          "type": "time",
+          "default": "16:00"
+        }
+      ],
       "document": {
         "description": "Every Friday afternoon: what got done, what slipped, and the three priorities for next week.",
         "category": "work",
         "icon": "calendar-check",
         "instructions_md": "Write my weekly review.\n\n1. List what got done this week, from our chats, tickets and anything in memory.\n2. List what slipped and why, in one line each.\n3. Suggest the three most important things for next week.\n\nKeep it under 200 words.",
         "schedule_cron": "0 16 * * 5"
+      },
+      "template": {
+        "instructions_md": "Write my weekly review.\n\n1. List what got done this week, from our chats, tickets and anything in memory.\n2. List what slipped and why, in one line each.\n3. Suggest the three most important things for next week.\n\nKeep it under 200 words.",
+        "schedule_cron": "{{time.minute}} {{time.hour}} * * 5"
       },
       "files": [
         "routines/weekly-review/item.json",

@@ -7,7 +7,8 @@
       "name": "Coral",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -17,8 +18,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "65b20a62c76c22e3d3ca0921ac31b431bc7697837043afabd7d7719718ec296a",
-      "size": 396,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "16fd2c591a71077403b0fe4b75f9ce7795db1b159a23ac4d5532ff5750e6d517",
+      "size": 445,
       "document": {
         "light": {
           "seed": "#C2412D",
@@ -42,7 +45,8 @@
       "name": "Ember",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -51,8 +55,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "879e05b408cc1e5de1df140e481ecdf9b8bbaba517e36899861646561920469a",
-      "size": 339,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "438cf47e73e10e3547d3dbb406cdef8b552d25a8764298a2efc7e3f2442dd522",
+      "size": 406,
       "document": {
         "light": {
           "seed": "#C4552A",
@@ -76,7 +82,8 @@
       "name": "Fjord",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -86,8 +93,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "76069606b163a7fb76d30dbbc9d8056aa4e3a64dc9d0fcaf57651ff2c64134d3",
-      "size": 396,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "15b311fa1a0690d532849efc93fee39f906ec8f1b337bd07a9bc411074a7d659",
+      "size": 505,
+      "pick": "Cool blues that stay easy on the eyes all day.",
       "document": {
         "light": {
           "seed": "#2F5DA8",
@@ -111,7 +121,8 @@
       "name": "Ink",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -121,8 +132,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "312cb69a8c7ac7bae62fe59ceeaf0f7d403218bb9ef4a21961c96ef30f4f1ada",
-      "size": 398,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "45db306c692b72be9983317dc7ec3f53a1b42a6cf2b38fcc07876c94dff4ac3f",
+      "size": 447,
       "document": {
         "light": {
           "seed": "#3A3F47",
@@ -146,7 +159,8 @@
       "name": "Lagoon",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -155,8 +169,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "1674540712616c377d55abe1266a9ba1e04ac9ea24826c764942874c769b0c53",
-      "size": 339,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "8877bbd980d353526414a8ee923609a91a9507c5f23fe88a3b56dffa408254f4",
+      "size": 467,
+      "pick": "Bright teal for light mode, deep sea for night.",
       "document": {
         "light": {
           "seed": "#0E6E78",
@@ -180,7 +197,8 @@
       "name": "Marigold",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -190,8 +208,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "a66e62a106ab7a2e285d47673e77f7993fcb59f78c3259c168515cd822b265dd",
-      "size": 402,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "1d2a04da81dfd0ea070edbc7910820adde019cf43361a8d3ca97a786d737d8ab",
+      "size": 451,
       "document": {
         "light": {
           "seed": "#A35F00",
@@ -215,7 +235,8 @@
       "name": "Moss",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -225,8 +246,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "3c148a2fb32771cae7284e2f93ae08249f621c8fbbf9ef67e50e58431f705b8f",
-      "size": 396,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "f77e72d4d1fd630f5dd455cdb522fbbc53e2912afe54d36a69d4c722089f1c2d",
+      "size": 515,
+      "pick": "Soft greens with gentle contrast, made for long reading.",
       "document": {
         "light": {
           "seed": "#3F6B2A",
@@ -250,7 +274,8 @@
       "name": "Orchid",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -260,8 +285,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f1a01d2dc7378815a527143f96229781a7d58b61bd17a97df17ee93f9a0e75fe",
-      "size": 828,
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "sha256": "e1f888fab66f7a42d6e29b689b6cce88394d20c6486a1a43397e5dcecd9234ed",
+      "size": 877,
       "requires": [
         "scheme-colors"
       ],
@@ -302,7 +329,8 @@
       "name": "Plum",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -311,8 +339,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "cd56e1e7643326ceee0f47032f6f18c11423fa36317389eafb4cd546a1d7d7c5",
-      "size": 386,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "36e36f36e4ed77cee2f624bd987bbdbe3b26f4f3cd723825310fba75016466b0",
+      "size": 435,
       "document": {
         "light": {
           "seed": "#7A3F8F",
@@ -336,7 +366,8 @@
       "name": "Article outline",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -345,11 +376,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "85897c1334822b2fcaad54da59997b9c84409d52ecb473567e63cb0de19ec98f",
-      "size": 1010,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "f12016b81d1aaa2d3284b7096a881c65c40b08d7a660ee815f866dc46a88d91f",
+      "size": 1387,
       "category": "writing",
       "icon": "list-tree",
       "description": "Outline a blog post, article or talk with a working title, the main argument, sections with key points and sources to find.",
+      "examples": [
+        "Outline a blog post on why small teams should write things down",
+        "Turn my talk notes into a 20-minute outline with sections",
+        "Give me three working titles and an outline for an article on remote onboarding"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/article-outline/SKILL.md",
         "skills/article-outline/item.json"
@@ -361,7 +405,8 @@
       "name": "Budget review",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -370,11 +415,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "51d5953d35c3ff288a07c59e1842f932f45678c01066d2521496428a89641a6b",
-      "size": 1064,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "8d9b734aeb6012555aa532000dbe3b93c4ac9bd4ac9b03e430d05a91cd89eabd",
+      "size": 1421,
       "category": "money",
       "icon": "wallet",
       "description": "Review income and spending from a statement or spreadsheet, group it into categories and point out where money could be saved.",
+      "examples": [
+        "Review my spending from this bank statement and find savings",
+        "Group last month's transactions into categories with totals",
+        "Where did most of my money go this quarter?"
+      ],
+      "access": {
+        "reads": [
+          "statements and sheets you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/budget-review/SKILL.md",
         "skills/budget-review/item.json"
@@ -386,7 +444,8 @@
       "name": "Bug report",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -395,11 +454,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f415467aa97777283b613c2f4300e27b2a67ab1ad9d97f2e0bb9b4cb1867a1c1",
-      "size": 1067,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "339d34f8f2785f2c8a1aee430b0dbe4fc0a10052f96775d2acd001212a1cd86a",
+      "size": 1435,
       "category": "build",
       "icon": "bug",
       "description": "Turn a vague problem description into a clear bug report with steps to reproduce, expected and actual behaviour, and environment.",
+      "examples": [
+        "Turn this into a bug report: the app crashes when I upload a photo",
+        "Write steps to reproduce from this support message",
+        "Make this vague complaint into a ticket with expected and actual behaviour"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/bug-report/SKILL.md",
         "skills/bug-report/item.json"
@@ -420,11 +492,27 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "6ee4a7ba6d1ef7b179ff4b83f0cc08e102dc4a8d7ea917a63e23261c24a4b8b3",
-      "size": 37791,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "8f7899f1e95ea8b725189c6e7d92499e554de4225c02007f1530b238a339cf7f",
+      "size": 38180,
       "category": "data",
       "icon": "layout-dashboard",
       "description": "Build an interactive HTML dashboard with charts, filters, and tables. Use when creating an executive overview with KPI cards, turning query results into a shareable self-contained report, building a team monitoring snapshot, or needing multiple charts with filters in one browser-openable file.",
+      "examples": [
+        "Build a dashboard from this sales CSV with a chart per region",
+        "Make an executive overview with KPI cards from these numbers",
+        "Turn this query result into a page with filters and a table"
+      ],
+      "access": {
+        "reads": [
+          "data you share"
+        ],
+        "writes": [
+          "creates an HTML file"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/build-dashboard/LICENSE.txt",
         "skills/build-dashboard/SKILL.md",
@@ -437,7 +525,8 @@
       "name": "Chart from data",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -446,11 +535,27 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "cc9526c033cecdab8e9c0b835c23e98590d12df27d77771964a264fbaa3549b6",
-      "size": 1093,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "6d7e404db12e1d5a826f556083277b4e991e499430aef2523f4033ce6554eecc",
+      "size": 1448,
       "category": "data",
       "icon": "chart-line",
       "description": "Turn a table or CSV into a clear chart, choosing the right chart type and writing a one-line takeaway.",
+      "examples": [
+        "Chart monthly revenue from this table",
+        "Which chart fits this survey data? Make it",
+        "Turn this CSV into a chart with a one-line takeaway"
+      ],
+      "access": {
+        "reads": [
+          "data you share"
+        ],
+        "writes": [
+          "creates a chart"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/chart-from-data/SKILL.md",
         "skills/chart-from-data/item.json"
@@ -462,7 +567,8 @@
       "name": "Code review",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -471,11 +577,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "aadb6a77c71d101ad10f92d8b0805f37ec35e50f3a4821de7f2b16115aa0dd90",
-      "size": 1313,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "3961f701cddbfff4ca1f0ece36fa68d894d2da08b15dbf0927f42e799e21d373",
+      "size": 1621,
       "category": "build",
       "icon": "git-pull-request",
       "description": "Review a code change for bugs first, then clarity and tests, and report findings ranked by severity with file and line.",
+      "examples": [
+        "Review this pull request for bugs",
+        "Check this function for edge cases and missing tests",
+        "Rank the problems in this diff by severity"
+      ],
+      "access": {
+        "reads": [
+          "code you share"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/code-review/LICENSE.txt",
         "skills/code-review/SKILL.md",
@@ -488,7 +607,8 @@
       "name": "Compare options",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -497,11 +617,25 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "1d4b52cdbc58d93c162c4e6a09622d9029343b7061a42874d22ed3eb4f86e649",
-      "size": 1052,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "55b78c4e5711b673cc81d28526cd142b8ebd4330831827a0de7731adeefb6429",
+      "size": 1427,
       "category": "research",
       "icon": "columns-3",
       "description": "Compare products, services or plans side by side on what matters to the person, and recommend one with the reasons.",
+      "examples": [
+        "Compare these three phone plans for someone who travels a lot",
+        "Which project tool fits a team of five: Asana, Linear or Notion?",
+        "Put these two job offers side by side and recommend one"
+      ],
+      "access": {
+        "reads": [
+          "the web",
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/compare-options/SKILL.md",
         "skills/compare-options/item.json"
@@ -522,11 +656,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "4902850d1f21f1c1f694b4890acd7ff878532059c06696b26abb7bad86b21435",
-      "size": 24873,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "2086f9327c8690e9e498967e01c9c17d4ee4c2f6ecf9e242dec3b82e71f1747f",
+      "size": 25176,
       "category": "research",
       "icon": "binoculars",
       "description": "Research competitors and write a positioning and messaging comparison with gaps, opportunities, and threats. Use for a sales battlecard, an unclaimed angle, or a competitor's move.",
+      "examples": [
+        "Write a competitive brief on our three main rivals",
+        "Make a sales battlecard against this competitor",
+        "Find a positioning angle nobody in our market claims yet"
+      ],
+      "access": {
+        "reads": [
+          "the web"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/competitive-brief/LICENSE.txt",
         "skills/competitive-brief/SKILL.md",
@@ -539,7 +686,8 @@
       "name": "CSV cleanup",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -549,11 +697,29 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "fc19dee4d66e7931aca3994c6496daa8439124055e3c0eca369d03a09ebbbda7",
-      "size": 2387,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "64c9206106c66f5f00297985b7bb6decb1c13ed143f6a97e5dc9634051151ed3",
+      "size": 2764,
       "category": "data",
       "icon": "sheet",
       "description": "Clean a messy CSV file - trim spaces, normalize headers, drop empty and duplicate rows - and report what changed.",
+      "examples": [
+        "Clean up this messy CSV and tell me what changed",
+        "Remove duplicate and empty rows from this export",
+        "Normalize the headers in this spreadsheet export"
+      ],
+      "access": {
+        "reads": [
+          "files you share"
+        ],
+        "writes": [
+          "creates a cleaned file"
+        ],
+        "credits": "low",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/csv-cleanup/LICENSE.txt",
         "skills/csv-cleanup/SKILL.md",
@@ -567,7 +733,8 @@
       "name": "Decision memo",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -576,14 +743,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "e7f1099001bbf30e14ec9f01c783eeb9351e5c0886b50711419ebff300815da4",
-      "size": 1051,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "4353ccd4b67df285d5bed5d16f7955c9bca7079120272c953e99400f67761ab6",
+      "size": 1798,
       "category": "work",
       "icon": "scale",
       "description": "Write a one-page decision memo that lays out the options, trade-offs, a recommendation and what would change it.",
+      "examples": [
+        "Write a decision memo on whether to hire or outsource support",
+        "Lay out the options and trade-offs for moving to a four-day week",
+        "Make a one-page memo recommending a CRM"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/decision-memo/SKILL.md",
-        "skills/decision-memo/item.json"
+        "skills/decision-memo/item.json",
+        "skills/decision-memo/tests.json"
       ]
     },
     {
@@ -601,11 +782,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "04cbe5b9305b30ac1ae719fa8ecbb1588f449716ce6cfbfa33c1ac135321b6e3",
-      "size": 17722,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "6ea3c80206f9ca15e7c96cbfa50160d50f62c5e37ce525fc5d4cfa356d4aaa72",
+      "size": 18024,
       "category": "work",
       "icon": "newspaper",
       "description": "Generate a daily or weekly digest of activity across all connected sources. Use when catching up after time away, starting the day and wanting a summary of mentions and action items, or reviewing a week's decisions and document updates grouped by project.",
+      "examples": [
+        "Catch me up on what happened while I was away",
+        "Give me a digest of today across my connected apps",
+        "What changed this week in email, chat and tickets?"
+      ],
+      "access": {
+        "reads": [
+          "connected apps"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/digest/LICENSE.txt",
         "skills/digest/SKILL.md",
@@ -627,11 +821,29 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "e3d9e65990c25ed1baa330e7ae7c266c33b268e3b576942cc3b0f0e8dfcfe886",
-      "size": 1138344,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "715c9c3deafde8285b3379dd4453621999c0a19246856d7e846d0056e3a9095f",
+      "size": 1138718,
       "category": "work",
       "icon": "file-pen",
       "description": "Use when creating, reading, or editing a Word document (.docx or .dotx): reports, memos, letters, templates, tracked changes, comments, or find-and-replace. Not for PDFs or spreadsheets.",
+      "examples": [
+        "Turn these notes into a formatted Word report",
+        "Find and replace the client name in this contract",
+        "Add comments to this document where the wording is unclear"
+      ],
+      "access": {
+        "reads": [
+          "documents you share"
+        ],
+        "writes": [
+          "creates and edits Word files"
+        ],
+        "credits": "medium",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/docx/LICENSE.txt",
         "skills/docx/SKILL.md",
@@ -712,11 +924,25 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "243f9ec558fe498ab1b5dbf1727a0136b68186c4564f06fcf4ac82e9d2440618",
-      "size": 20034,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "dff08c2c2bd9ccbfe09d5900358943ab357c90e9ca7d74d7443557521e75adb3",
+      "size": 20340,
       "category": "research",
       "icon": "badge-check",
       "description": "Three-layer verification pipeline for AI output. Extracts verifiable claims, finds supporting or contradicting sources via web search, runs adversarial review for hallucination patterns, and produces a structured verification report with source links for human review.",
+      "examples": [
+        "Double-check this answer before I send it to a client",
+        "Verify the claims in this report against sources",
+        "Find what's wrong in this summary"
+      ],
+      "access": {
+        "reads": [
+          "the web",
+          "what you share"
+        ],
+        "credits": "high"
+      },
       "files": [
         "skills/doublecheck/LICENSE.txt",
         "skills/doublecheck/SKILL.md",
@@ -730,7 +956,8 @@
       "name": "Email drafter",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -739,14 +966,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "ffab9e9b47ff981c618f4aabe609288fa4cda16bece98f8c0f1221fd42accfc2",
-      "size": 1133,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "c0aafe8c377160f3092ab6071e788fcc88d42befda20f60fb83a7039c25b09e9",
+      "size": 2056,
       "category": "work",
       "icon": "mail",
       "description": "Draft a clear email or reply from a few notes, matched to the reader and the tone the person wants.",
+      "examples": [
+        "Draft a polite reply declining this meeting",
+        "Write an email asking for a deadline extension from these notes",
+        "Make this follow-up shorter and friendlier"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/email-drafter/SKILL.md",
-        "skills/email-drafter/item.json"
+        "skills/email-drafter/item.json",
+        "skills/email-drafter/tests.json"
       ]
     },
     {
@@ -755,7 +996,8 @@
       "name": "Fact check",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -764,11 +1006,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "5e22185a584235b150bf1d244da5f3368785e58eb732b3d3951083316fa4356f",
-      "size": 1052,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "10826a09171160cf97297b405380711a8be02edf21cb662b234d93ea4d2fab5a",
+      "size": 1356,
       "category": "research",
       "icon": "badge-check",
       "description": "Check the claims in a text against reliable sources and mark each one as supported, wrong, misleading or unverified.",
+      "examples": [
+        "Fact-check this article before I share it",
+        "Is this statistic about remote work true?",
+        "Mark each claim in this post as supported or not"
+      ],
+      "access": {
+        "reads": [
+          "the web"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/fact-check/SKILL.md",
         "skills/fact-check/item.json"
@@ -780,7 +1035,8 @@
       "name": "Gift ideas",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -789,11 +1045,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "7fccf0d0e86398d2304e6372972db1a44bbdc0ddfaeebb2df403d541bd7232e5",
-      "size": 970,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "2dc1250f46cf29ac3f0b4fc7bf70718443e3b814a98026296dc0e68cbebdd5e4",
+      "size": 1280,
       "category": "life",
       "icon": "gift",
       "description": "Suggest thoughtful gift ideas for a person and occasion within a budget, with where to get them.",
+      "examples": [
+        "Gift ideas for my dad who loves gardening, under $50",
+        "What should I get a coworker who is leaving?",
+        "Birthday ideas for a 10-year-old into space"
+      ],
+      "access": {
+        "reads": [
+          "the web"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/gift-ideas/SKILL.md",
         "skills/gift-ideas/item.json"
@@ -805,23 +1074,39 @@
       "name": "Inbox triage",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
         "work"
       ],
-      "featured": false,
+      "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "314c1e343cab7be06ea4282ad6adb740bb88b7e5b45797b44177da1e31270ef9",
-      "size": 1055,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "7ee49733900483aca731f0194bb187d79a1e6c779864f9d919ed62e95ad60927",
+      "size": 1828,
       "category": "work",
       "icon": "inbox",
       "description": "Sort a pile of emails or messages into reply now, do later, read and ignore, with a one-line reason for each.",
+      "pick": "Know what needs a reply today and what can wait.",
+      "examples": [
+        "Sort these emails into reply now, later, read and ignore",
+        "Which of my messages today actually need an answer?",
+        "Triage this inbox export and draft the urgent replies"
+      ],
+      "access": {
+        "reads": [
+          "emails and messages you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/inbox-triage/SKILL.md",
-        "skills/inbox-triage/item.json"
+        "skills/inbox-triage/item.json",
+        "skills/inbox-triage/tests.json"
       ]
     },
     {
@@ -830,7 +1115,8 @@
       "name": "Invoice check",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -839,11 +1125,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f2f84f65aaec02677efed251ab6f9475e779243421166aa556c808c33a5f5a3c",
-      "size": 1169,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "e4bccf8be4f09211caa0d686822ce45bb7ef79f30de35a19a0b3915cfae8d436",
+      "size": 1501,
       "category": "money",
       "icon": "receipt",
       "description": "Check an invoice or bill against the quote, contract or order for wrong amounts, duplicates, missing details and due dates.",
+      "examples": [
+        "Check this invoice against the quote",
+        "Is anything on this bill charged twice?",
+        "Compare this invoice to the contract and list the differences"
+      ],
+      "access": {
+        "reads": [
+          "invoices and contracts you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/invoice-check/SKILL.md",
         "skills/invoice-check/item.json"
@@ -855,7 +1154,8 @@
       "name": "Meal planner",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -864,11 +1164,21 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f350ade9d2d303176e520bae57162eac5f7cbcf2a670475d881265f91d5e95f9",
-      "size": 1015,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "44b76a00c99009aeeb65003fd78a2520ded5ec14d6d0c9050133fde2ad16a336",
+      "size": 1297,
       "category": "life",
       "icon": "utensils",
       "description": "Plan a week of meals around diet, budget and time, with simple recipes and one combined shopping list.",
+      "examples": [
+        "Plan a week of vegetarian dinners under 30 minutes each",
+        "Make a meal plan for a family of four on a budget",
+        "Give me a shopping list for this week's meals"
+      ],
+      "access": {
+        "credits": "low"
+      },
       "files": [
         "skills/meal-planner/SKILL.md",
         "skills/meal-planner/item.json"
@@ -880,7 +1190,8 @@
       "name": "Meeting notes",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -889,15 +1200,30 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "86c17a71ac6c979bf88d0994b7c837e315011b9c4f697ae05d07be3c9ddb2e96",
-      "size": 1329,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "681d6e86a84a88c8040934be3f4abe4cda20f4e170c386d481369bdebb777bd7",
+      "size": 2252,
       "category": "work",
       "icon": "notebook-pen",
       "description": "Turn a meeting transcript or rough notes into a short summary with decisions, action items and open questions.",
+      "pick": "Turns any transcript into decisions and action items in seconds.",
+      "examples": [
+        "Turn this transcript into notes with decisions and action items",
+        "Summarize this call and list who does what by when",
+        "What questions were left open in this meeting?"
+      ],
+      "access": {
+        "reads": [
+          "transcripts and notes you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/meeting-notes/LICENSE.txt",
         "skills/meeting-notes/SKILL.md",
-        "skills/meeting-notes/item.json"
+        "skills/meeting-notes/item.json",
+        "skills/meeting-notes/tests.json"
       ]
     },
     {
@@ -906,7 +1232,8 @@
       "name": "Meeting prep",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -915,11 +1242,25 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "fbd4672dc1c0ceb8b4d9b934f1be3c8f7ada996491016ef5459d8bb2281d9973",
-      "size": 1105,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "d6b1b5d07b694c33dbfe74bd7fdc46b55ade034d3623806829be7b73cea2a145",
+      "size": 1424,
       "category": "work",
       "icon": "calendar-clock",
       "description": "Prepare for a meeting with a short brief on the people, the goal, open items from last time and questions to ask.",
+      "examples": [
+        "Prepare me for my call with Acme tomorrow",
+        "Brief me on the people in this meeting",
+        "What should I ask in my one-on-one this week?"
+      ],
+      "access": {
+        "reads": [
+          "the web",
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/meeting-prep/SKILL.md",
         "skills/meeting-prep/item.json"
@@ -940,11 +1281,29 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "ed0bc43f076a97a7c7be7ab490a3f4942ca2eedc3353769f06a7f5dee5cacbe3",
-      "size": 68764,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "497f94910aa1fe2c5393418c3a63d136371fa1193d2eba62cf1c28eb57a7c502",
+      "size": 69105,
       "category": "work",
       "icon": "file-text",
       "description": "Use when the person wants anything done with a PDF: read or extract text and tables, merge, split, rotate, watermark, create, fill a form, encrypt, pull images out, or OCR a scan.",
+      "examples": [
+        "Pull the tables out of this PDF into a spreadsheet",
+        "Merge these three PDFs and add page numbers",
+        "Fill in this PDF form with my details"
+      ],
+      "access": {
+        "reads": [
+          "PDFs you share"
+        ],
+        "writes": [
+          "creates and edits PDFs"
+        ],
+        "credits": "medium",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/pdf/LICENSE.txt",
         "skills/pdf/SKILL.md",
@@ -976,11 +1335,29 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "2b6695a7e6b09057915f400f64943c98362da49e0ac2f91f5632fa8cd8567066",
-      "size": 1148894,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "b6e172930b95ab2c7703c5ca09aeaad276b49d3d62825e6ee38fa31f1b5662c4",
+      "size": 1149238,
       "category": "work",
       "icon": "presentation",
       "description": "Use whenever a .pptx or .potx file is involved: create or edit a slide deck, read text out of one, combine or split slides, or work with notes and comments.",
+      "examples": [
+        "Make a 10-slide deck from this outline",
+        "Add speaker notes to every slide in this presentation",
+        "Pull all the text out of this deck"
+      ],
+      "access": {
+        "reads": [
+          "decks you share"
+        ],
+        "writes": [
+          "creates and edits slide decks"
+        ],
+        "credits": "medium",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/pptx/LICENSE.txt",
         "skills/pptx/SKILL.md",
@@ -1047,7 +1424,8 @@
       "name": "Proofread",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1056,14 +1434,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "d0c2bc2d249d31e30487a610cc347a20bd27b08485f194c357b095ee24d50a18",
-      "size": 1007,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "9c1f253f0eb25983d1317aa67985a368d35f322430baf1dcb738b22320926181",
+      "size": 1887,
       "category": "writing",
       "icon": "spell-check",
       "description": "Proofread a text for spelling, grammar, punctuation and clarity, keeping the author's voice, and list what changed.",
+      "examples": [
+        "Proofread this cover letter",
+        "Fix the grammar in this post without changing my voice",
+        "Check this report for typos and list what you changed"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/proofread/SKILL.md",
-        "skills/proofread/item.json"
+        "skills/proofread/item.json",
+        "skills/proofread/tests.json"
       ]
     },
     {
@@ -1072,7 +1464,8 @@
       "name": "Research brief",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1081,11 +1474,25 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "361a7bf18f1ae2338b045c33fa899dfbe8fd60def307c9b4ba10306a516187b2",
-      "size": 1232,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "10126b0e5bfee073234a852a04cd8c8b939b2e7a8ff853d763edfa580d72fe64",
+      "size": 1645,
       "category": "research",
       "icon": "file-search",
       "description": "Research a question on the web and write a sourced brief with the answer first, key facts, disagreements and links.",
+      "pick": "Answer first, sources after: research you can actually check.",
+      "examples": [
+        "Research whether heat pumps work in cold climates",
+        "Write a sourced brief on the four-day work week",
+        "What do studies say about standing desks? Answer first, then sources"
+      ],
+      "access": {
+        "reads": [
+          "the web"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/research-brief/LICENSE.txt",
         "skills/research-brief/SKILL.md",
@@ -1098,7 +1505,8 @@
       "name": "Rewrite tone",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1107,14 +1515,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "6e3a296c2903c20df5cdf82fd9937bcb50cf334283663d2b2d8756fc502d6493",
-      "size": 992,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "f2cdde1e54fd031ed5d3e725a02dad480f372393c11c4d46f312db6e7e94f582",
+      "size": 1818,
       "category": "writing",
       "icon": "wand-sparkles",
       "description": "Rewrite a text in a different tone or for a different reader, such as friendlier, more formal, shorter or simpler.",
+      "examples": [
+        "Make this message friendlier",
+        "Rewrite this for a ten-year-old",
+        "Turn this rant into a calm, professional email"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/rewrite-tone/SKILL.md",
-        "skills/rewrite-tone/item.json"
+        "skills/rewrite-tone/item.json",
+        "skills/rewrite-tone/tests.json"
       ]
     },
     {
@@ -1123,7 +1545,8 @@
       "name": "Social post",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1132,11 +1555,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "3b009ce3ad0e708a84c2bb90aee9d06f7daac7d3b8eaeff558ec4f812473f05b",
-      "size": 990,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "fd005392a86e6f6560581317f83f3666af2c2f78693f69539a0800b8f68a8ebb",
+      "size": 1306,
       "category": "writing",
       "icon": "megaphone",
       "description": "Turn an announcement, article or idea into short social posts sized for each network, with a few variations to choose from.",
+      "examples": [
+        "Turn this announcement into posts for LinkedIn and X",
+        "Write three versions of a post about our launch",
+        "Make a short thread from this blog post"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/social-post/SKILL.md",
         "skills/social-post/item.json"
@@ -1148,7 +1584,8 @@
       "name": "Spreadsheet formulas",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1157,14 +1594,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "63379532953385c4e8c1a8512abb6d6854e610ef0ad0ca37dd8cc964b406c12a",
-      "size": 1113,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "439dc697ab227955b9b5e801e8827a77c297d20538b6e4050cbff0e637095ca7",
+      "size": 1951,
       "category": "data",
       "icon": "sigma",
       "description": "Write, explain or fix spreadsheet formulas for Excel or Google Sheets from a plain-language description of what is needed.",
+      "examples": [
+        "Write a formula that sums sales by month",
+        "Why does this VLOOKUP return #N/A?",
+        "Explain this nested IF formula in plain words"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/spreadsheet-formulas/SKILL.md",
-        "skills/spreadsheet-formulas/item.json"
+        "skills/spreadsheet-formulas/item.json",
+        "skills/spreadsheet-formulas/tests.json"
       ]
     },
     {
@@ -1173,7 +1624,8 @@
       "name": "SQL helper",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1182,14 +1634,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "43d3f7fee8999190ab1d662f27b168a2ede560ba1d86e44e14d9ccadcc8538fb",
-      "size": 1048,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "7aa746b08e65fceac8a7457dd75c982b776a341436c7d64fc639d16f004da414",
+      "size": 1955,
       "category": "build",
       "icon": "database",
       "description": "Write, explain or speed up a SQL query from a plain-language question and the table structure.",
+      "examples": [
+        "Write a query for the top 10 customers by revenue last year",
+        "Why is this query slow?",
+        "Explain what this SQL does"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/sql-helper/SKILL.md",
-        "skills/sql-helper/item.json"
+        "skills/sql-helper/item.json",
+        "skills/sql-helper/tests.json"
       ]
     },
     {
@@ -1198,7 +1664,8 @@
       "name": "Summarize document",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1207,14 +1674,28 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "3f60ae290e600f7a0a0cdbf3dbc3cc44d9707a7f68bea14e3c48c66068cbf6ce",
-      "size": 1127,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "556090b78baa4b0bd83cc0a1fe641b5ad4c0836f1ab472e11ccce661d8320541",
+      "size": 1979,
       "category": "research",
       "icon": "file-text",
       "description": "Summarize a long document, report or contract into the key points, numbers, obligations and anything that needs attention.",
+      "examples": [
+        "Summarize this contract and list my obligations",
+        "Give me the key numbers from this annual report",
+        "What in this policy needs my attention?"
+      ],
+      "access": {
+        "reads": [
+          "documents you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/summarize-document/SKILL.md",
-        "skills/summarize-document/item.json"
+        "skills/summarize-document/item.json",
+        "skills/summarize-document/tests.json"
       ]
     },
     {
@@ -1232,11 +1713,26 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "517d283c965b9abc60d363b9823cd699849871e147489fd62ba49d2ee6036fc7",
-      "size": 30394,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "a3217343e849a617c86835a7b3b9f7462be1559629642436bc1b467b419a3a0b",
+      "size": 30781,
       "category": "build",
       "icon": "bug",
       "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "examples": [
+        "My tests pass locally but fail in CI. Help me find out why",
+        "This function returns the wrong total sometimes. Debug it step by step",
+        "Find the root cause of this crash before suggesting a fix"
+      ],
+      "access": {
+        "reads": [
+          "code you share"
+        ],
+        "runs_code": true,
+        "computer": true,
+        "credits": "medium"
+      },
       "files": [
         "skills/systematic-debugging/LICENSE.txt",
         "skills/systematic-debugging/SKILL.md",
@@ -1263,11 +1759,27 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "22b528d7cc9910ed8113178c2035fc7bffab1d5834f99a8b4c7834c013cbaaf9",
-      "size": 19369,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "a13ed11053d6f68baf8e273dad8c43b3bac9987e16ba7944b52e9e049308e8e2",
+      "size": 19697,
       "category": "life",
       "icon": "graduation-cap",
       "description": "Teach the user a new skill or concept, within this workspace.",
+      "examples": [
+        "Teach me how Git branches work",
+        "I want to learn SQL. Start me off",
+        "Help me understand compound interest with examples"
+      ],
+      "access": {
+        "reads": [
+          "your workspace files"
+        ],
+        "writes": [
+          "saves learning notes"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/teach/GLOSSARY-FORMAT.md",
         "skills/teach/LEARNING-RECORD-FORMAT.md",
@@ -1284,7 +1796,8 @@
       "name": "Trip planner",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1294,11 +1807,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "fcd841b8fdd5573146ec23335508b06f9f2c7185caf848b472c0e9f94603204b",
-      "size": 1179,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "42bc2e99e941fa2267f60830ad32c6fe82e71325fc5e6fff3e3f786dc6c35cc5",
+      "size": 1507,
       "category": "life",
       "icon": "plane",
       "description": "Plan a trip day by day within a budget, with travel times, bookings to make and a packing list.",
+      "examples": [
+        "Plan four days in Lisbon on a mid-range budget",
+        "Make a weekend itinerary in the mountains with travel times",
+        "What should I pack for a week in Japan in spring?"
+      ],
+      "access": {
+        "reads": [
+          "the web"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/trip-planner/LICENSE.txt",
         "skills/trip-planner/SKILL.md",
@@ -1320,11 +1846,26 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "0b6e677af98a0cb8410af3ba304f15ff7984056efb592e16862ccdc2c59b8992",
-      "size": 22799,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "b923db6745edb721db337c6e9e01d16853a83b6a83bedb1bc4a7da3153db606a",
+      "size": 23101,
       "category": "build",
       "icon": "app-window",
       "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "examples": [
+        "Test the sign-up flow of my local app",
+        "Take a screenshot of my web app after logging in",
+        "Check my page's console for errors while clicking around"
+      ],
+      "access": {
+        "reads": [
+          "your local web app"
+        ],
+        "credits": "medium",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/webapp-testing/LICENSE.txt",
         "skills/webapp-testing/SKILL.md",
@@ -1341,7 +1882,8 @@
       "name": "Weekly report",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1351,11 +1893,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "0bffc8c6bc46633e21253e7df6b01455ea3e66a9c06068db74548551d50258b4",
-      "size": 1162,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "ef50db88497fc09b8f15ce3559c73f80a7a1c2700974e2d9e1c1b68c78a306e6",
+      "size": 1501,
       "category": "work",
       "icon": "calendar-check",
       "description": "Write a concise weekly status report from tickets, chats and notes, grouped into done, in progress, blocked and next.",
+      "examples": [
+        "Write my weekly status report from these notes",
+        "Group this week's tickets into done, in progress and blocked",
+        "Draft a short update for my manager"
+      ],
+      "access": {
+        "reads": [
+          "tickets, chats and notes you share"
+        ],
+        "credits": "low"
+      },
       "files": [
         "skills/weekly-report/LICENSE.txt",
         "skills/weekly-report/SKILL.md",
@@ -1368,7 +1923,8 @@
       "name": "Workout plan",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "Apache-2.0",
       "tags": [
@@ -1377,11 +1933,21 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "8702522dfbee9ef250698087bc6bf1a1b23d3a44a876ccb982506f03eab053ec",
-      "size": 1040,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "e489b87bbba44c016cc699a3b298d78d626064c9bbe530467cb9ab595ecb0fe6",
+      "size": 1301,
       "category": "life",
       "icon": "dumbbell",
       "description": "Build a simple weekly workout plan around goals, fitness level, equipment and time, with how to progress.",
+      "examples": [
+        "Make a three-day gym plan for a beginner",
+        "Plan home workouts with only dumbbells",
+        "How should I progress my running over eight weeks?"
+      ],
+      "access": {
+        "credits": "low"
+      },
       "files": [
         "skills/workout-plan/SKILL.md",
         "skills/workout-plan/item.json"
@@ -1402,11 +1968,24 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "15fb309cf577582e3072d0f9b0bf2f5d6c77c5eafee0b1f42ba552e39569d2ae",
-      "size": 24177,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "5d3dc592cc9864c2af383061274789fc629120cccb69ca252ec12e5be8da31c4",
+      "size": 24455,
       "category": "work",
       "icon": "clipboard-list",
       "description": "Write a feature spec or PRD from a problem statement or feature idea. Use when turning a vague idea or user request into a structured document, scoping a feature with goals and non-goals, defining success metrics and acceptance criteria, or breaking a big ask into a phased spec.",
+      "examples": [
+        "Write a spec for adding dark mode to our app",
+        "Turn this feature request into a PRD",
+        "Scope a first version of team invitations"
+      ],
+      "access": {
+        "reads": [
+          "what you share"
+        ],
+        "credits": "medium"
+      },
       "files": [
         "skills/write-spec/LICENSE.txt",
         "skills/write-spec/SKILL.md",
@@ -1428,11 +2007,29 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "0bc2844f3c415f18973a25b7381e0f712452332411ae8cb35c6ca0b9e5863efe",
-      "size": 1112390,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "213c7e120745f3a88802a7215c7e593e2363952426a27074708d8902c85cdde6",
+      "size": 1112758,
       "category": "data",
       "icon": "sheet",
       "description": "Use when a spreadsheet is the main input or output: open, edit, or create .xlsx, .xlsm, .csv, or .tsv files, including formulas, charts, and cleaning messy tables.",
+      "examples": [
+        "Clean this spreadsheet and add totals per column",
+        "Build a budget workbook with formulas and a chart",
+        "Convert this CSV into a formatted Excel file"
+      ],
+      "access": {
+        "reads": [
+          "spreadsheets you share"
+        ],
+        "writes": [
+          "creates and edits spreadsheets"
+        ],
+        "credits": "medium",
+        "runs_code": true,
+        "computer": true
+      },
       "files": [
         "skills/xlsx/LICENSE.txt",
         "skills/xlsx/SKILL.md",
@@ -1496,7 +2093,8 @@
       "name": "Ember",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1506,8 +2104,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "4e350bbb6ccb1478ca4ccd75cba05142001134b0f01222f428c199cd4fe036b8",
-      "size": 606,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "ef0b1de887274fccd9d583a599d34d32c80799cca8bad1b3beefe5ad53141a1d",
+      "size": 655,
       "document": {
         "v": 2,
         "scheme": {
@@ -1541,7 +2141,8 @@
       "name": "Lagoon",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1551,8 +2152,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "1afff5b410ab1fa48725b496aff0020e33b06983ad5f8da0ca9fc9a2a4f0c45f",
-      "size": 508,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "9d4790a817facb5e7ccfc670f20c3959a0c4e54fdef28907927894e27cad2ea5",
+      "size": 649,
+      "pick": "Sea colors, Fraunces headings and a playful sea pattern.",
       "document": {
         "v": 2,
         "scheme": {
@@ -1586,7 +2190,8 @@
       "name": "Marigold",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1596,8 +2201,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "e930ad5c49b5a08495294d70652ac8eb288d3bcb87825b3c9672c6ef44a1afa0",
-      "size": 601,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "57c38a5e959ab54d5ca206b858cd233756da9fea861c38c6d5c69d7b25fa3c89",
+      "size": 650,
       "document": {
         "v": 2,
         "scheme": {
@@ -1631,7 +2238,8 @@
       "name": "Nightshift",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1641,8 +2249,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "a056644f0f6d8009cf21d4ef54c0f3d6638d22a8537e255267c758804a93fb6e",
-      "size": 611,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "9524b2ceab65eae6e697fbd869adb21676680f7c9c8edb1c65d3391cbdb3ef76",
+      "size": 734,
+      "pick": "A dark theme for late work, with calm colors and clear type.",
       "document": {
         "v": 2,
         "scheme": {
@@ -1676,7 +2287,8 @@
       "name": "North",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1686,8 +2298,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "45c224e20191706fb51ed86992ee1b7c7daa40d9827b8bb89e2b6bdcf9977c99",
-      "size": 599,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "071d9fb02d7b6913f2c222878818eff7291998051a6c0085450e6542acc4b299",
+      "size": 648,
       "document": {
         "v": 2,
         "scheme": {
@@ -1721,7 +2335,8 @@
       "name": "Orchard",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1731,8 +2346,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "542fd23301682648d056eb856ca43f8cca00cf25aa17bd4ee80209821aa60463",
-      "size": 592,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "370155e2487c4d6b29f41ec4a2eec4b8756f84b3541ddf7670ea8ecc3304a78b",
+      "size": 697,
+      "pick": "Warm and friendly, like a sunny afternoon.",
       "document": {
         "v": 2,
         "scheme": {
@@ -1766,7 +2384,8 @@
       "name": "Postcard",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1776,8 +2395,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "69602bcb6810fb9d946c3f4a62b36cffef55666dcf731ec270401150bc0249b7",
-      "size": 598,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "4bdcd6641eebaa0a51881611148b2f7d1e4fe3e29a1af79fa082784f08822ab2",
+      "size": 647,
       "document": {
         "v": 2,
         "scheme": {
@@ -1811,7 +2432,8 @@
       "name": "Velvet",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1821,8 +2443,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "7dba5c94eaa759f637a56ec53d97eceb63d356ef10d8038d47b92a86c075dde6",
-      "size": 603,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "f9793640fef4a0121e8ffa728342198e4875ad8b95d90f70af1663b42015d4cf",
+      "size": 652,
       "document": {
         "v": 2,
         "scheme": {
@@ -1856,7 +2480,8 @@
       "name": "Aurora",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1866,8 +2491,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "08b30ed90d53b048f70674b17371fcc49ae9f5051828c092098cf2baba2fd1af",
-      "size": 292207,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "958f798c441930ff89ecc81ea7c6948109fe80c68dfff24df3091e4a1a3fb5f1",
+      "size": 292312,
+      "pick": "Northern lights colors in a soft gradient.",
       "document": {
         "kind": "image",
         "file": "aurora.jpg",
@@ -1886,7 +2514,8 @@
       "name": "Circuit",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1896,8 +2525,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "80fb8f115db1a4c55a3c0b125dd4fef3b883dab7517aa3e1aa57fa9d2f99f727",
-      "size": 290,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "a29eed8d9fdadb92820173ab4bb3570337ed532b9d731852812bc5a245e30ca5",
+      "size": 339,
       "document": {
         "kind": "pattern",
         "pattern": "tech",
@@ -1915,7 +2546,8 @@
       "name": "Dune",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1925,8 +2557,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "e01a087c1c219b9a85d1c923bc5d1faadb1730b4e63555be7e1b64347881f249",
-      "size": 173276,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "79fb1891f291205be5fb2a0124f09e47b9bc801c28ecad8eba19c47d67e713cb",
+      "size": 173325,
       "document": {
         "kind": "image",
         "file": "dune.jpg",
@@ -1945,7 +2579,8 @@
       "name": "Dusk",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1955,8 +2590,23 @@
       "featured": true,
       "retired": false,
       "version": 2,
-      "sha256": "b94064c20b79ef81e529ddd48d89d52e736a6bcd1ea75a4577391975ee12806d",
-      "size": 192623,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "d8e2e19dc68b53313268e0f9b03a6c24694db299850f1983263ba20ff3d11598",
+      "size": 192977,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-11",
+          "note": "Adds a small thumbnail so cards load faster."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
+      "pick": "A warm sunset photo that sits quietly behind your chats.",
       "document": {
         "kind": "image",
         "file": "dusk.jpg",
@@ -1975,7 +2625,8 @@
       "name": "Fog",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -1985,8 +2636,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "d0c730d2884af10af900a01765de313e5df295552c05075a2f3119c4065c3d24",
-      "size": 219123,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "f4a263cd9cdd6237dac1fd7242dd09e91ec6848a7a77fb9963b7780e2360753d",
+      "size": 219172,
       "document": {
         "kind": "image",
         "file": "fog.jpg",
@@ -2005,7 +2658,8 @@
       "name": "Greenhouse",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2015,8 +2669,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "56615f706745ccf9a91127ce9b9792be1540c690da683a61ef90c27ef9460b5c",
-      "size": 292,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "4902d68e2bf319ad04576e0c68ea8b7fa35a55b4bd6bff034736dd1780298716",
+      "size": 341,
       "document": {
         "kind": "pattern",
         "pattern": "garden",
@@ -2034,7 +2690,8 @@
       "name": "Margins",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2043,8 +2700,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f600d735d298b08d54cc87a6c8a258339e02228c1398e09a5d61bae45ed0f35b",
-      "size": 282,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "f5aa57043e1a08f42c50c382bd935a1e8c938f3c71f708e895d57880f3c7daac",
+      "size": 331,
       "document": {
         "kind": "pattern",
         "pattern": "doodles",
@@ -2062,7 +2721,8 @@
       "name": "Night sky",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2071,8 +2731,11 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "ac15c512036435fef2290d3c69fe6179b6bd137106dd535e66d8044726676f31",
-      "size": 277,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "6ee7e62cd6dbe430f1b892309f72f882efb22d6a759360b76e4348ef08142a91",
+      "size": 361,
+      "pick": "Stars for night owls.",
       "document": {
         "kind": "pattern",
         "pattern": "space",
@@ -2090,7 +2753,8 @@
       "name": "Petal",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2100,11 +2764,14 @@
       "featured": true,
       "retired": false,
       "version": 1,
-      "sha256": "4a1431ffa51cbbf2ad9eb61afb371ade580ea352dbdb9716e2e44e8214da0472",
-      "size": 626,
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "sha256": "ca4e1536cf8f4839843a5437f7466dffda122b654a50f72ef126e4cbf821cc35",
+      "size": 745,
       "requires": [
         "mesh"
       ],
+      "pick": "A soft pink mesh that changes gently from light to dark.",
       "document": {
         "kind": "mesh",
         "pattern": "none",
@@ -2184,7 +2851,8 @@
       "name": "Picnic",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2194,8 +2862,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "0c0818b3e89ddae44e9c22bec77bc2247ab945b884b5bcbb13ade7bf168ba703",
-      "size": 292,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "b119998caee88b48aa1be9863b96a6c813d1f39004bf4c9081a3181ab480303b",
+      "size": 341,
       "document": {
         "kind": "pattern",
         "pattern": "treats",
@@ -2213,7 +2883,8 @@
       "name": "Purr",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2223,8 +2894,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "44827befd3496776c56360e4c1334a867037590d95fa4c8c81c75d4526846294",
-      "size": 282,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "b53202e66b61b403fda5c7e05fc7bb2a7e4e8dfe9cfcd5e3142db1e9ad859783",
+      "size": 331,
       "document": {
         "kind": "pattern",
         "pattern": "pets",
@@ -2242,7 +2915,8 @@
       "name": "Scribbles",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2252,8 +2926,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "f7fa8b6b30f133884711723fa3dcfff9bd9a850d6e62ccb8d8cbd3320c140ea3",
-      "size": 1370,
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "sha256": "f4cb212a1e81dda1352b8bdf84200250b80420a6556b2045b6571f042737856c",
+      "size": 1419,
       "requires": [
         "doodles",
         "mesh"
@@ -2422,12 +3098,321 @@
       ]
     },
     {
+      "id": "snow-day",
+      "type": "wallpaper",
+      "name": "Snow day",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "winter",
+        "holiday",
+        "seasonal"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "723fb18e3b259415b400a2d4479fd69eede020d3374ec4bc4b2965248e2dd7e1",
+      "size": 551,
+      "requires": [
+        "doodles"
+      ],
+      "season": {
+        "from": "12-01",
+        "to": "01-06"
+      },
+      "document": {
+        "kind": "pattern",
+        "pattern": "clouds",
+        "palette": "ocean",
+        "intensity": 0.5,
+        "glyphs": [
+          "snowflake",
+          "tree-pine",
+          "gift",
+          "star",
+          "candy-cane",
+          "cookie",
+          "bell",
+          "sparkles"
+        ],
+        "doodles": [
+          [
+            [
+              "path",
+              {
+                "d": "m10 20-1.25-2.5L6 18"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 4 8.75 6.5 6 6"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m14 20 1.25-2.5L18 18"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m14 4 1.25 2.5L18 6"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m17 21-3-6h-4"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m17 3-3 6 1.5 3"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M2 12h6.5L10 9"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m20 10-1.5 2 1.5 2"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M22 12h-6.5L14 15"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m4 10 1.5 2L4 14"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m7 21 3-6-1.5-3"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m7 3 3 6h4"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 22v-3"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "M12 7v14"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"
+              }
+            ],
+            [
+              "rect",
+              {
+                "x": "3",
+                "y": "7",
+                "width": "18",
+                "height": "4",
+                "rx": "1"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "m10.8 5 2.111 4.223"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M17.75 7 15 2.1"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m4.874 14.647 2.12 4.24"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M5.7 21a2 2 0 0 1-3.5-2l8.6-14a6 6 0 0 1 10.4 6 2 2 0 1 1-3.464-2 2 2 0 1 0-3.464-2z"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "m7.906 9.712 2.005 4.411"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "M11 17h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M11.496 2c.324-.016.558.292.529.615a4 4 0 004.235 4.368.713.713 0 01.758.757 4 4 0 004.366 4.237c.323-.03.63.204.614.527a10 10 0 01-2.915 6.566A1 1 0 114.93 4.918 10 10 0 0111.496 2"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 12h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M16 16h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M16 3h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M21 4h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M21 8h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M7 14h.01"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M9 8h.01"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "M10.268 21a2 2 0 0 0 3.464 0"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
+              }
+            ]
+          ],
+          [
+            [
+              "path",
+              {
+                "d": "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M20 2v4"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M22 4h-4"
+              }
+            ],
+            [
+              "circle",
+              {
+                "cx": "4",
+                "cy": "20",
+                "r": "2"
+              }
+            ]
+          ]
+        ]
+      },
+      "files": [
+        "wallpapers/snow-day/item.json",
+        "wallpapers/snow-day/wallpaper.json"
+      ]
+    },
+    {
       "id": "stargazer",
       "type": "wallpaper",
       "name": "Stargazer",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2437,8 +3422,10 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "bf13abc64d7d0bdec9ab97ba5a55d44f12bc014739fd714153ce20d98e66342b",
-      "size": 370,
+      "added": "2026-11-12",
+      "updated": "2026-11-12",
+      "sha256": "684c0a4660b70658fd9ae56652274180a07cbe060367bd7f6f2501eb9ea34f55",
+      "size": 419,
       "requires": [
         "doodles"
       ],
@@ -2611,7 +3598,8 @@
       "name": "Tide",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -2620,8 +3608,23 @@
       "featured": true,
       "retired": false,
       "version": 2,
-      "sha256": "380b1243c6d3a7ba76dfc15b70d1586c945e9db20df30682024b127d628c9ce1",
-      "size": 267,
+      "added": "2026-11-11",
+      "updated": "2026-11-11",
+      "sha256": "6480077485ea24f78f779d34d0a01a89efde7c72a2f7495422ef652b4582a848",
+      "size": 597,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-11",
+          "note": "Adds a small thumbnail so cards load faster."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
+      "pick": "Calm ocean blues from the shore.",
       "document": {
         "kind": "pattern",
         "pattern": "sea",

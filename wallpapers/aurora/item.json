@@ -2,7 +2,8 @@
   "name": "Aurora",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "CC0-1.0",
   "tags": [
@@ -10,5 +11,7 @@
     "green"
   ],
   "featured": true,
-  "version": 1
+  "pick": "Northern lights colors in a soft gradient.",
+  "version": 1,
+  "added": "2026-11-11"
 }

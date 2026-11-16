@@ -7,7 +7,8 @@
       "name": "Hello Casama",
       "author": {
         "name": "Casama",
-        "url": "https://casama.ai"
+        "url": "https://casama.ai",
+        "handle": "casama"
       },
       "license": "CC0-1.0",
       "tags": [
@@ -17,9 +18,19 @@
       "featured": false,
       "retired": false,
       "version": 1,
-      "sha256": "a0b3ec319333d9e0445ccd7f8547a9764bf61e9cea698afba81428381744009c",
-      "size": 562,
+      "added": "2026-11-13",
+      "updated": "2026-11-13",
+      "sha256": "e351f9bcda604ff8c0190caf38be0d90dfed0963f55252e5e59d2ca3d14a7954",
+      "size": 759,
       "description": "A small example plugin: a stand-up skill and a notes server that asks for one setting.",
+      "access": {
+        "writes": [
+          "runs a notes server"
+        ],
+        "runs_code": true,
+        "computer": true,
+        "credits": "low"
+      },
       "document": {
         "description": "A small example plugin: a stand-up skill and a notes server that asks for one setting.",
         "url": "https://github.com/stackwares/casama/tree/main/examples/hello-plugin",

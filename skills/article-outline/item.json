@@ -2,14 +2,27 @@
   "name": "Article outline",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "Apache-2.0",
   "tags": [
     "writing"
   ],
   "category": "writing",
+  "icon": "list-tree",
   "featured": false,
   "version": 1,
-  "icon": "list-tree"
+  "added": "2026-11-13",
+  "examples": [
+    "Outline a blog post on why small teams should write things down",
+    "Turn my talk notes into a 20-minute outline with sections",
+    "Give me three working titles and an outline for an article on remote onboarding"
+  ],
+  "access": {
+    "reads": [
+      "what you share"
+    ],
+    "credits": "low"
+  }
 }

@@ -3,5 +3,5 @@
   "category": "work",
   "icon": "calendar-check",
   "instructions_md": "Write my weekly review.\n\n1. List what got done this week, from our chats, tickets and anything in memory.\n2. List what slipped and why, in one line each.\n3. Suggest the three most important things for next week.\n\nKeep it under 200 words.",
-  "schedule_cron": "0 16 * * 5"
+  "schedule_cron": "{{time.minute}} {{time.hour}} * * 5"
 }

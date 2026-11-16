@@ -2,7 +2,8 @@
   "name": "Dusk",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "CC0-1.0",
   "tags": [
@@ -10,5 +11,19 @@
     "warm"
   ],
   "featured": true,
-  "version": 2
+  "pick": "A warm sunset photo that sits quietly behind your chats.",
+  "version": 2,
+  "added": "2026-11-11",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-11",
+      "note": "Adds a small thumbnail so cards load faster."
+    },
+    {
+      "version": 1,
+      "date": "2026-11-11",
+      "note": "First version."
+    }
+  ]
 }

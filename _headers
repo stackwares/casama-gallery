@@ -4,3 +4,9 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
   X-Frame-Options: DENY
   Access-Control-Allow-Origin: *
+
+# Item pages and share images (build-pages.mjs) change only with a deploy.
+/i/*
+  Cache-Control: public, max-age=600
+/badge.svg
+  Cache-Control: public, max-age=86400

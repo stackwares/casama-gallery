@@ -26,6 +26,8 @@ routines/<id>/item.json
 routines/<id>/routine.json
 plugins/<id>/item.json
 plugins/<id>/plugin.json
+sets/<id>/item.json
+sets/<id>/set.json
 ```
 
 `item.json` names the author and the license. Looks use CC0-1.0 or CC-BY-4.0. Skills use MIT or Apache-2.0.
@@ -78,10 +80,12 @@ draw previews from the list alone. `gallery.js` and `gallery.css` draw them on t
 chat in a theme's colors, fonts and background, a scheme's colors as fields, and wallpapers. casama.ai's
 item pages load the same two files. The pattern glyphs inside `gallery.js` are Lucide icons (ISC).
 
-Check the tree and refresh `index.json`:
+Check the tree and refresh the derived files (`index.json`, `apps.json`, `bots.json`, `routines.json`,
+`plugins.json`, `sets.json`, `authors.json` and `manifest.json`):
 
 ```sh
-node scripts/casama-gallery-check.mts
+node check.mjs          # in this folder, no toolchain
+node scripts/casama-gallery-check.mts   # from the Casama repo; same rules and output
 ```
 
 ## Make a look
@@ -201,3 +205,79 @@ A newer version is a pull request that changes `commit`, reviewed like the first
 the plugin keeps its own license.
 
 Bots, routine ideas and plugins are written to `bots.json`, `routines.json` and `plugins.json`.
+
+### Starter sets
+
+A starter set bundles items people often add together (Founder kit, Student kit). `set.json`:
+
+```json
+{
+  "description": "Decide, plan and report without a chief of staff.",
+  "icon": "rocket",
+  "items": [{ "type": "skill", "id": "decision-memo" }, { "type": "routine", "id": "weekly-review" }]
+}
+```
+
+2 to 12 items of any kind but another set, each one in this gallery and not retired. License CC0-1.0 or
+CC-BY-4.0. Sets are written to `sets.json`.
+
+## More in item.json (gallery v2, D-315)
+
+Every item needs `added`; the rest is optional. The checker copies them into the item's record.
+
+| Field | Shape | Notes |
+| --- | --- | --- |
+| `added` | `"YYYY-MM-DD"` | Required. The day the item joined the gallery. Drives the **New** row. |
+| `updated` | `"YYYY-MM-DD"` | Defaults to the top changelog date, else `added`. Every record carries it. |
+| `changelog` | `[{ "version", "date", "note", "breaking"? }]` | Newest first, versions going down, the top one equal to `version`. Required once `version` is above 1. `note` up to 160 characters. `breaking: true` makes apps ask before updating. |
+| `pick` | string up to 140 | Why it's a pick. Only with `"featured": true`, and every featured item should have one. |
+| `examples` | 1 to 3 strings up to 160 | Prompts people can try. Skills, apps and bots. |
+| `access` | `{ "reads"?, "writes"?, "runs_code"?, "computer"?, "credits"? }` | What it can touch, in plain words: `"reads": ["email", "calendar"]`, `"writes": ["sends email"]` (up to 8 each, 40 characters). `credits`: `none`, `low`, `medium` or `high`. Skills, apps, routines, bots and plugins. A skill with scripts always gets `runs_code` and `computer`. |
+| `needs` | `{ "apps"?, "skills"? }` | Apps (gallery ids or built-in ids such as `google_calendar`) and gallery skills a routine or bot needs. Installing it adds the skills and walks the person through the apps. |
+| `inputs` | up to 6 questions | Asked when a routine or bot is added. See below. |
+| `remix_of` | `{ "type", "id" }` | The gallery item this one is based on. Must exist. |
+| `replaced_by` | `{ "type", "id" }` | For a retired item: what to use instead. Must exist. |
+| `min_app`, `min_server` | `"x.y.z"` | Lowest app or server version that can use it; older ones hide it. |
+| `season` | `{ "from": "MM-DD", "to": "MM-DD" }` | Shown in the **Seasonal** row between these days; may wrap the year end. |
+| `author.handle` | `[a-z0-9-]`, up to 39 | Stable author id for author pages, like a GitHub login. Without it, items group by the author's name. |
+
+### Install questions
+
+A routine or bot can ask a few things when it's added and use the answers as `{{key}}` in a routine's
+`instructions_md` or a bot's `persona` and `starters`:
+
+```json
+"inputs": [
+  { "key": "time", "label": "What time should it arrive?", "type": "time", "default": "07:30" },
+  { "key": "city", "label": "Your city, for the weather", "type": "text", "default": "my city" }
+]
+```
+
+- `type`: `text`, `choice` (with 2 to 8 `options`), `time` (`HH:MM`) or `timezone` (`Europe/Berlin`).
+- `default` is required and has to fit the type: it's what the form starts with and what servers from
+  before inputs use.
+- A `time` input named `time` can set the schedule: `"schedule_cron": "{{time.minute}} {{time.hour}} * * 1-5"`.
+- Every placeholder needs an input and every input has to be used.
+
+In the record, `document` has the defaults filled in (so older servers get a working routine) and
+`template` holds the fields with their placeholders, which newer servers fill from the answers.
+
+### Skill tests
+
+A skill can add `tests.json`, 1 to 5 prompts with a plain-words rubric:
+
+```json
+{ "cases": [{ "prompt": "Proofread this: 'Their going tomorow.'", "expect": "Fixes they're and tomorrow, keeps the voice, lists what changed." }] }
+```
+
+`node scripts/gallery-skill-tests.mts` (in the Casama repo, needs `OPENROUTER_API_KEY`, costs a little)
+runs each prompt with the skill loaded, has a model grade the answer, and writes `tested.json`. A skill that
+passed on its current version gets `tested: { version, date }` in its record, shown as **Reviewed**.
+
+### Authors and the signed manifest
+
+`authors.json` lists each author (by `handle`, else a slug of the name) with their items. `manifest.json`
+holds the sha256 of every derived file. On a merge, CI runs `node sign.mjs` with `GALLERY_SIGNING_KEY` to
+write `manifest.sig`, an Ed25519 signature over `manifest.json`; servers check it with the gallery's public
+key before trusting the files. `node sign.mjs --gen-key` prints a new key pair, and
+`node sign.mjs --verify <public key>` checks a signature. Pull requests don't need the key.

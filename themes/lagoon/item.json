@@ -1,8 +1,17 @@
 {
   "name": "Lagoon",
-  "author": { "name": "Casama", "url": "https://casama.ai" },
+  "author": {
+    "name": "Casama",
+    "url": "https://casama.ai",
+    "handle": "casama"
+  },
   "license": "CC0-1.0",
-  "tags": ["teal", "calm"],
+  "tags": [
+    "teal",
+    "calm"
+  ],
   "featured": true,
-  "version": 1
+  "pick": "Sea colors, Fraunces headings and a playful sea pattern.",
+  "version": 1,
+  "added": "2026-11-11"
 }

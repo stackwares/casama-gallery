@@ -2,9 +2,25 @@
   "name": "Klaviyo",
   "author": {
     "name": "Casama",
-    "url": "https://casama.ai"
+    "url": "https://casama.ai",
+    "handle": "casama"
   },
   "license": "CC0-1.0",
-  "tags": ["email", "marketing"],
-  "version": 1
+  "tags": [
+    "email",
+    "marketing"
+  ],
+  "version": 1,
+  "added": "2026-11-13",
+  "examples": [
+    "How did my last Klaviyo campaign perform?",
+    "Which flows bring in the most revenue?",
+    "Look up this customer's profile"
+  ],
+  "access": {
+    "reads": [
+      "Klaviyo campaigns, flows and profiles"
+    ],
+    "credits": "low"
+  }
 }

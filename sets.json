@@ -1,0 +1,298 @@
+{
+  "schema": 1,
+  "items": [
+    {
+      "id": "founder-kit",
+      "type": "set",
+      "name": "Founder kit",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "founder",
+        "startup",
+        "work"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "d93f2e3721e51dbe84772624305c7583c910754f116647c74a71ca6b3c856a4a",
+      "size": 992,
+      "description": "Decide, plan and report without a chief of staff: memos, specs, competitor briefs and a weekly review.",
+      "pick": "Everything a solo founder reaches for in week one.",
+      "document": {
+        "description": "Decide, plan and report without a chief of staff: memos, specs, competitor briefs and a weekly review.",
+        "icon": "rocket",
+        "items": [
+          {
+            "type": "skill",
+            "id": "decision-memo"
+          },
+          {
+            "type": "skill",
+            "id": "write-spec"
+          },
+          {
+            "type": "skill",
+            "id": "competitive-brief"
+          },
+          {
+            "type": "skill",
+            "id": "weekly-report"
+          },
+          {
+            "type": "routine",
+            "id": "morning-plan"
+          },
+          {
+            "type": "routine",
+            "id": "weekly-review"
+          },
+          {
+            "type": "app",
+            "id": "todoist"
+          },
+          {
+            "type": "app",
+            "id": "attio"
+          }
+        ]
+      },
+      "files": [
+        "sets/founder-kit/item.json",
+        "sets/founder-kit/set.json"
+      ]
+    },
+    {
+      "id": "meetings-handled",
+      "type": "set",
+      "name": "Meetings, handled",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "meetings",
+        "work"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "e260b0962d6920b16e6d9fc61bf27defca0c2c5000ce907f680fa24a2b3cf21d",
+      "size": 717,
+      "description": "Walk in prepared and walk out with notes, decisions and action items filed for you.",
+      "document": {
+        "description": "Walk in prepared and walk out with notes, decisions and action items filed for you.",
+        "icon": "notebook-pen",
+        "items": [
+          {
+            "type": "skill",
+            "id": "meeting-prep"
+          },
+          {
+            "type": "skill",
+            "id": "meeting-notes"
+          },
+          {
+            "type": "routine",
+            "id": "meeting-notes"
+          },
+          {
+            "type": "app",
+            "id": "granola"
+          },
+          {
+            "type": "app",
+            "id": "fireflies"
+          }
+        ]
+      },
+      "files": [
+        "sets/meetings-handled/item.json",
+        "sets/meetings-handled/set.json"
+      ]
+    },
+    {
+      "id": "stay-on-top-of-email",
+      "type": "set",
+      "name": "Stay on top of email",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "email",
+        "inbox",
+        "productivity"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "8cc66c6b6a95e164aacacdc6301815b1f87e0bc3b044296130ca6cd8091a199f",
+      "size": 673,
+      "description": "Sort what needs a reply, draft the answers, and start each day knowing what matters.",
+      "document": {
+        "description": "Sort what needs a reply, draft the answers, and start each day knowing what matters.",
+        "icon": "mail",
+        "items": [
+          {
+            "type": "skill",
+            "id": "inbox-triage"
+          },
+          {
+            "type": "skill",
+            "id": "email-drafter"
+          },
+          {
+            "type": "skill",
+            "id": "digest"
+          },
+          {
+            "type": "routine",
+            "id": "morning-plan"
+          }
+        ]
+      },
+      "files": [
+        "sets/stay-on-top-of-email/item.json",
+        "sets/stay-on-top-of-email/set.json"
+      ]
+    },
+    {
+      "id": "student-kit",
+      "type": "set",
+      "name": "Student kit",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "school",
+        "learning"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "8e48fbdfb0f1d1a2f138414d31f8a311c391fc53e11001a5221de8bb72c6042f",
+      "size": 874,
+      "description": "A study partner that quizzes you, skills to summarize and learn, and a quiet night look for late revision.",
+      "pick": "Revision plans, quizzes and summaries for exam season.",
+      "document": {
+        "description": "A study partner that quizzes you, skills to summarize and learn, and a quiet night look for late revision.",
+        "icon": "graduation-cap",
+        "items": [
+          {
+            "type": "bot",
+            "id": "study-buddy"
+          },
+          {
+            "type": "skill",
+            "id": "teach"
+          },
+          {
+            "type": "skill",
+            "id": "summarize-document"
+          },
+          {
+            "type": "skill",
+            "id": "fact-check"
+          },
+          {
+            "type": "routine",
+            "id": "weekly-review"
+          },
+          {
+            "type": "wallpaper",
+            "id": "night-sky"
+          }
+        ]
+      },
+      "files": [
+        "sets/student-kit/item.json",
+        "sets/student-kit/set.json"
+      ]
+    },
+    {
+      "id": "writer-kit",
+      "type": "set",
+      "name": "Writer kit",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "writing",
+        "content"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-16",
+      "updated": "2026-11-16",
+      "sha256": "0baa93ee989890486dc314b428dce5b21d86bfb08fe135e549cb8a255a754660",
+      "size": 901,
+      "description": "Outline, draft, proofread and share: skills for writing, plus a calm theme to write in.",
+      "document": {
+        "description": "Outline, draft, proofread and share: skills for writing, plus a calm theme to write in.",
+        "icon": "pen-line",
+        "items": [
+          {
+            "type": "skill",
+            "id": "article-outline"
+          },
+          {
+            "type": "skill",
+            "id": "proofread"
+          },
+          {
+            "type": "skill",
+            "id": "rewrite-tone"
+          },
+          {
+            "type": "skill",
+            "id": "fact-check"
+          },
+          {
+            "type": "skill",
+            "id": "social-post"
+          },
+          {
+            "type": "routine",
+            "id": "reading-digest"
+          },
+          {
+            "type": "app",
+            "id": "wordpress"
+          },
+          {
+            "type": "theme",
+            "id": "postcard"
+          }
+        ]
+      },
+      "files": [
+        "sets/writer-kit/item.json",
+        "sets/writer-kit/set.json"
+      ]
+    }
+  ]
+}
