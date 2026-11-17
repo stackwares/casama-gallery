@@ -520,6 +520,48 @@
       ]
     },
     {
+      "id": "calendar-invite",
+      "type": "skill",
+      "name": "Calendar invite",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "life"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-17",
+      "updated": "2026-11-17",
+      "sha256": "65b8b7dbbc66e1550fd637e1f40f43825163ed6c94a51229a1c3b222e3cf1308",
+      "size": 2286,
+      "category": "life",
+      "icon": "calendar-days",
+      "description": "Use when the person wants something added to their calendar from text, an email, a ticket or an itinerary, as an .ics file that opens in any calendar app.",
+      "examples": [
+        "Add my flight and hotel to my calendar",
+        "Make a calendar invite from this email",
+        "Turn this class schedule into calendar events"
+      ],
+      "access": {
+        "reads": [
+          "text, emails and tickets you share"
+        ],
+        "writes": [
+          "creates .ics calendar files"
+        ],
+        "credits": "low"
+      },
+      "files": [
+        "skills/calendar-invite/SKILL.md",
+        "skills/calendar-invite/item.json"
+      ]
+    },
+    {
       "id": "chart-from-data",
       "type": "skill",
       "name": "Chart from data",
@@ -678,6 +720,48 @@
         "skills/competitive-brief/LICENSE.txt",
         "skills/competitive-brief/SKILL.md",
         "skills/competitive-brief/item.json"
+      ]
+    },
+    {
+      "id": "convert-photos",
+      "type": "skill",
+      "name": "Convert photos",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "life"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-17",
+      "updated": "2026-11-17",
+      "sha256": "f72292a9ae65f506b66c9446162a73058fa4b8e510a6ea4ee7c774de7fcf8dc5",
+      "size": 2093,
+      "category": "life",
+      "icon": "image",
+      "description": "Use when the person shares photos to convert, resize, compress, rotate or strip location from, including iPhone HEIC photos that won't open elsewhere.",
+      "examples": [
+        "Turn these iPhone photos into JPGs",
+        "Make these photos small enough to email",
+        "Remove the location from these pictures before I post them"
+      ],
+      "access": {
+        "reads": [
+          "photos you share"
+        ],
+        "writes": [
+          "creates converted copies"
+        ],
+        "credits": "low"
+      },
+      "files": [
+        "skills/convert-photos/SKILL.md",
+        "skills/convert-photos/item.json"
       ]
     },
     {
@@ -1537,6 +1621,90 @@
         "skills/rewrite-tone/SKILL.md",
         "skills/rewrite-tone/item.json",
         "skills/rewrite-tone/tests.json"
+      ]
+    },
+    {
+      "id": "scan-to-pdf",
+      "type": "skill",
+      "name": "Scan to PDF",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "work"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-17",
+      "updated": "2026-11-17",
+      "sha256": "069356c7c4c09ce4786759db2c14b4ded07552e52df3f5aa0610775fd2c238ed",
+      "size": 1942,
+      "category": "work",
+      "icon": "camera",
+      "description": "Use when the person shares phone photos or scans of paper (receipts, letters, forms, book pages) and wants a clean, searchable PDF or the text from them.",
+      "examples": [
+        "Turn these photos of my lease into one searchable PDF",
+        "Read the total and date off this receipt",
+        "Make a PDF of these pages and get the text out"
+      ],
+      "access": {
+        "reads": [
+          "photos and scans you share"
+        ],
+        "writes": [
+          "creates PDFs"
+        ],
+        "credits": "low"
+      },
+      "files": [
+        "skills/scan-to-pdf/SKILL.md",
+        "skills/scan-to-pdf/item.json"
+      ]
+    },
+    {
+      "id": "shrink-file",
+      "type": "skill",
+      "name": "Shrink a file",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "work"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-17",
+      "updated": "2026-11-17",
+      "sha256": "b6aa4e12f4e73aee270463facb5ec857c41820c36c955d037d8ce8ad3eef0de5",
+      "size": 2194,
+      "category": "work",
+      "icon": "archive",
+      "description": "Use when a file is too big to send or upload (a PDF, photo, video, slide deck or folder) and the person needs it smaller, often under a size limit.",
+      "examples": [
+        "Make this PDF small enough to email",
+        "Get this video under 25 MB",
+        "Compress this slide deck"
+      ],
+      "access": {
+        "reads": [
+          "files you share"
+        ],
+        "writes": [
+          "creates smaller copies"
+        ],
+        "credits": "low"
+      },
+      "files": [
+        "skills/shrink-file/SKILL.md",
+        "skills/shrink-file/item.json"
       ]
     },
     {

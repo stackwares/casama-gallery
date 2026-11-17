@@ -407,6 +407,10 @@
         },
         {
           "type": "skill",
+          "id": "calendar-invite"
+        },
+        {
+          "type": "skill",
           "id": "chart-from-data"
         },
         {
@@ -416,6 +420,10 @@
         {
           "type": "skill",
           "id": "compare-options"
+        },
+        {
+          "type": "skill",
+          "id": "convert-photos"
         },
         {
           "type": "skill",
@@ -468,6 +476,14 @@
         {
           "type": "skill",
           "id": "rewrite-tone"
+        },
+        {
+          "type": "skill",
+          "id": "scan-to-pdf"
+        },
+        {
+          "type": "skill",
+          "id": "shrink-file"
         },
         {
           "type": "skill",
