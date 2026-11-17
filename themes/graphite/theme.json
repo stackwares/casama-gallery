@@ -1,0 +1,22 @@
+{
+  "v": 2,
+  "scheme": {
+    "light": {
+      "seed": "#18181B",
+      "background": "#F6F3FA",
+      "onBackground": "#1B1B21"
+    },
+    "dark": {
+      "seed": "#FAFAFA",
+      "background": "#1D1E23",
+      "onBackground": "#E4E1E9"
+    }
+  },
+  "headingFont": "Google Sans",
+  "bodyFont": "Lato",
+  "wallpaper": {
+    "pattern": "tech",
+    "palette": "graphite",
+    "intensity": 0.35
+  }
+}

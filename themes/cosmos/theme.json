@@ -1,0 +1,22 @@
+{
+  "v": 2,
+  "scheme": {
+    "light": {
+      "seed": "#4527A0",
+      "background": "#F9F2FD",
+      "onBackground": "#1C1B20"
+    },
+    "dark": {
+      "seed": "#B39DDB",
+      "background": "#1B1921",
+      "onBackground": "#E6E1E9"
+    }
+  },
+  "headingFont": "Libre Baskerville",
+  "bodyFont": "Lato",
+  "wallpaper": {
+    "pattern": "space",
+    "palette": "lavender",
+    "intensity": 0.5
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "v": 2,
+  "scheme": {
+    "light": {
+      "seed": "#C78D20",
+      "background": "#FEF5EE",
+      "onBackground": "#201B13"
+    },
+    "dark": {
+      "seed": "#DEB059",
+      "background": "#211A0F",
+      "onBackground": "#ECE1D4"
+    }
+  },
+  "headingFont": "Fraunces",
+  "bodyFont": "Lato",
+  "wallpaper": {
+    "pattern": "doodles",
+    "palette": "sunset",
+    "intensity": 0.5
+  }
+}

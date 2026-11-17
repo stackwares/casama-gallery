@@ -1,0 +1,22 @@
+{
+  "v": 2,
+  "scheme": {
+    "light": {
+      "seed": "#413D32",
+      "background": "#FBF4EB",
+      "onBackground": "#1E1B13"
+    },
+    "dark": {
+      "seed": "#F1E8D9",
+      "background": "#201D15",
+      "onBackground": "#E9E2D4"
+    }
+  },
+  "headingFont": "Fraunces",
+  "bodyFont": "Figtree",
+  "wallpaper": {
+    "pattern": "none",
+    "palette": "peach",
+    "intensity": 0.3
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "v": 2,
+  "scheme": {
+    "light": {
+      "seed": "#023047",
+      "background": "#F0F4FA",
+      "onBackground": "#181C20"
+    },
+    "dark": {
+      "seed": "#57859D",
+      "background": "#13191D",
+      "onBackground": "#DFE3E8"
+    }
+  },
+  "headingFont": "Libre Baskerville",
+  "bodyFont": "Lato",
+  "wallpaper": {
+    "pattern": "sea",
+    "palette": "ocean",
+    "intensity": 0.5
+  }
+}

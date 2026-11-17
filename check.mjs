@@ -501,7 +501,7 @@ const TEMPLATE_FIELDS = { routine: ["instructions_md", "schedule_cron"], bot: ["
 // packages/domain/test/gallery-catalog.test.ts keeps this list in step.
 const BUILT_IN_APPS = [
   "gmail", "google_calendar", "google_drive", "google_docs", "google_sheets", "google_contacts", "google_slides",
-  "notion", "slack", "asana", "monday", "box", "atlassian", "exa", "airtable", "zapier", "composio", "pipedream", "zoho",
+  "notion", "slack", "asana", "monday", "box", "atlassian", "exa", "airtable", "zapier", "composio", "pipedream", "zoho", "zoho_mail", "zoho_crm", "zoho_desk", "zoho_books", "zoho_apps",
   "figma", "webflow", "hubspot", "intercom", "stripe", "github", "linear", "sentry", "vercel", "supabase", "neon",
   "cloudflare", "context7", "posthog", "huggingface",
 ];

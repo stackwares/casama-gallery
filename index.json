@@ -2256,6 +2256,167 @@
       ]
     },
     {
+      "id": "casama",
+      "type": "theme",
+      "name": "Casama",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "purple",
+        "playful"
+      ],
+      "featured": true,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "cf889cb19adf480f3f5b2f0c07979e756a2cb33c7b4acddbe0ab43144f58bce9",
+      "size": 1107,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#9C3A9E",
+            "background": "#FDF3F8",
+            "onBackground": "#201A1E",
+            "primary": "#9C3A9E",
+            "primaryContainer": "#FADDF5",
+            "secondary": "#B8407F",
+            "secondaryContainer": "#FFD9EA",
+            "tertiary": "#5562CF",
+            "tertiaryContainer": "#E0E2FF",
+            "appBar": "#FCF3FB"
+          },
+          "dark": {
+            "seed": "#F2B0EC",
+            "background": "#211920",
+            "onBackground": "#EBDFE6",
+            "primary": "#F2B0EC",
+            "primaryContainer": "#6B1F69",
+            "secondary": "#FFB1D4",
+            "secondaryContainer": "#7A2152",
+            "tertiary": "#BDC2FF",
+            "tertiaryContainer": "#323C8A",
+            "appBar": "#25102F"
+          }
+        },
+        "headingFont": "Libre Baskerville",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "clouds",
+          "palette": "theme",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/casama/item.json",
+        "themes/casama/theme.json"
+      ]
+    },
+    {
+      "id": "cosmos",
+      "type": "theme",
+      "name": "Cosmos",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "purple",
+        "dark"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "b180cf7f5948077a419f6bd0cb47f896967e6cd4fffa201f20de480ccb89ca60",
+      "size": 651,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#4527A0",
+            "background": "#F9F2FD",
+            "onBackground": "#1C1B20"
+          },
+          "dark": {
+            "seed": "#B39DDB",
+            "background": "#1B1921",
+            "onBackground": "#E6E1E9"
+          }
+        },
+        "headingFont": "Libre Baskerville",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "space",
+          "palette": "lavender",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/cosmos/item.json",
+        "themes/cosmos/theme.json"
+      ]
+    },
+    {
+      "id": "editorial",
+      "type": "theme",
+      "name": "Editorial",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "f1f855abaea3ae00a5d3ed0eaeca654e4981e616c97bb874a977e8a0f834517a",
+      "size": 642,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#413D32",
+            "background": "#FBF4EB",
+            "onBackground": "#1E1B13"
+          },
+          "dark": {
+            "seed": "#F1E8D9",
+            "background": "#201D15",
+            "onBackground": "#E9E2D4"
+          }
+        },
+        "headingFont": "Fraunces",
+        "bodyFont": "Figtree",
+        "wallpaper": {
+          "pattern": "none",
+          "palette": "peach",
+          "intensity": 0.3
+        }
+      },
+      "files": [
+        "themes/editorial/item.json",
+        "themes/editorial/theme.json"
+      ]
+    },
+    {
       "id": "ember",
       "type": "theme",
       "name": "Ember",
@@ -2301,6 +2462,102 @@
       "files": [
         "themes/ember/item.json",
         "themes/ember/theme.json"
+      ]
+    },
+    {
+      "id": "forest",
+      "type": "theme",
+      "name": "Forest",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "green",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "0ca0b38af5450b7dfad7ab77d304397d302d5eee8cad71b7f84ab1815cef1ed6",
+      "size": 649,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#004E15",
+            "background": "#F1F7EC",
+            "onBackground": "#181D17"
+          },
+          "dark": {
+            "seed": "#519E67",
+            "background": "#131A13",
+            "onBackground": "#E0E4DB"
+          }
+        },
+        "headingFont": "Libre Baskerville",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "garden",
+          "palette": "forest",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/forest/item.json",
+        "themes/forest/theme.json"
+      ]
+    },
+    {
+      "id": "graphite",
+      "type": "theme",
+      "name": "Graphite",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "neutral",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "c4d6832158c26b6dd50a72a01b38f665fcdd1e955344bf32ec3e6aac707140fe",
+      "size": 648,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#18181B",
+            "background": "#F6F3FA",
+            "onBackground": "#1B1B21"
+          },
+          "dark": {
+            "seed": "#FAFAFA",
+            "background": "#1D1E23",
+            "onBackground": "#E4E1E9"
+          }
+        },
+        "headingFont": "Google Sans",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "tech",
+          "palette": "graphite",
+          "intensity": 0.35
+        }
+      },
+      "files": [
+        "themes/graphite/item.json",
+        "themes/graphite/theme.json"
       ]
     },
     {
@@ -2498,6 +2755,54 @@
       ]
     },
     {
+      "id": "ocean",
+      "type": "theme",
+      "name": "Ocean",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "blue",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "1a3690cf4bce6461ae2070ad308cc095a29faba3378c45b6c6cd32b7f41863a8",
+      "size": 643,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#023047",
+            "background": "#F0F4FA",
+            "onBackground": "#181C20"
+          },
+          "dark": {
+            "seed": "#57859D",
+            "background": "#13191D",
+            "onBackground": "#DFE3E8"
+          }
+        },
+        "headingFont": "Libre Baskerville",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "sea",
+          "palette": "ocean",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/ocean/item.json",
+        "themes/ocean/theme.json"
+      ]
+    },
+    {
       "id": "orchard",
       "type": "theme",
       "name": "Orchard",
@@ -2592,6 +2897,102 @@
       "files": [
         "themes/postcard/item.json",
         "themes/postcard/theme.json"
+      ]
+    },
+    {
+      "id": "sakura",
+      "type": "theme",
+      "name": "Sakura",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "pink",
+        "playful"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "c08985d45352079b1620dc86ec65d7e193fa78460d96a32c803d7f5719f14350",
+      "size": 651,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#CE5B78",
+            "background": "#FEF4F4",
+            "onBackground": "#22191B"
+          },
+          "dark": {
+            "seed": "#EEC4D8",
+            "background": "#23191C",
+            "onBackground": "#EFDEE0"
+          }
+        },
+        "headingFont": "Libre Baskerville",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "treats",
+          "palette": "cotton",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/sakura/item.json",
+        "themes/sakura/theme.json"
+      ]
+    },
+    {
+      "id": "sunset",
+      "type": "theme",
+      "name": "Sunset",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm",
+        "playful"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "aadce7e66040d863166a28f983403cc6175e3e797f36584ca41cc3bc04826e15",
+      "size": 643,
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#C78D20",
+            "background": "#FEF5EE",
+            "onBackground": "#201B13"
+          },
+          "dark": {
+            "seed": "#DEB059",
+            "background": "#211A0F",
+            "onBackground": "#ECE1D4"
+          }
+        },
+        "headingFont": "Fraunces",
+        "bodyFont": "Lato",
+        "wallpaper": {
+          "pattern": "doodles",
+          "palette": "sunset",
+          "intensity": 0.5
+        }
+      },
+      "files": [
+        "themes/sunset/item.json",
+        "themes/sunset/theme.json"
       ]
     },
     {
@@ -2706,6 +3107,39 @@
       "files": [
         "wallpapers/circuit/item.json",
         "wallpapers/circuit/wallpaper.json"
+      ]
+    },
+    {
+      "id": "cloud-sea",
+      "type": "wallpaper",
+      "name": "Cloud sea",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "calm",
+        "sky"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "b645e52694dd6c2be0ee7b5a2bdaae55b39146f14384b5435b4ae4266d119176",
+      "size": 494051,
+      "document": {
+        "kind": "image",
+        "file": "cloud-sea.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/cloud-sea/cloud-sea.jpg",
+        "wallpapers/cloud-sea/item.json",
+        "wallpapers/cloud-sea/thumb.jpg",
+        "wallpapers/cloud-sea/wallpaper.json"
       ]
     },
     {
@@ -2853,6 +3287,39 @@
       ]
     },
     {
+      "id": "lavender-hills",
+      "type": "wallpaper",
+      "name": "Lavender hills",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "calm",
+        "purple"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "bc1ef7b3354a66d2beca5df4e282b08c7a6994abe18a515d68411902a0451bea",
+      "size": 904949,
+      "document": {
+        "kind": "image",
+        "file": "lavender-hills.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/lavender-hills/item.json",
+        "wallpapers/lavender-hills/lavender-hills.jpg",
+        "wallpapers/lavender-hills/thumb.jpg",
+        "wallpapers/lavender-hills/wallpaper.json"
+      ]
+    },
+    {
       "id": "margins",
       "type": "wallpaper",
       "name": "Margins",
@@ -2881,6 +3348,39 @@
       "files": [
         "wallpapers/margins/item.json",
         "wallpapers/margins/wallpaper.json"
+      ]
+    },
+    {
+      "id": "moonlit-garden",
+      "type": "wallpaper",
+      "name": "Moonlit garden",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "night",
+        "flowers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "33765300be72090273f9b30d69101c661bd90ea9b9b61be7fbe9d97633ac1e9c",
+      "size": 891108,
+      "document": {
+        "kind": "image",
+        "file": "moonlit-garden.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/moonlit-garden/item.json",
+        "wallpapers/moonlit-garden/moonlit-garden.jpg",
+        "wallpapers/moonlit-garden/thumb.jpg",
+        "wallpapers/moonlit-garden/wallpaper.json"
       ]
     },
     {
@@ -2913,6 +3413,39 @@
       "files": [
         "wallpapers/night-sky/item.json",
         "wallpapers/night-sky/wallpaper.json"
+      ]
+    },
+    {
+      "id": "paper-cranes",
+      "type": "wallpaper",
+      "name": "Paper cranes",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "calm",
+        "light"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "4e2ed78e2f44f9b41ee34a2846a7293b1cdb1ba4038ccd307ca0f818dacb7488",
+      "size": 675272,
+      "document": {
+        "kind": "image",
+        "file": "paper-cranes.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/paper-cranes/item.json",
+        "wallpapers/paper-cranes/paper-cranes.jpg",
+        "wallpapers/paper-cranes/thumb.jpg",
+        "wallpapers/paper-cranes/wallpaper.json"
       ]
     },
     {
@@ -3761,6 +4294,39 @@
       ]
     },
     {
+      "id": "tea-morning",
+      "type": "wallpaper",
+      "name": "Tea morning",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm",
+        "light"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "edee3ce320dbaf2a1eaf710a93f1bf42f07ebb0ccc72c9137c42c9f89212e3be",
+      "size": 440253,
+      "document": {
+        "kind": "image",
+        "file": "tea-morning.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/tea-morning/item.json",
+        "wallpapers/tea-morning/tea-morning.jpg",
+        "wallpapers/tea-morning/thumb.jpg",
+        "wallpapers/tea-morning/wallpaper.json"
+      ]
+    },
+    {
       "id": "tide",
       "type": "wallpaper",
       "name": "Tide",
@@ -3802,6 +4368,39 @@
       "files": [
         "wallpapers/tide/item.json",
         "wallpapers/tide/wallpaper.json"
+      ]
+    },
+    {
+      "id": "tidepool",
+      "type": "wallpaper",
+      "name": "Tidepool",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "sea",
+        "pastel"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "619f7bab08d22b955336e782de918923ae5d3195de5b2fd62b143c7352c6d1c7",
+      "size": 804383,
+      "document": {
+        "kind": "image",
+        "file": "tidepool.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/tidepool/item.json",
+        "wallpapers/tidepool/thumb.jpg",
+        "wallpapers/tidepool/tidepool.jpg",
+        "wallpapers/tidepool/wallpaper.json"
       ]
     }
   ]

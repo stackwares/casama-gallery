@@ -160,7 +160,7 @@ ${noindex ? '<meta name="robots" content="noindex">\n' : ""}<meta property="og:t
     <nav class="bar-nav" aria-label="Gallery">
       <a href="/make.html">Make a look</a>
       <a href="/#contribute">Contribute</a>
-      <a class="btn primary" href="https://casama.ai">Get Casama</a>
+      <a class="btn primary" href="https://casama.ai/download">Get Casama</a>
     </nav>
   </div>
 </header>
@@ -304,7 +304,7 @@ ${heroHtml(item)}
   <p class="about">${esc(about)}</p>
   <div class="actions">
     <a class="btn primary" href="${esc(open)}">${svgIcon("external-link", 17)}${item.type === "skill" ? "Install in Casama" : item.type === "set" ? "Add all in Casama" : "Open in Casama"}</a>
-    <a class="btn" href="https://casama.ai">Get Casama</a>
+    <a class="btn" href="https://casama.ai/download">Get Casama</a>
     <button class="btn quiet" type="button" data-copy="${esc(item.type === "set" ? C.pageUrl(item) : C.shareLink(item))}">${svgIcon("link", 17)}<span>Copy link</span></button>
   </div>
   ${hint(item.type) ? `<p class="small">${esc(hint(item.type))}</p>` : ""}

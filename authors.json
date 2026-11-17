@@ -515,7 +515,27 @@
         },
         {
           "type": "theme",
+          "id": "casama"
+        },
+        {
+          "type": "theme",
+          "id": "cosmos"
+        },
+        {
+          "type": "theme",
+          "id": "editorial"
+        },
+        {
+          "type": "theme",
           "id": "ember"
+        },
+        {
+          "type": "theme",
+          "id": "forest"
+        },
+        {
+          "type": "theme",
+          "id": "graphite"
         },
         {
           "type": "theme",
@@ -535,11 +555,23 @@
         },
         {
           "type": "theme",
+          "id": "ocean"
+        },
+        {
+          "type": "theme",
           "id": "orchard"
         },
         {
           "type": "theme",
           "id": "postcard"
+        },
+        {
+          "type": "theme",
+          "id": "sakura"
+        },
+        {
+          "type": "theme",
+          "id": "sunset"
         },
         {
           "type": "theme",
@@ -552,6 +584,10 @@
         {
           "type": "wallpaper",
           "id": "circuit"
+        },
+        {
+          "type": "wallpaper",
+          "id": "cloud-sea"
         },
         {
           "type": "wallpaper",
@@ -571,11 +607,23 @@
         },
         {
           "type": "wallpaper",
+          "id": "lavender-hills"
+        },
+        {
+          "type": "wallpaper",
           "id": "margins"
         },
         {
           "type": "wallpaper",
+          "id": "moonlit-garden"
+        },
+        {
+          "type": "wallpaper",
           "id": "night-sky"
+        },
+        {
+          "type": "wallpaper",
+          "id": "paper-cranes"
         },
         {
           "type": "wallpaper",
@@ -603,7 +651,15 @@
         },
         {
           "type": "wallpaper",
+          "id": "tea-morning"
+        },
+        {
+          "type": "wallpaper",
           "id": "tide"
+        },
+        {
+          "type": "wallpaper",
+          "id": "tidepool"
         }
       ]
     },
