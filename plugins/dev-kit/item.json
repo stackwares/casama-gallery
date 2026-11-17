@@ -12,15 +12,23 @@
     "code-review"
   ],
   "featured": true,
-  "version": 1,
+  "version": 2,
   "added": "2026-11-17",
   "access": {
     "reads": [
-      "GitHub pull requests"
+      "GitHub pull requests",
+      "public GitHub repositories"
     ],
     "writes": [
       "comments on pull requests"
     ],
     "credits": "medium"
-  }
+  },
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-17",
+      "note": "A small tool server that reads public pull requests and shows them as cards."
+    }
+  ]
 }

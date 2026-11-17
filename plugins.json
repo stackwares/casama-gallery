@@ -18,15 +18,23 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-17",
       "updated": "2026-11-17",
-      "sha256": "5960c6fa11a74d05696102befe6b57b6c4538cfc71a5580457b873be8ae80de3",
-      "size": 841,
+      "sha256": "2314bfabd916cd5096bdc3a2ab029fc7c0a1b29fb0664767c9f8a87158ea7272",
+      "size": 1088,
       "description": "A code reviewer bot: reviews pull requests, helps debug, and a weekday digest of open pull requests.",
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-17",
+          "note": "A small tool server that reads public pull requests and shows them as cards."
+        }
+      ],
       "access": {
         "reads": [
-          "GitHub pull requests"
+          "GitHub pull requests",
+          "public GitHub repositories"
         ],
         "writes": [
           "comments on pull requests"
@@ -36,12 +44,13 @@
       "document": {
         "description": "A code reviewer bot: reviews pull requests, helps debug, and a weekday digest of open pull requests.",
         "url": "https://github.com/stackwares/casama/tree/main/packs/dev-kit",
-        "commit": "ca3813c705e42aaf297493a2d889207c79cf657b",
+        "commit": "882b4d02f2efcbc2229704bd6a819d5d8b821012",
         "icon": "git-pull-request",
         "adds": [
           "A code reviewer bot",
           "Pull request reviews and debugging help",
-          "A weekday digest of open pull requests"
+          "A weekday digest of open pull requests",
+          "Pull requests shown as cards"
         ]
       },
       "files": [
