@@ -1,6 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "doodles",
-  "palette": "lavender",
-  "intensity": 0.75
+  "kind": "image",
+  "file": "margins.jpg",
+  "thumb": "thumb.jpg"
 }

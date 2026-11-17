@@ -583,11 +583,23 @@
         },
         {
           "type": "wallpaper",
+          "id": "candy-sky"
+        },
+        {
+          "type": "wallpaper",
           "id": "circuit"
         },
         {
           "type": "wallpaper",
+          "id": "citrus-grove"
+        },
+        {
+          "type": "wallpaper",
           "id": "cloud-sea"
+        },
+        {
+          "type": "wallpaper",
+          "id": "desert-bloom"
         },
         {
           "type": "wallpaper",
@@ -607,6 +619,14 @@
         },
         {
           "type": "wallpaper",
+          "id": "koi-pond"
+        },
+        {
+          "type": "wallpaper",
+          "id": "lantern-night"
+        },
+        {
+          "type": "wallpaper",
           "id": "lavender-hills"
         },
         {
@@ -619,7 +639,15 @@
         },
         {
           "type": "wallpaper",
+          "id": "mountain-mist"
+        },
+        {
+          "type": "wallpaper",
           "id": "night-sky"
+        },
+        {
+          "type": "wallpaper",
+          "id": "northern-pines"
         },
         {
           "type": "wallpaper",
@@ -639,6 +667,10 @@
         },
         {
           "type": "wallpaper",
+          "id": "rain-window"
+        },
+        {
+          "type": "wallpaper",
           "id": "scribbles"
         },
         {
@@ -648,6 +680,10 @@
         {
           "type": "wallpaper",
           "id": "stargazer"
+        },
+        {
+          "type": "wallpaper",
+          "id": "starlit-lake"
         },
         {
           "type": "wallpaper",

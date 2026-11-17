@@ -11,6 +11,18 @@
     "calm"
   ],
   "featured": false,
-  "version": 1,
-  "added": "2026-11-11"
+  "version": 2,
+  "added": "2026-11-11",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "New painted art in the same mood."
+    },
+    {
+      "version": 1,
+      "date": "2026-11-11",
+      "note": "First version."
+    }
+  ]
 }

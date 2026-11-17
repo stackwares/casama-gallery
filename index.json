@@ -3059,11 +3059,23 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "958f798c441930ff89ecc81ea7c6948109fe80c68dfff24df3091e4a1a3fb5f1",
-      "size": 292312,
+      "updated": "2026-11-18",
+      "sha256": "18006d5d79476339cfc3677b3c339ed1018fd304d6771aabbd12049d1167ead1",
+      "size": 606085,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "pick": "Northern lights colors in a soft gradient.",
       "document": {
         "kind": "image",
@@ -3075,6 +3087,39 @@
         "wallpapers/aurora/item.json",
         "wallpapers/aurora/thumb.jpg",
         "wallpapers/aurora/wallpaper.json"
+      ]
+    },
+    {
+      "id": "candy-sky",
+      "type": "wallpaper",
+      "name": "Candy sky",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "pastel",
+        "playful"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "6cf36ce0e791b3130c9c8e25593a6966556c3c7d7fb590baf7ec39094168840a",
+      "size": 495213,
+      "document": {
+        "kind": "image",
+        "file": "candy-sky.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/candy-sky/candy-sky.jpg",
+        "wallpapers/candy-sky/item.json",
+        "wallpapers/candy-sky/thumb.jpg",
+        "wallpapers/candy-sky/wallpaper.json"
       ]
     },
     {
@@ -3093,20 +3138,66 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "a29eed8d9fdadb92820173ab4bb3570337ed532b9d731852812bc5a245e30ca5",
-      "size": 339,
+      "updated": "2026-11-18",
+      "sha256": "affa61f5c211ab7f44244a518813175c6c2493d784d070807abf8221c4b46e3b",
+      "size": 558431,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
-        "kind": "pattern",
-        "pattern": "tech",
-        "palette": "graphite",
-        "intensity": 0.8
+        "kind": "image",
+        "file": "circuit.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
+        "wallpapers/circuit/circuit.jpg",
         "wallpapers/circuit/item.json",
+        "wallpapers/circuit/thumb.jpg",
         "wallpapers/circuit/wallpaper.json"
+      ]
+    },
+    {
+      "id": "citrus-grove",
+      "type": "wallpaper",
+      "name": "Citrus grove",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "bright",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "0114eae1edc8ac623e7044bec21db2bed08c37a7307494be67ae87d64aeb183f",
+      "size": 572621,
+      "document": {
+        "kind": "image",
+        "file": "citrus-grove.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/citrus-grove/citrus-grove.jpg",
+        "wallpapers/citrus-grove/item.json",
+        "wallpapers/citrus-grove/thumb.jpg",
+        "wallpapers/citrus-grove/wallpaper.json"
       ]
     },
     {
@@ -3128,8 +3219,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "b645e52694dd6c2be0ee7b5a2bdaae55b39146f14384b5435b4ae4266d119176",
-      "size": 494051,
+      "sha256": "b5cefa1fd881ac5f977adb9ba3edb098ead733e95b039ff0e225a41021a085d1",
+      "size": 370131,
       "document": {
         "kind": "image",
         "file": "cloud-sea.jpg",
@@ -3140,6 +3231,39 @@
         "wallpapers/cloud-sea/item.json",
         "wallpapers/cloud-sea/thumb.jpg",
         "wallpapers/cloud-sea/wallpaper.json"
+      ]
+    },
+    {
+      "id": "desert-bloom",
+      "type": "wallpaper",
+      "name": "Desert bloom",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm",
+        "flowers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "a79ed7578bf61f49bc307ff33a8ba19d84cc8ad858b8edb8132ea36b61563deb",
+      "size": 523036,
+      "document": {
+        "kind": "image",
+        "file": "desert-bloom.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/desert-bloom/desert-bloom.jpg",
+        "wallpapers/desert-bloom/item.json",
+        "wallpapers/desert-bloom/thumb.jpg",
+        "wallpapers/desert-bloom/wallpaper.json"
       ]
     },
     {
@@ -3158,11 +3282,23 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "79fb1891f291205be5fb2a0124f09e47b9bc801c28ecad8eba19c47d67e713cb",
-      "size": 173325,
+      "updated": "2026-11-18",
+      "sha256": "322f0bbdd4acaf1bb6bbb23bbb285911b12f711ca97f1d9cdfec503493cbe274",
+      "size": 528001,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "dune.jpg",
@@ -3191,12 +3327,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "d8e2e19dc68b53313268e0f9b03a6c24694db299850f1983263ba20ff3d11598",
-      "size": 192977,
+      "updated": "2026-11-18",
+      "sha256": "5a06673c336e9e2b006d4c9017953de84cab14c69ea521e98ed131d4fc117a5f",
+      "size": 557965,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
         {
           "version": 2,
           "date": "2026-11-11",
@@ -3208,7 +3349,7 @@
           "note": "First version."
         }
       ],
-      "pick": "A warm sunset photo that sits quietly behind your chats.",
+      "pick": "A warm painted sunset that sits quietly behind your chats.",
       "document": {
         "kind": "image",
         "file": "dusk.jpg",
@@ -3237,11 +3378,23 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "f4a263cd9cdd6237dac1fd7242dd09e91ec6848a7a77fb9963b7780e2360753d",
-      "size": 219172,
+      "updated": "2026-11-18",
+      "sha256": "c9876c5a734af4d631e825e3da5199415aba43b297c4499867c7707f3b60ccf8",
+      "size": 535065,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "fog.jpg",
@@ -3270,20 +3423,99 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "4902d68e2bf319ad04576e0c68ea8b7fa35a55b4bd6bff034736dd1780298716",
-      "size": 341,
+      "updated": "2026-11-18",
+      "sha256": "be43ac86390c9e9e495ffb16e7da1e53c2d58b94863a21af2ae98d72a4204f8e",
+      "size": 632828,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
-        "kind": "pattern",
-        "pattern": "garden",
-        "palette": "mint",
-        "intensity": 0.75
+        "kind": "image",
+        "file": "greenhouse.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
+        "wallpapers/greenhouse/greenhouse.jpg",
         "wallpapers/greenhouse/item.json",
+        "wallpapers/greenhouse/thumb.jpg",
         "wallpapers/greenhouse/wallpaper.json"
+      ]
+    },
+    {
+      "id": "koi-pond",
+      "type": "wallpaper",
+      "name": "Koi pond",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "water",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "4ab158fcca6b7f39c3962e28c4ae9d790f453ac0aca3f4a369dacf3b6f916448",
+      "size": 508313,
+      "document": {
+        "kind": "image",
+        "file": "koi-pond.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/koi-pond/item.json",
+        "wallpapers/koi-pond/koi-pond.jpg",
+        "wallpapers/koi-pond/thumb.jpg",
+        "wallpapers/koi-pond/wallpaper.json"
+      ]
+    },
+    {
+      "id": "lantern-night",
+      "type": "wallpaper",
+      "name": "Lantern night",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "night",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "84789ceba8d6c9aab6e1dbf62015a962dc7c96c501d01ad1e4069afefece8a19",
+      "size": 360664,
+      "document": {
+        "kind": "image",
+        "file": "lantern-night.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/lantern-night/item.json",
+        "wallpapers/lantern-night/lantern-night.jpg",
+        "wallpapers/lantern-night/thumb.jpg",
+        "wallpapers/lantern-night/wallpaper.json"
       ]
     },
     {
@@ -3305,8 +3537,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "bc1ef7b3354a66d2beca5df4e282b08c7a6994abe18a515d68411902a0451bea",
-      "size": 904949,
+      "sha256": "9cb6fc0d50ce6a23f5d718391acab8e1ea7e141082c1af2ac959a69617fb181f",
+      "size": 691635,
       "document": {
         "kind": "image",
         "file": "lavender-hills.jpg",
@@ -3334,19 +3566,32 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "f5aa57043e1a08f42c50c382bd935a1e8c938f3c71f708e895d57880f3c7daac",
-      "size": 331,
+      "updated": "2026-11-18",
+      "sha256": "499c2d47d1c5cd495f8285549fb34f4666d4210cd100330384e623f783135ee9",
+      "size": 569999,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
-        "kind": "pattern",
-        "pattern": "doodles",
-        "palette": "lavender",
-        "intensity": 0.75
+        "kind": "image",
+        "file": "margins.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/margins/item.json",
+        "wallpapers/margins/margins.jpg",
+        "wallpapers/margins/thumb.jpg",
         "wallpapers/margins/wallpaper.json"
       ]
     },
@@ -3369,8 +3614,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "33765300be72090273f9b30d69101c661bd90ea9b9b61be7fbe9d97633ac1e9c",
-      "size": 891108,
+      "sha256": "955de97b71df375b946b170c6d35cd4b5a66d304dfb84985e595044cf40db945",
+      "size": 685365,
       "document": {
         "kind": "image",
         "file": "moonlit-garden.jpg",
@@ -3381,6 +3626,39 @@
         "wallpapers/moonlit-garden/moonlit-garden.jpg",
         "wallpapers/moonlit-garden/thumb.jpg",
         "wallpapers/moonlit-garden/wallpaper.json"
+      ]
+    },
+    {
+      "id": "mountain-mist",
+      "type": "wallpaper",
+      "name": "Mountain mist",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "calm",
+        "cool"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "2f015046ee67ceadab7483ef1ffc9ea9d84d939dba4491dcec90d9247062f6c9",
+      "size": 497240,
+      "document": {
+        "kind": "image",
+        "file": "mountain-mist.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/mountain-mist/item.json",
+        "wallpapers/mountain-mist/mountain-mist.jpg",
+        "wallpapers/mountain-mist/thumb.jpg",
+        "wallpapers/mountain-mist/wallpaper.json"
       ]
     },
     {
@@ -3398,21 +3676,67 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "6ee7e62cd6dbe430f1b892309f72f882efb22d6a759360b76e4348ef08142a91",
-      "size": 361,
+      "updated": "2026-11-18",
+      "sha256": "0be2e30caeda66761c1214968209d84c653aeec8b75cdffef66a51f1f02c3c65",
+      "size": 485204,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "pick": "Stars for night owls.",
       "document": {
-        "kind": "pattern",
-        "pattern": "space",
-        "palette": "casama",
-        "intensity": 0.85
+        "kind": "image",
+        "file": "night-sky.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/night-sky/item.json",
+        "wallpapers/night-sky/night-sky.jpg",
+        "wallpapers/night-sky/thumb.jpg",
         "wallpapers/night-sky/wallpaper.json"
+      ]
+    },
+    {
+      "id": "northern-pines",
+      "type": "wallpaper",
+      "name": "Northern pines",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "forest",
+        "green"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "e024c377c80641ad5d487671a6ce9cd3f02e21451c11cc3cac8b925b7c2308ef",
+      "size": 758128,
+      "document": {
+        "kind": "image",
+        "file": "northern-pines.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/northern-pines/item.json",
+        "wallpapers/northern-pines/northern-pines.jpg",
+        "wallpapers/northern-pines/thumb.jpg",
+        "wallpapers/northern-pines/wallpaper.json"
       ]
     },
     {
@@ -3434,8 +3758,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "4e2ed78e2f44f9b41ee34a2846a7293b1cdb1ba4038ccd307ca0f818dacb7488",
-      "size": 675272,
+      "sha256": "c6c87cd5a453543bdfb24b67274e1d0157c2521833cacc71804a4361f596c334",
+      "size": 513544,
       "document": {
         "kind": "image",
         "file": "paper-cranes.jpg",
@@ -3464,85 +3788,33 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-12",
-      "updated": "2026-11-12",
-      "sha256": "ca4e1536cf8f4839843a5437f7466dffda122b654a50f72ef126e4cbf821cc35",
-      "size": 745,
-      "requires": [
-        "mesh"
-      ],
-      "pick": "A soft pink mesh that changes gently from light to dark.",
-      "document": {
-        "kind": "mesh",
-        "pattern": "none",
-        "palette": "casama",
-        "intensity": 0.5,
-        "mesh": {
-          "light": [
-            "#FED1D6",
-            "#FFDCCD",
-            "#FFC7EB",
-            "#F7DEFD",
-            "#FFD6D2",
-            "#E3D6FE",
-            "#FEC4DE",
-            "#DFE2FE",
-            "#FFD6D7"
-          ],
-          "dark": [
-            "#410918",
-            "#481418",
-            "#37082B",
-            "#3B1F41",
-            "#440D23",
-            "#291544",
-            "#350321",
-            "#22224E",
-            "#460D17"
-          ],
-          "points": [
-            [
-              0,
-              0
-            ],
-            [
-              0.42,
-              0
-            ],
-            [
-              1,
-              0
-            ],
-            [
-              0,
-              0.55
-            ],
-            [
-              0.6,
-              0.4
-            ],
-            [
-              1,
-              0.62
-            ],
-            [
-              0,
-              1
-            ],
-            [
-              0.58,
-              1
-            ],
-            [
-              1,
-              1
-            ]
-          ]
+      "updated": "2026-11-18",
+      "sha256": "d4d5f8cc72581f50812994b7bcbb3cf4ea06f448591f76b30924a2ed97131332",
+      "size": 412748,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-12",
+          "note": "First version."
         }
+      ],
+      "pick": "Soft pink petals drifting over a blush wash.",
+      "document": {
+        "kind": "image",
+        "file": "petal.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/petal/item.json",
+        "wallpapers/petal/petal.jpg",
+        "wallpapers/petal/thumb.jpg",
         "wallpapers/petal/wallpaper.json"
       ]
     },
@@ -3562,19 +3834,32 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "b119998caee88b48aa1be9863b96a6c813d1f39004bf4c9081a3181ab480303b",
-      "size": 341,
+      "updated": "2026-11-18",
+      "sha256": "c1354db07870333f862b780fe2574963e4dac8c711cad7fddfae074f2fd25a9d",
+      "size": 534334,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
-        "kind": "pattern",
-        "pattern": "treats",
-        "palette": "cotton",
-        "intensity": 0.75
+        "kind": "image",
+        "file": "picnic.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/picnic/item.json",
+        "wallpapers/picnic/picnic.jpg",
+        "wallpapers/picnic/thumb.jpg",
         "wallpapers/picnic/wallpaper.json"
       ]
     },
@@ -3594,20 +3879,66 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "b53202e66b61b403fda5c7e05fc7bb2a7e4e8dfe9cfcd5e3142db1e9ad859783",
-      "size": 331,
+      "updated": "2026-11-18",
+      "sha256": "37bac03b003199dcddef8cbed247735efcb6c246aabdd0d5cf4b3a15e1633d41",
+      "size": 715395,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-11",
+          "note": "First version."
+        }
+      ],
       "document": {
-        "kind": "pattern",
-        "pattern": "pets",
-        "palette": "peach",
-        "intensity": 0.75
+        "kind": "image",
+        "file": "purr.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/purr/item.json",
+        "wallpapers/purr/purr.jpg",
+        "wallpapers/purr/thumb.jpg",
         "wallpapers/purr/wallpaper.json"
+      ]
+    },
+    {
+      "id": "rain-window",
+      "type": "wallpaper",
+      "name": "Rain window",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "cozy",
+        "city"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "ea28504a0036e5793e97c1e9c68aa44c8d99a2533e6bd90941aaa4ba26ec1497",
+      "size": 541205,
+      "document": {
+        "kind": "image",
+        "file": "rain-window.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/rain-window/item.json",
+        "wallpapers/rain-window/rain-window.jpg",
+        "wallpapers/rain-window/thumb.jpg",
+        "wallpapers/rain-window/wallpaper.json"
       ]
     },
     {
@@ -3626,175 +3957,32 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-12",
-      "updated": "2026-11-12",
-      "sha256": "f4cb212a1e81dda1352b8bdf84200250b80420a6556b2045b6571f042737856c",
-      "size": 1419,
-      "requires": [
-        "doodles",
-        "mesh"
+      "updated": "2026-11-18",
+      "sha256": "9c26645533c4b6d53c0189fdc7a2e55be1ad4fe5ad25d72f88ac10ac6d29c4d4",
+      "size": 643527,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-12",
+          "note": "First version."
+        }
       ],
       "document": {
-        "kind": "mesh",
-        "pattern": "doodles",
-        "palette": "cotton",
-        "intensity": 0.55,
-        "mesh": {
-          "light": [
-            "#FFD6E6",
-            "#ECDDFF",
-            "#DCE4FF",
-            "#FFE2EE",
-            "#F6E6FB",
-            "#E0DCFF",
-            "#FFDCE9",
-            "#F3D9FF",
-            "#FFE6DE"
-          ],
-          "dark": [
-            "#3E0F2A",
-            "#2C1A45",
-            "#1E2148",
-            "#3A1530",
-            "#33203F",
-            "#24194A",
-            "#3F1027",
-            "#311545",
-            "#3D1A24"
-          ],
-          "points": [
-            [
-              0,
-              0
-            ],
-            [
-              0.55,
-              0
-            ],
-            [
-              1,
-              0
-            ],
-            [
-              0,
-              0.45
-            ],
-            [
-              0.4,
-              0.55
-            ],
-            [
-              1,
-              0.4
-            ],
-            [
-              0,
-              1
-            ],
-            [
-              0.6,
-              1
-            ],
-            [
-              1,
-              1
-            ]
-          ]
-        },
-        "doodles": [
-          [
-            [
-              "path",
-              {
-                "d": "M3 14c2-4 4-4 6 0s4 4 6 0 4-4 6 0"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M12 20s-7-4.35-7-9.5A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 7 2.5C19 15.65 12 20 12 20Z"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M12 12a1 1 0 0 1 2 0 3 3 0 0 1-3 3 5 5 0 0 1-5-5 7 7 0 0 1 7-7 9 9 0 0 1 9 9"
-              }
-            ]
-          ],
-          [
-            [
-              "polygon",
-              {
-                "points": "12 3 14.4 9 21 9.3 15.9 13.4 17.6 20 12 16.3 6.4 20 8.1 13.4 3 9.3 9.6 9"
-              }
-            ]
-          ],
-          [
-            [
-              "circle",
-              {
-                "cx": 12,
-                "cy": 9,
-                "r": 3
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": 12,
-                "cy": 9,
-                "r": 6.5
-              }
-            ],
-            [
-              "line",
-              {
-                "x1": 12,
-                "y1": 15.5,
-                "x2": 12,
-                "y2": 22
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M4 18 8 6l4 12 4-12 4 12"
-              }
-            ]
-          ],
-          [
-            [
-              "rect",
-              {
-                "x": 5,
-                "y": 5,
-                "width": 14,
-                "height": 14,
-                "rx": 4
-              }
-            ],
-            [
-              "line",
-              {
-                "x1": 9,
-                "y1": 12,
-                "x2": 15,
-                "y2": 12
-              }
-            ]
-          ]
-        ]
+        "kind": "image",
+        "file": "scribbles.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/scribbles/item.json",
+        "wallpapers/scribbles/scribbles.jpg",
+        "wallpapers/scribbles/thumb.jpg",
         "wallpapers/scribbles/wallpaper.json"
       ]
     },
@@ -3815,294 +4003,36 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-16",
-      "updated": "2026-11-16",
-      "sha256": "723fb18e3b259415b400a2d4479fd69eede020d3374ec4bc4b2965248e2dd7e1",
-      "size": 551,
-      "requires": [
-        "doodles"
+      "updated": "2026-11-18",
+      "sha256": "fc36aa3345073daab2b986c011f0db9b26f9775a2f9b47b8a0995640d456a423",
+      "size": 561048,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-16",
+          "note": "First version."
+        }
       ],
       "season": {
         "from": "12-01",
         "to": "01-06"
       },
       "document": {
-        "kind": "pattern",
-        "pattern": "clouds",
-        "palette": "ocean",
-        "intensity": 0.5,
-        "glyphs": [
-          "snowflake",
-          "tree-pine",
-          "gift",
-          "star",
-          "candy-cane",
-          "cookie",
-          "bell",
-          "sparkles"
-        ],
-        "doodles": [
-          [
-            [
-              "path",
-              {
-                "d": "m10 20-1.25-2.5L6 18"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M10 4 8.75 6.5 6 6"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m14 20 1.25-2.5L18 18"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m14 4 1.25 2.5L18 6"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m17 21-3-6h-4"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m17 3-3 6 1.5 3"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M2 12h6.5L10 9"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m20 10-1.5 2 1.5 2"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M22 12h-6.5L14 15"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m4 10 1.5 2L4 14"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m7 21 3-6-1.5-3"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m7 3 3 6h4"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M12 22v-3"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M12 7v14"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"
-              }
-            ],
-            [
-              "rect",
-              {
-                "x": "3",
-                "y": "7",
-                "width": "18",
-                "height": "4",
-                "rx": "1"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "m10.8 5 2.111 4.223"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M17.75 7 15 2.1"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m4.874 14.647 2.12 4.24"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M5.7 21a2 2 0 0 1-3.5-2l8.6-14a6 6 0 0 1 10.4 6 2 2 0 1 1-3.464-2 2 2 0 1 0-3.464-2z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m7.906 9.712 2.005 4.411"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M11 17h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M11.496 2c.324-.016.558.292.529.615a4 4 0 004.235 4.368.713.713 0 01.758.757 4 4 0 004.366 4.237c.323-.03.63.204.614.527a10 10 0 01-2.915 6.566A1 1 0 114.93 4.918 10 10 0 0111.496 2"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M12 12h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M16 16h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M16 3h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M21 4h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M21 8h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M7 14h.01"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M9 8h.01"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M10.268 21a2 2 0 0 0 3.464 0"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M20 2v4"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M22 4h-4"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "4",
-                "cy": "20",
-                "r": "2"
-              }
-            ]
-          ]
-        ]
+        "kind": "image",
+        "file": "snow-day.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/snow-day/item.json",
+        "wallpapers/snow-day/snow-day.jpg",
+        "wallpapers/snow-day/thumb.jpg",
         "wallpapers/snow-day/wallpaper.json"
       ]
     },
@@ -4122,175 +4052,66 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-12",
-      "updated": "2026-11-12",
-      "sha256": "684c0a4660b70658fd9ae56652274180a07cbe060367bd7f6f2501eb9ea34f55",
-      "size": 419,
-      "requires": [
-        "doodles"
+      "updated": "2026-11-18",
+      "sha256": "f5e08b16c04b6ec23a4addd9ae10d6ffd3bf467aaa22673a1e0ad683c2182d22",
+      "size": 481980,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-12",
+          "note": "First version."
+        }
       ],
       "document": {
-        "kind": "pattern",
-        "pattern": "space",
-        "palette": "lavender",
-        "intensity": 0.5,
-        "glyphs": [
-          "moon",
-          "star",
-          "sparkles",
-          "telescope",
-          "orbit",
-          "cloud-moon"
-        ],
-        "doodles": [
-          [
-            [
-              "path",
-              {
-                "d": "M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M20 2v4"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M22 4h-4"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "4",
-                "cy": "20",
-                "r": "2"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m13.56 11.747 4.332-.924"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m16 21-3.105-6.21"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m6.158 8.633 1.114 4.456"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "m8 21 3.105-6.21"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "12",
-                "cy": "13",
-                "r": "2"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M20.341 6.484A10 10 0 0 1 10.266 21.85"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M3.659 17.516A10 10 0 0 1 13.74 2.152"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "12",
-                "cy": "12",
-                "r": "3"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "19",
-                "cy": "5",
-                "r": "2"
-              }
-            ],
-            [
-              "circle",
-              {
-                "cx": "5",
-                "cy": "19",
-                "r": "2"
-              }
-            ]
-          ],
-          [
-            [
-              "path",
-              {
-                "d": "M13 16a3 3 0 0 1 0 6H7a5 5 0 1 1 4.9-6z"
-              }
-            ],
-            [
-              "path",
-              {
-                "d": "M18.376 14.512a6 6 0 0 0 3.461-4.127c.148-.625-.659-.97-1.248-.714a4 4 0 0 1-5.259-5.26c.255-.589-.09-1.395-.716-1.248a6 6 0 0 0-4.594 5.36"
-              }
-            ]
-          ]
-        ]
+        "kind": "image",
+        "file": "stargazer.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/stargazer/item.json",
+        "wallpapers/stargazer/stargazer.jpg",
+        "wallpapers/stargazer/thumb.jpg",
         "wallpapers/stargazer/wallpaper.json"
+      ]
+    },
+    {
+      "id": "starlit-lake",
+      "type": "wallpaper",
+      "name": "Starlit lake",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "night",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "42c1c76a286ad2b0e4dfa315e73c3e7d28f9dfabdb314bf2955d83128568dba7",
+      "size": 563067,
+      "document": {
+        "kind": "image",
+        "file": "starlit-lake.jpg",
+        "thumb": "thumb.jpg"
+      },
+      "files": [
+        "wallpapers/starlit-lake/item.json",
+        "wallpapers/starlit-lake/starlit-lake.jpg",
+        "wallpapers/starlit-lake/thumb.jpg",
+        "wallpapers/starlit-lake/wallpaper.json"
       ]
     },
     {
@@ -4312,8 +4133,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "edee3ce320dbaf2a1eaf710a93f1bf42f07ebb0ccc72c9137c42c9f89212e3be",
-      "size": 440253,
+      "sha256": "9e041c43941f9c0a8f1438f57eeaeb21b24b73baee9f45f83a4e078e71975a69",
+      "size": 333132,
       "document": {
         "kind": "image",
         "file": "tea-morning.jpg",
@@ -4341,12 +4162,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "6480077485ea24f78f779d34d0a01a89efde7c72a2f7495422ef652b4582a848",
-      "size": 597,
+      "updated": "2026-11-18",
+      "sha256": "871ff6ecf76241d15b969b906b83e372051ecac0fe404ab3de60b254aef2caa4",
+      "size": 657064,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "New painted art in the same mood."
+        },
         {
           "version": 2,
           "date": "2026-11-11",
@@ -4360,13 +4186,14 @@
       ],
       "pick": "Calm ocean blues from the shore.",
       "document": {
-        "kind": "pattern",
-        "pattern": "sea",
-        "palette": "ocean",
-        "intensity": 0.75
+        "kind": "image",
+        "file": "tide.jpg",
+        "thumb": "thumb.jpg"
       },
       "files": [
         "wallpapers/tide/item.json",
+        "wallpapers/tide/thumb.jpg",
+        "wallpapers/tide/tide.jpg",
         "wallpapers/tide/wallpaper.json"
       ]
     },
@@ -4389,8 +4216,8 @@
       "version": 1,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "619f7bab08d22b955336e782de918923ae5d3195de5b2fd62b143c7352c6d1c7",
-      "size": 804383,
+      "sha256": "cdbec02d554e12b7c94133db63cd32dee3d40c80e1955771e1bedb9a7032b230",
+      "size": 615199,
       "document": {
         "kind": "image",
         "file": "tidepool.jpg",

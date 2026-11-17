@@ -1,6 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "pets",
-  "palette": "peach",
-  "intensity": 0.75
+  "kind": "image",
+  "file": "purr.jpg",
+  "thumb": "thumb.jpg"
 }

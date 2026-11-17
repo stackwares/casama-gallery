@@ -11,9 +11,14 @@
   ],
   "featured": true,
   "pick": "Calm ocean blues from the shore.",
-  "version": 2,
+  "version": 3,
   "added": "2026-11-11",
   "changelog": [
+    {
+      "version": 3,
+      "date": "2026-11-18",
+      "note": "New painted art in the same mood."
+    },
     {
       "version": 2,
       "date": "2026-11-11",

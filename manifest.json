@@ -2,12 +2,12 @@
   "schema": 1,
   "created": "2026-11-18",
   "files": {
-    "index.json": "632d47df718cd2e46e7a095f5ed7dd17c4839c24999c9f0096ddf4c7994d895c",
+    "index.json": "5770f02b5b0c0ec6f6e76b9ede9ebfe223e8244b3b0bb7ec93a6bcf9b06c9cb8",
     "apps.json": "443915a22b0edca9489ab6ae1446e515e644568f5a652619719c331a30f7f499",
     "bots.json": "8170dc2afef7d58cba6c7a3ae5e77b439ca7ce53a4469371cab3978405f6d00b",
     "routines.json": "f26ebe7c6eeec99adda2c24806b82e6e325f123f02aeb4b2dbba8e64be3cfbca",
     "plugins.json": "6bf8b4ecdfad5871c07c658b82384d2501f7636d14c7efb0e3f467b3ea10c3e8",
     "sets.json": "672a29e5833d691b707d75a642867d7e1e9c1259731abbc2f278d3777d24df19",
-    "authors.json": "d69c397fffcad2715ab1dbe456187aebb8d96d43076cf749d8a17ddb25bfdf64"
+    "authors.json": "28f8836accf9d48e5871016b2be8bdbe4a5a00d4b0914c3645d8b9f96d621367"
   }
 }

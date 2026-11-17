@@ -11,7 +11,19 @@
     "calm"
   ],
   "featured": true,
-  "pick": "A soft pink mesh that changes gently from light to dark.",
-  "version": 1,
-  "added": "2026-11-12"
+  "pick": "Soft pink petals drifting over a blush wash.",
+  "version": 2,
+  "added": "2026-11-12",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "New painted art in the same mood."
+    },
+    {
+      "version": 1,
+      "date": "2026-11-12",
+      "note": "First version."
+    }
+  ]
 }

@@ -1,6 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "tech",
-  "palette": "graphite",
-  "intensity": 0.8
+  "kind": "image",
+  "file": "circuit.jpg",
+  "thumb": "thumb.jpg"
 }

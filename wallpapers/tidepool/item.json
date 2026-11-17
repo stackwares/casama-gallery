@@ -6,7 +6,10 @@
     "handle": "casama"
   },
   "license": "CC0-1.0",
-  "tags": ["sea", "pastel"],
+  "tags": [
+    "sea",
+    "pastel"
+  ],
   "featured": false,
   "version": 1,
   "added": "2026-11-18"

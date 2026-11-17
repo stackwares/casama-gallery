@@ -1,16 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "clouds",
-  "palette": "ocean",
-  "intensity": 0.5,
-  "glyphs": [
-    "snowflake",
-    "tree-pine",
-    "gift",
-    "star",
-    "candy-cane",
-    "cookie",
-    "bell",
-    "sparkles"
-  ]
+  "kind": "image",
+  "file": "snow-day.jpg",
+  "thumb": "thumb.jpg"
 }

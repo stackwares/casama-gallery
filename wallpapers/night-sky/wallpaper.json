@@ -1,6 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "space",
-  "palette": "casama",
-  "intensity": 0.85
+  "kind": "image",
+  "file": "night-sky.jpg",
+  "thumb": "thumb.jpg"
 }

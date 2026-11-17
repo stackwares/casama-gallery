@@ -1,6 +1,5 @@
 {
-  "kind": "pattern",
-  "pattern": "treats",
-  "palette": "cotton",
-  "intensity": 0.75
+  "kind": "image",
+  "file": "picnic.jpg",
+  "thumb": "thumb.jpg"
 }
