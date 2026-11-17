@@ -119,7 +119,7 @@ function rowHtml(item) {
   return `<li><a class="skill row-link" href="${C.pagePath(item)}">${pic}<span><span class="skill-name">${esc(item.name)}</span><span class="skill-desc">${esc(C.SINGULAR[item.type])}${item.description ? ` · ${esc(item.description)}` : ""}</span></span><span class="skill-go">${svgIcon("chevron-right", 18)}</span></a></li>`;
 }
 
-function shell({ title, description, path, image, imageAlt, body, data, noindex, type = "website" }) {
+function shell({ title, description, path, image, imageAlt, body, data, noindex, ld, type = "website" }) {
   const url = SITE + path;
   return `<!doctype html>
 <html lang="en">
@@ -149,7 +149,7 @@ ${noindex ? '<meta name="robots" content="noindex">\n' : ""}<meta property="og:t
 <link rel="stylesheet" href="/gallery.css">
 <link rel="stylesheet" href="/app.css">
 <link rel="stylesheet" href="/page.css">
-<script>document.documentElement.setAttribute("data-theme", matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");</script>
+${ld ? `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, "\\u003c")}</script>\n` : ""}<script>document.documentElement.setAttribute("data-theme", matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to the content</a>
@@ -293,7 +293,7 @@ function itemPage(item) {
   const more = related(item);
   const looks = [item, ...more].filter(C.isLook);
   const tags = (item.tags || []).length ? `<div class="tags">${item.tags.map((t) => `<a class="tag" href="/?q=${encodeURIComponent(t)}">${esc(t)}</a>`).join("")}</div>` : "";
-  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Gallery</a><span aria-hidden="true">/</span><a href="/${item.type === "set" ? "" : `#${item.type}`}">${esc(C.PLURAL[item.type])}</a></nav>
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Gallery</a><span aria-hidden="true">/</span><a href="/c/${item.type}/">${esc(C.PLURAL[item.type])}</a></nav>
 <article class="item">
 ${heroHtml(item)}
 <div class="item-info">
@@ -302,6 +302,7 @@ ${heroHtml(item)}
   <p class="stats-line" id="stats" hidden></p>
   ${item.pick ? `<p class="pick-note">${svgIcon("sparkles", 16)}<span>${esc(item.pick)}</span></p>` : ""}
   <p class="about">${esc(about)}</p>
+  ${item.type === "app" ? `<p class="small">Connect ${esc(item.name)} once, choose which bots may use it, and ask in plain words. For each thing a bot can do in ${esc(item.name)}, you decide whether it may act alone or must ask you first.</p>` : ""}
   <div class="actions">
     <a class="btn primary" href="${esc(open)}">${svgIcon("external-link", 17)}${item.type === "skill" ? "Install in Casama" : item.type === "set" ? "Add all in Casama" : "Open in Casama"}</a>
     <a class="btn" href="https://casama.ai/download">Get Casama</a>
@@ -316,9 +317,28 @@ ${heroHtml(item)}
 </div>
 </article>
 ${more.length ? `<section class="section"><div class="section-head"><h2>More ${esc(C.PLURAL[item.type].toLowerCase())}</h2></div><ul class="skills">${more.map(rowHtml).join("")}</ul></section>` : ""}`;
+  // Structured data: where the page sits, and what the item is (docs/SEO-PLAN.md part D).
+  const ld = [
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Casama Gallery", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: C.PLURAL[item.type], item: `${SITE}/c/${item.type}/` },
+      { "@type": "ListItem", position: 3, name: item.name, item: C.pageUrl(item) },
+    ] },
+    { "@context": "https://schema.org", "@type": "CreativeWork", name: item.name, description: about, url: C.pageUrl(item),
+      genre: `${kind} for Casama`, isAccessibleForFree: true, inLanguage: "en",
+      ...(item.author?.name ? { author: { "@type": item.author.name === "Casama" ? "Organization" : "Person", name: item.author.name, ...(item.author.url ? { url: item.author.url } : {}) } } : {}),
+      ...(item.license ? { license: `https://spdx.org/licenses/${item.license}.html` } : {}),
+      ...(item.added ? { datePublished: item.added } : {}), ...(item.updated ? { dateModified: item.updated } : {}),
+      ...((item.tags || []).length ? { keywords: item.tags.join(", ") } : {}),
+      isPartOf: { "@type": "WebSite", name: "Casama Gallery", url: `${SITE}/` } },
+  ];
+  // People search for an app by name plus "AI agent", so an app's page says so in its title.
+  const isApp = item.type === "app";
+  const can = isApp ? (C.doc(item).capabilities || []).slice(0, 3).map((c) => c[0].toLowerCase() + c.slice(1)).join(", ") : "";
   return shell({
-    title: `${item.name} · ${kind} for Casama`,
-    description: about,
+    ld,
+    title: isApp ? `${item.name} AI agent: use ${item.name} with a Casama bot` : `${item.name} · ${kind} for Casama`,
+    description: isApp && can ? `${about} Connect ${item.name} to a Casama bot: ${can}. You choose what it must ask first.`.slice(0, 200) : about,
     path: C.pagePath(item),
     image: `${SITE}${C.pagePath(item)}og.png`,
     imageAlt: `${item.name}, a ${kind.toLowerCase()} for Casama`,
@@ -580,12 +600,62 @@ for (const item of all) {
 for (const a of authors.values()) write(`${C.authorPath(a.handle).slice(1)}index.html`, authorPage(a));
 if (WITH_OG) write("og.png", render(homeOgSvg()));
 
+// Group pages (docs/SEO-PLAN.md part D): one page per kind of item, and one per category of apps
+// and skills, each with a short introduction and links to every item in it.
+const GROUP_INTRO = {
+  app: "Apps a Casama bot can connect to. Connect one once, choose which bots may use it, and ask in plain words. For each thing a bot can do in an app, you decide whether it may act alone or must ask you first.",
+  skill: "Skills are written how-tos a bot loads when a task calls for them. Install one and every bot you choose knows how to do that job the same way each time.",
+  bot: "Starter bots: a name, a role and instructions in one tap, some with skills and routines included. Change anything after you add one.",
+  routine: "Routine ideas: work a bot starts without being asked, on a schedule or when something happens. Add one, pick the bot, and adjust the timing.",
+  plugin: "Plugins give bots new skills and tools from a GitHub repository. Each one listed here was reviewed at the commit shown on its page.",
+  set: "Starter sets bundle items that go together, so one tap adds a working setup.",
+  theme: "Themes change the whole look of the Casama app: colors, fonts and background.",
+  scheme: "Color schemes for the Casama app, each in light and dark.",
+  wallpaper: "Wallpapers for the Casama app's chats.",
+};
+const groupPath = (type, cat) => `/c/${type}/${cat ? `${cat}/` : ""}`;
+const groups = [];
+for (const type of C.TYPES.concat("set")) {
+  const of = all.filter((i) => i.type === type);
+  if (!of.length || groups.some((g) => g.type === type && !g.cat)) continue;
+  const cats = [...new Set(of.map((i) => C.category(i)).filter(Boolean))].filter((c) => (type === "app" || type === "skill") && of.filter((i) => C.category(i) === c).length >= 3);
+  groups.push({ type, cat: "", items: of, cats });
+  for (const cat of cats) groups.push({ type, cat, items: of.filter((i) => C.category(i) === cat), cats: [] });
+}
+function groupPage(g) {
+  const plural = C.PLURAL[g.type];
+  const label = g.cat ? C.categoryLabel(g.items[0]) : "";
+  const name = g.cat ? `${label} ${plural.toLowerCase()}` : plural;
+  const title = g.type === "app"
+    ? (g.cat ? `${label} apps your AI agent can use · Casama Gallery` : "Apps your AI agent can connect to · Casama Gallery")
+    : `${name} for Casama AI bots · Casama Gallery`;
+  const intro = g.cat
+    ? `${C.count(g.items.length, g.type)} in ${label.toLowerCase()}: ${g.items.slice(0, 6).map((i) => i.name).join(", ")}${g.items.length > 6 ? " and more" : ""}. ${GROUP_INTRO[g.type]}`
+    : GROUP_INTRO[g.type];
+  const sorted = [...g.items].sort((a, b) => a.name.localeCompare(b.name));
+  const sub = g.cats.length ? `<p class="inline-list">${g.cats.map((c) => { const one = g.items.find((i) => C.category(i) === c); return `<a href="${groupPath(g.type, c)}">${esc(C.categoryLabel(one))}</a>`; }).join(" · ")}</p>` : "";
+  const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Gallery</a><span aria-hidden="true">/</span>${g.cat ? `<a href="${groupPath(g.type)}">${esc(plural)}</a><span aria-hidden="true">/</span><span>${esc(label)}</span>` : `<span>${esc(plural)}</span>`}</nav>
+<div class="title-row"><h1>${esc(g.type === "app" && !g.cat ? "Apps your AI agent can connect to" : name)}</h1><p class="sub">${esc(intro)}</p></div>
+${sub}
+<section class="section"><div class="section-head"><h2>${esc(name)}<span class="n">${sorted.length}</span></h2></div><ul class="skills">${sorted.map(rowHtml).join("")}</ul></section>`;
+  const path = groupPath(g.type, g.cat);
+  return shell({
+    title, description: intro.slice(0, 200), path, image: `${SITE}/og.png`, body,
+    data: { looks: sorted.filter(C.isLook).map(slim) },
+    ld: [{ "@context": "https://schema.org", "@type": "CollectionPage", name, description: intro, url: SITE + path,
+      isPartOf: { "@type": "WebSite", name: "Casama Gallery", url: `${SITE}/` },
+      mainEntity: { "@type": "ItemList", numberOfItems: sorted.length, itemListElement: sorted.map((i, n) => ({ "@type": "ListItem", position: n + 1, name: i.name, url: C.pageUrl(i) })) } }],
+  });
+}
+for (const g of groups) write(`${groupPath(g.type, g.cat).slice(1)}index.html`, groupPage(g));
+
 // sitemap.xml: the gallery, the developer page, every item and author.
 const today = new Date().toISOString().slice(0, 10);
 const urls = [
   { loc: `${SITE}/`, lastmod: today },
   { loc: `${SITE}/add/` },
   { loc: `${SITE}/make.html` },
+  ...groups.map((g) => ({ loc: SITE + groupPath(g.type, g.cat), lastmod: g.items.map((i) => i.updated || i.added || "").sort().at(-1) })),
   ...all.map((i) => ({ loc: C.pageUrl(i), lastmod: i.updated || i.added })),
   ...[...authors.values()].map((a) => ({ loc: SITE + C.authorPath(a.handle) })),
 ];
@@ -595,9 +665,27 @@ ${urls.map((u) => `  <url><loc>${esc(u.loc)}</loc>${/^\d{4}-\d{2}-\d{2}$/.test(u
 </urlset>
 `);
 
+// llms.txt: what the gallery is and where its catalog lives, for AI agents.
+write("llms.txt", `# Casama Gallery
+
+> Free, open-source add-ons for Casama, the open-source app for AI teammates with their own computers: ${C.TYPES.map((t) => C.count(all.filter((i) => i.type === t).length, t)).join(", ")}. Every item has its own page and is reviewed before it is listed.
+
+- [Casama](https://casama.ai/llms.txt): what Casama is, with links to its docs
+- [Add something to the gallery](${SITE}/add/): how to propose an item by pull request
+
+## Catalog (public JSON, no sign-in)
+
+${["index", "apps", "bots", "routines", "plugins", "sets", "authors"].map((f) => `- [${f}.json](${SITE}/${f}.json)`).join("\n")}
+- [Usage stats](https://api.casama.ai/v1/gallery/stats): installs and trending per item
+
+## Items
+
+${C.TYPES.map((t) => { const of = all.filter((i) => i.type === t); return of.length ? `### ${C.PLURAL[t]}\n\n${of.map((i) => `- [${i.name}](${C.pageUrl(i)}): ${describe(i)}`).join("\n")}` : ""; }).filter(Boolean).join("\n\n")}
+`);
+
 // A size check against Cloudflare's static asset limits (20,000 files, 25 MiB each).
 function walk(d) { return readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(join(d, e.name)) : [join(d, e.name)])); }
-const outFiles = ["i", "by"].flatMap((d) => (existsSync(join(DIR, d)) ? walk(join(DIR, d)) : []));
+const outFiles = ["i", "by", "c"].flatMap((d) => (existsSync(join(DIR, d)) ? walk(join(DIR, d)) : []));
 const bytes = outFiles.reduce((n, f) => n + statSync(f).size, 0);
 const biggest = outFiles.reduce((m, f) => Math.max(m, statSync(f).size), 0);
 if (biggest > 25 * 1024 * 1024) throw new Error("A generated file is over Cloudflare's 25 MiB limit.");

@@ -295,11 +295,115 @@
         },
         {
           "type": "bot",
+          "id": "bug-triager"
+        },
+        {
+          "type": "bot",
+          "id": "coder"
+        },
+        {
+          "type": "bot",
+          "id": "coordinator"
+        },
+        {
+          "type": "bot",
+          "id": "daily-briefing"
+        },
+        {
+          "type": "bot",
+          "id": "data-analyst"
+        },
+        {
+          "type": "bot",
+          "id": "designer"
+        },
+        {
+          "type": "bot",
+          "id": "executive-assistant"
+        },
+        {
+          "type": "bot",
+          "id": "expense-matcher"
+        },
+        {
+          "type": "bot",
+          "id": "fitness-coach"
+        },
+        {
+          "type": "bot",
           "id": "home-organizer"
         },
         {
           "type": "bot",
+          "id": "inbox-triage"
+        },
+        {
+          "type": "bot",
+          "id": "marketer"
+        },
+        {
+          "type": "bot",
+          "id": "meal-planner"
+        },
+        {
+          "type": "bot",
+          "id": "money-helper"
+        },
+        {
+          "type": "bot",
+          "id": "ops-assistant"
+        },
+        {
+          "type": "bot",
+          "id": "outbound-prospector"
+        },
+        {
+          "type": "bot",
+          "id": "product-manager"
+        },
+        {
+          "type": "bot",
+          "id": "qa-tester"
+        },
+        {
+          "type": "bot",
+          "id": "recruiting-screener"
+        },
+        {
+          "type": "bot",
+          "id": "research-assistant"
+        },
+        {
+          "type": "bot",
+          "id": "sales-researcher"
+        },
+        {
+          "type": "bot",
+          "id": "social-manager"
+        },
+        {
+          "type": "bot",
           "id": "study-buddy"
+        },
+        {
+          "type": "bot",
+          "id": "support-agent"
+        },
+        {
+          "type": "bot",
+          "id": "translator"
+        },
+        {
+          "type": "bot",
+          "id": "travel-planner"
+        },
+        {
+          "type": "bot",
+          "id": "tutor"
+        },
+        {
+          "type": "bot",
+          "id": "writer"
         },
         {
           "type": "plugin",
@@ -319,7 +423,43 @@
         },
         {
           "type": "routine",
+          "id": "backup-check"
+        },
+        {
+          "type": "routine",
           "id": "bill-reminders"
+        },
+        {
+          "type": "routine",
+          "id": "birthday-and-dates"
+        },
+        {
+          "type": "routine",
+          "id": "competitor-watch"
+        },
+        {
+          "type": "routine",
+          "id": "end-of-day-wrap"
+        },
+        {
+          "type": "routine",
+          "id": "follow-up-chaser"
+        },
+        {
+          "type": "routine",
+          "id": "home-maintenance"
+        },
+        {
+          "type": "routine",
+          "id": "inbox-zero-pass"
+        },
+        {
+          "type": "routine",
+          "id": "invoice-chaser"
+        },
+        {
+          "type": "routine",
+          "id": "job-search-digest"
         },
         {
           "type": "routine",
@@ -327,7 +467,19 @@
         },
         {
           "type": "routine",
+          "id": "meeting-prep"
+        },
+        {
+          "type": "routine",
           "id": "morning-plan"
+        },
+        {
+          "type": "routine",
+          "id": "news-brief"
+        },
+        {
+          "type": "routine",
+          "id": "price-watch"
         },
         {
           "type": "routine",
@@ -335,7 +487,27 @@
         },
         {
           "type": "routine",
+          "id": "receipt-collector"
+        },
+        {
+          "type": "routine",
+          "id": "social-post-planner"
+        },
+        {
+          "type": "routine",
+          "id": "subscription-audit"
+        },
+        {
+          "type": "routine",
+          "id": "support-inbox-triage"
+        },
+        {
+          "type": "routine",
           "id": "weekly-review"
+        },
+        {
+          "type": "routine",
+          "id": "weekly-team-update"
         },
         {
           "type": "scheme",
@@ -379,7 +551,19 @@
         },
         {
           "type": "set",
+          "id": "job-search-kit"
+        },
+        {
+          "type": "set",
           "id": "meetings-handled"
+        },
+        {
+          "type": "set",
+          "id": "money-in-order"
+        },
+        {
+          "type": "set",
+          "id": "small-business-kit"
         },
         {
           "type": "set",

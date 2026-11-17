@@ -11,12 +11,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          # The merge commit and its base, to see what a pull request changes.
+          fetch-depth: 2
       - uses: actions/setup-node@v5
         with:
           node-version: "24"
       # Checks every item and that index.json, the other kinds' files, authors.json and
       # manifest.json are up to date. Needs no key.
       - run: node check.mjs --check
+      # coding-agents.json becomes commands on people's computers (D-370): first-party only.
+      - name: Coding agents are Casama's own
+        if: github.event_name == 'pull_request'
+        env:
+          ASSOCIATION: ${{ github.event.pull_request.author_association }}
+        run: |
+          if git diff --name-only HEAD^1 HEAD -- coding-agents.json | grep -q .; then
+            case "$ASSOCIATION" in
+              OWNER|MEMBER) ;;
+              *) echo "::error::coding-agents.json runs commands on people's computers, so only Casama changes it."; exit 1 ;;
+            esac
+          fi
 
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

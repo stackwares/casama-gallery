@@ -6,6 +6,9 @@ A pull request there is how a theme, color scheme, wallpaper, skill, app, starte
 Themes, color schemes, wallpapers, skills, apps, starter bots, routine ideas and plugins for Casama. A pull request is how someone contributes.
 Casama reviews it, and a merge is what every app sees, without an app release.
 
+`coding-agents.json` (the coding agents bots can run, D-370) is the exception: Casama writes it,
+and pull requests from outside that change it are refused.
+
 Each item is a folder:
 
 ```text
@@ -171,6 +174,10 @@ A starter bot is offered when someone makes a new bot. `bot.json`:
 - `skills` (up to 10) and `routines` (up to 5, five-field cron) are optional.
 - License: MIT, Apache-2.0, CC0-1.0 or CC-BY-4.0. Built-in starter bots keep their ids.
 
+The 26 starter bots built into Casama have copies here under the same ids (D-372). The gallery copy
+wins: change `bots/<id>/bot.json` and every server offers the new version without a release. The
+built-in copy only stands in when the gallery can't be read.
+
 ### Routine ideas
 
 A routine idea fills in a new routine (a bot's Routines → New routine → Ideas). `routine.json`:
@@ -220,6 +227,31 @@ A starter set bundles items people often add together (Founder kit, Student kit)
 
 2 to 12 items of any kind but another set, each one in this gallery and not retired. License CC0-1.0 or
 CC-BY-4.0. Sets are written to `sets.json`.
+
+A set's `tags` are also its match words in onboarding: a set whose tags share words with what someone
+says they want to do is suggested to them. Give a set at least three tags.
+
+### Lists (D-372)
+
+`lists/<id>.json` holds content the app and server read instead of their built-in copies. Each file is
+written into `lists.json`, a file older apps never read. A list that can't be read, or a field left
+out, falls back to the built-in copy. Gallery text shows in the app only in English.
+
+- `search-words.json`: `{ "words": { "email": ["mail", "inbox"] } }`. Extra words a gallery search
+  also matches; used by the app, bots' `gallery.search` and the MCP server. Up to 12 lower-case
+  words per key.
+- `welcome.json`: the welcome chat's focus choices, a `focus` list. Each has an `id`
+  (`email_calendar`, `work_projects`, `coding`, `research`, `sales`, `errands`, `health`, `other`),
+  a `label`, an `intro`, a `first_task` (`label`, `placeholder`, `prefix`), up to 4 `starters`
+  (starter bot ids) and up to 4 `apps` (app ids). Focus ids are fixed for analytics; an unknown id
+  is left out.
+- `starters.json`: empty-screen starters. `library` (up to 9: `id`, `label`, `prompt`, a Lucide
+  `icon`, a `hue`), `tasks` (up to 6) and `support` (up to 6), each `{ "id", "text" }`.
+- `app-curation.json`: display fields only for built-in apps: `apps` (`id` with an optional `name`,
+  `description`, `color`, `featured`), `order` (ids first, in this order) and `starter_apps` (up to
+  8 ids shown in an empty chat). Sign-in, scopes and server addresses stay in code.
+
+`node gallery/check.mjs` checks every list strictly (known ids, icon names, lengths).
 
 ## More in item.json (gallery v2, D-315)
 

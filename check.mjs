@@ -505,7 +505,12 @@ const BUILT_IN_APPS = [
   "figma", "webflow", "hubspot", "intercom", "stripe", "github", "linear", "sentry", "vercel", "supabase", "neon",
   "cloudflare", "context7", "posthog", "huggingface",
 ];
-const MANIFEST_FILES = ["index.json", "apps.json", "bots.json", "routines.json", "plugins.json", "sets.json", "authors.json"];
+const MANIFEST_FILES = ["index.json", "apps.json", "bots.json", "routines.json", "plugins.json", "sets.json", "authors.json",
+  // Content lists (D-372).
+  "lists.json",
+  "coding-agents.json",
+  "prompts.json",
+];
 const DATE = /^(\d{4})-(\d{2})-(\d{2})$/;
 const SEMVER = /^\d{1,4}\.\d{1,4}\.\d{1,4}$/;
 const HANDLE = /^[a-z0-9][a-z0-9-]{0,38}$/;
@@ -1062,6 +1067,39 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
   }
 }
 
+// Check-in and setup prompts (D-374): prompts/<id>.md, versioned in prompts/versions.json (a new
+// version whenever a text changes). Main catalog only; packages/agent/src/prompts.ts holds the ids,
+// the fallback text and the same reserved words (its test keeps them in step).
+const PROMPT_IDS = ["checkin.brief", "checkin.scan", "checkin.setup_scan", "checkin.reason.connection", "checkin.reason.event", "setup.guide"];
+const PROMPT_RESERVED = [[/NOTHING_NEW/, "NOTHING_NEW"], [/quiet day/i, '"Quiet day"'], [/write my morning brief for today/i, "the brief's opening line"], [/check-in scan\./i, "the scan's opening line"], [/you(?:'|’)re all set/i, '"You\'re all set"']];
+const prompts = (() => {
+  const dir = join(root, "prompts");
+  let versions = {};
+  try {
+    versions = JSON.parse(readFileSync(join(dir, "versions.json"), "utf8"));
+  } catch {
+    // A first run starts every prompt at version 1.
+  }
+  const out = [];
+  const nextVersions = {};
+  for (const file of readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
+    const id = file.slice(0, -3);
+    if (!PROMPT_IDS.includes(id)) {
+      errors.push(`prompts/${file}: ${id} isn't a prompt id`);
+      continue;
+    }
+    const text = readFileSync(join(dir, file), "utf8").trim();
+    if (text.length < 20 || text.length > 8000) errors.push(`prompts/${file}: the text must be 20 to 8000 characters`);
+    for (const [re, what] of PROMPT_RESERVED) if (re.test(text)) errors.push(`prompts/${file}: ${what} is added by code; leave it out of the text`);
+    const sha256 = createHash("sha256").update(text).digest("hex");
+    const was = versions[id];
+    const version = !was ? 1 : was.sha256 === sha256 ? was.version : was.version + 1;
+    nextVersions[id] = { version, sha256 };
+    out.push({ id, version, text });
+  }
+  return { items: out, versions: nextVersions };
+})();
+
 // References that need the whole catalog: needs, remix_of, replaced_by and sets' items.
 const known = new Map(refs.map((r) => [`${r.type}/${r.id}`, r]));
 const builtInApps = new Set(BUILT_IN_APPS);
@@ -1084,6 +1122,248 @@ for (const r of refs) {
   }
 }
 
+// Coding agents (D-370): first-party, hand-written, signed with the rest. Their commands run on
+// people's computers, so pull requests from outside Casama can't change this file (gallery.yml).
+// Mirrors packages/domain/src/coding-agents.ts (parseCodingAgentEntry, checkCodingTemplate).
+const CODING_AGENTS_FILE = "coding-agents.json";
+let codingAgentsBody = "";
+try {
+  codingAgentsBody = readFileSync(join(root, CODING_AGENTS_FILE), "utf8");
+} catch {
+  errors.push(`${CODING_AGENTS_FILE} is missing`);
+}
+if (codingAgentsBody) {
+  let parsed;
+  try {
+    parsed = JSON.parse(codingAgentsBody);
+  } catch {
+    errors.push(`${CODING_AGENTS_FILE} is not JSON`);
+  }
+  if (parsed && (parsed.schema !== 1 || !Array.isArray(parsed.items))) errors.push(`${CODING_AGENTS_FILE} must be { "schema": 1, "items": [...] }`);
+  else if (parsed) {
+    const ids = new Set();
+    for (const [n, e] of parsed.items.entries()) for (const err of checkCodingAgent(e, ids)) errors.push(`${CODING_AGENTS_FILE} items[${n}]: ${err}`);
+  }
+}
+
+function checkCodingTemplate(t, bin, marker) {
+  if (typeof t !== "string" || !t.trim()) return ["the command is empty"];
+  if (t.length > 1000) return ["the command is longer than 1000 characters"];
+  const tokens = [];
+  let i = 0;
+  while (i < t.length) {
+    const ch = t[i];
+    if (ch === " " || ch === "\t") { i++; continue; }
+    if (ch === "\n" || ch === "\r") return ["a command is one line"];
+    const two = t.slice(i, i + 2);
+    if (two === "&&" || two === "||") { tokens.push({ op: two }); i += 2; continue; }
+    if (ch === ";" || ch === "|") { tokens.push({ op: ch }); i++; continue; }
+    if (ch === "{") {
+      const close = t.indexOf("}", i);
+      const name = close > i ? t.slice(i + 1, close) : "";
+      if (!["task", "folder", "result_file"].includes(name)) return ["only {task}, {folder} and {result_file} may be used"];
+      if (t[close + 1] !== undefined && !/[\s;|&]/.test(t[close + 1])) return [`{${name}} must be a word of its own`];
+      tokens.push({ placeholder: name });
+      i = close + 1;
+      continue;
+    }
+    let text = "";
+    while (i < t.length) {
+      const c = t[i];
+      if (c === " " || c === "\t" || c === ";" || c === "|") break;
+      if (c === "&") {
+        if (t[i + 1] === "&") break;
+        if (t[i - 1] === ">" && /[0-9]/.test(t[i + 1] ?? "")) { text += c; i++; continue; }
+        return ["a command can't run in the background (&)"];
+      }
+      if (c === "'" || c === '"') {
+        const close = t.indexOf(c, i + 1);
+        if (close < 0) return ["a quote isn't closed"];
+        const inner = t.slice(i + 1, close);
+        if (c === '"' && /[$`\\\n\r]/.test(inner)) return ["double quotes can't hold $, backticks or backslashes"];
+        if (/[\n\r]/.test(inner)) return ["a command is one line"];
+        if (/\{(task|folder|result_file)\}/.test(inner)) return ["placeholders can't be inside quotes"];
+        text += inner;
+        i = close + 1;
+        continue;
+      }
+      if (c === ">" || c === "<") { text += c; i++; continue; }
+      if (!/[A-Za-z0-9_\-./=:,@+%^~]/.test(c)) return [`"${c}" isn't allowed outside quotes`];
+      text += c;
+      i++;
+    }
+    tokens.push({ word: text });
+  }
+  const errs = [];
+  let atStart = true;
+  for (const tok of tokens) {
+    if (tok.op) { if (atStart) errs.push(`"${tok.op}" needs a command before it`); atStart = true; continue; }
+    if (atStart && tok.word !== bin) errs.push(`every command must start with ${bin}`);
+    atStart = false;
+  }
+  if (atStart && tokens.length) errs.push("it can't end with an operator");
+  const names = tokens.filter((x) => x.placeholder).map((x) => x.placeholder);
+  if (names.filter((x) => x === "task").length !== 1) errs.push("it needs {task}, once");
+  if (marker !== names.includes("result_file")) errs.push("{result_file} goes with the marker result, and only with it");
+  return [...new Set(errs)];
+}
+
+function checkCodingAgent(e, ids) {
+  if (!isRecord(e)) return ["must be an object"];
+  const errs = [];
+  const KEYS = ["id", "label", "bin", "where", "install", "key_name", "command", "result", "browser", "commits_for_agent", "needs_folder", "exit_messages", "hint", "min_server"];
+  for (const k of Object.keys(e)) if (!KEYS.includes(k)) errs.push(`unknown field ${k}`);
+  if (typeof e.id !== "string" || !/^[a-z][a-z0-9_]{1,31}$/.test(e.id) || e.id.startsWith("own_")) errs.push("id must be 2 to 32 lower-case letters, digits or _, not starting with own_");
+  else if (ids.has(e.id)) errs.push(`${e.id} is listed twice`);
+  else ids.add(e.id);
+  const text = (v, max) => typeof v === "string" && v.trim().length > 0 && v.length <= max && !/[\u0000-\u001f]/.test(v);
+  if (!text(e.label, 40)) errs.push("label must be 1 to 40 characters");
+  const binOk = typeof e.bin === "string" && /^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/.test(e.bin);
+  if (!binOk) errs.push("bin must be a command name");
+  const whereOk = Array.isArray(e.where) && e.where.length > 0 && e.where.every((w) => ["my_computer", "bot_computer"].includes(w)) && new Set(e.where).size === e.where.length;
+  if (!whereOk) errs.push("where must list my_computer and/or bot_computer");
+  if (e.install != null && !text(e.install, 300)) errs.push("install must be one line of at most 300 characters");
+  if (e.key_name != null && (typeof e.key_name !== "string" || !/^[A-Z][A-Z0-9_]{1,63}$/.test(e.key_name))) errs.push("key_name must be UPPER_SNAKE_CASE");
+  if (whereOk && e.where.includes("bot_computer") && (!e.install || !e.key_name)) errs.push("bot_computer needs install and key_name");
+  const resultOk = ["json_result", "marker", "stream_json", "tail"].includes(e.result) || (typeof e.result === "string" && /^json_field:[A-Za-z_][A-Za-z0-9_]{0,31}$/.test(e.result));
+  if (!resultOk) errs.push("result must be json_result, marker, json_field:<name>, stream_json or tail");
+  if (!isRecord(e.command)) errs.push("command must be an object by where");
+  else if (whereOk && binOk) {
+    for (const k of Object.keys(e.command)) if (!e.where.includes(k)) errs.push(`command.${k} isn't in where`);
+    for (const w of e.where) for (const err of checkCodingTemplate(e.command[w], e.bin, e.result === "marker")) errs.push(`command.${w}: ${err}`);
+  }
+  if (e.browser != null && !["claude", "codex"].includes(e.browser)) errs.push("browser must be claude, codex or left out");
+  for (const k of ["commits_for_agent", "needs_folder"]) if (e[k] !== undefined && typeof e[k] !== "boolean") errs.push(`${k} must be true or false`);
+  if (e.exit_messages !== undefined) {
+    if (!isRecord(e.exit_messages)) errs.push("exit_messages must be an object");
+    else for (const [code, m] of Object.entries(e.exit_messages)) {
+      if (!/^[1-9][0-9]{0,2}$/.test(code)) errs.push(`exit_messages.${code}: not an exit code`);
+      else if (!isRecord(m) || !text(m.status, 80) || (m.note !== undefined && !text(m.note, 300))) errs.push(`exit_messages.${code} needs a status (and an optional note)`);
+    }
+  }
+  if (e.hint != null && !text(e.hint, 160)) errs.push("hint must be at most 160 characters");
+  if (e.min_server !== undefined && !(typeof e.min_server === "string" && SEMVER.test(e.min_server))) errs.push("min_server must be a version like 0.2.0");
+  return errs;
+}
+
+// Content lists (D-372): first-party lists the apps and servers read instead of their built-in
+// copies (search words, welcome chat words, empty-state starters, app catalog curation). One file
+// each in lists/, published together as lists.json. Readers skip what they don't know, so a list
+// here can only add or reword; packages/domain/src/gallery-lists.ts is the reader.
+const LISTS = ["search-words", "welcome", "starters", "app-curation"];
+// The welcome chat's focus ids (packages/agent/src/welcome.ts WELCOME_FOCUS): fixed for analytics.
+const WELCOME_FOCUS_IDS = ["email_calendar", "work_projects", "coding", "research", "sales", "errands", "health", "other"];
+const LIST_WORD = /^[a-z0-9][a-z0-9' -]{0,30}$/;
+const LIST_ID = /^[a-z0-9][a-z0-9_-]{0,62}$/;
+const lists = [];
+function listDocument(id, raw, errs) {
+  const textOk = (v, max) => typeof v === "string" && v.trim().length >= 1 && v.trim().length <= max;
+  const ids = (v, max, label, known) => {
+    if (v === undefined) return;
+    if (!Array.isArray(v) || v.length > max || v.some((x) => typeof x !== "string" || !LIST_ID.test(x)) || new Set(v).size !== v.length)
+      return errs.push(`${label} must be at most ${max} different ids`);
+    if (known) for (const x of v) if (!known.includes(x)) errs.push(`${label}: ${x} isn't a built-in app`);
+  };
+  const entries = (v, label, max, fields) => {
+    if (v === undefined) return;
+    if (!Array.isArray(v) || v.length < 1 || v.length > max) return errs.push(`${label} must list 1 to ${max} entries`);
+    const seen = new Set();
+    v.forEach((e, i) => {
+      if (!isRecord(e) || typeof e.id !== "string" || !LIST_ID.test(e.id)) return errs.push(`${label}[${i}].id must be lowercase letters, digits, - or _`);
+      if (seen.has(e.id)) errs.push(`${label}[${i}].id ${e.id} is used twice`);
+      seen.add(e.id);
+      for (const [k, max] of Object.entries(fields)) if (!textOk(e[k], max)) errs.push(`${label}[${i}].${k} must be 1 to ${max} characters`);
+    });
+  };
+  if (id === "search-words") {
+    if (!isRecord(raw.words) || Object.keys(raw.words).length < 1 || Object.keys(raw.words).length > 500) return errs.push("words must map 1 to 500 words to lists");
+    for (const [k, v] of Object.entries(raw.words)) {
+      if (!LIST_WORD.test(k)) errs.push(`words.${k}: lowercase words only`);
+      if (!Array.isArray(v) || v.length < 1 || v.length > 12 || v.some((x) => typeof x !== "string" || !LIST_WORD.test(x) || x === k) || new Set(v).size !== v.length)
+        errs.push(`words.${k} must be 1 to 12 different lowercase words, not itself`);
+    }
+  } else if (id === "welcome") {
+    if (!Array.isArray(raw.focus) || raw.focus.length < 1) return errs.push("focus must list the choices");
+    const seen = new Set();
+    raw.focus.forEach((f, i) => {
+      const at = `focus[${i}]`;
+      if (!isRecord(f) || !WELCOME_FOCUS_IDS.includes(f.id)) return errs.push(`${at}.id must be one of ${WELCOME_FOCUS_IDS.join(", ")}`);
+      if (seen.has(f.id)) errs.push(`${at}.id ${f.id} is used twice`);
+      seen.add(f.id);
+      for (const k of Object.keys(f)) if (!["id", "label", "intro", "first_task", "starters", "apps"].includes(k)) errs.push(`${at}.${k} isn't a field`);
+      if (f.label !== undefined && !textOk(f.label, 40)) errs.push(`${at}.label must be 1 to 40 characters`);
+      if (f.intro !== undefined && !textOk(f.intro, 400)) errs.push(`${at}.intro must be 1 to 400 characters`);
+      if (f.first_task !== undefined) {
+        const t = f.first_task;
+        if (!isRecord(t) || !textOk(t.label, 120) || !textOk(t.placeholder, 120) || typeof t.prefix !== "string" || t.prefix.length > 200)
+          errs.push(`${at}.first_task needs label and placeholder (1 to 120 characters) and a prefix (up to 200)`);
+      }
+      ids(f.starters, 4, `${at}.starters`);
+      ids(f.apps, 4, `${at}.apps`, BUILT_IN_APPS);
+    });
+  } else if (id === "starters") {
+    entries(raw.library, "library", 9, { label: 40, prompt: 300 });
+    for (const [i, e] of (Array.isArray(raw.library) ? raw.library : []).entries()) {
+      if (!isRecord(e)) continue;
+      if (typeof e.icon !== "string" || !LUCIDE[e.icon]) errs.push(`library[${i}].icon must be a Lucide icon name`);
+      if (typeof e.hue !== "number" || e.hue < 0 || e.hue > 360) errs.push(`library[${i}].hue must be 0 to 360`);
+    }
+    entries(raw.tasks, "tasks", 6, { text: 160 });
+    entries(raw.support, "support", 6, { text: 120 });
+  } else if (id === "app-curation") {
+    const allowed = ["id", "name", "description", "color", "featured"];
+    if (!Array.isArray(raw.apps) || raw.apps.length > 200) errs.push("apps must be a list");
+    else
+      raw.apps.forEach((a, i) => {
+        const at = `apps[${i}]`;
+        if (!isRecord(a) || !BUILT_IN_APPS.includes(a.id)) return errs.push(`${at}.id must be a built-in app (gallery apps are curated in their own entry)`);
+        for (const k of Object.keys(a)) if (!allowed.includes(k)) errs.push(`${at}.${k}: only display fields (${allowed.join(", ")}); sign-in details stay in code`);
+        if (a.name !== undefined && !textOk(a.name, 60)) errs.push(`${at}.name must be 1 to 60 characters`);
+        if (a.description !== undefined && !textOk(a.description, 300)) errs.push(`${at}.description must be 1 to 300 characters`);
+        if (a.color !== undefined && !(typeof a.color === "string" && /^[0-9A-Fa-f]{6}$/.test(a.color))) errs.push(`${at}.color must be six hex digits without #`);
+        if (a.featured !== undefined && typeof a.featured !== "boolean") errs.push(`${at}.featured must be true or false`);
+      });
+    ids(raw.order, 200, "order", BUILT_IN_APPS);
+    ids(raw.starter_apps, 8, "starter_apps", BUILT_IN_APPS);
+  }
+}
+{
+  const parent = join(root, "lists");
+  let names = [];
+  try {
+    names = readdirSync(parent).filter((n) => n.endsWith(".json"));
+  } catch {
+    // No lists: every reader keeps its built-in copy.
+  }
+  for (const file of names.sort()) {
+    const id = file.replace(/\.json$/, "");
+    const where = `lists/${file}`;
+    if (!LISTS.includes(id)) {
+      errors.push(`${where}: unknown list (${LISTS.join(", ")})`);
+      continue;
+    }
+    let raw;
+    try {
+      raw = JSON.parse(readFileSync(join(parent, file), "utf8"));
+    } catch {
+      errors.push(`${where}: not JSON`);
+      continue;
+    }
+    if (!isRecord(raw)) {
+      errors.push(`${where}: must be an object`);
+      continue;
+    }
+    const { name, version, updated, ...document } = raw;
+    const local = [];
+    if (typeof name !== "string" || name.trim().length < 1 || name.trim().length > 60) local.push("name must be 1 to 60 characters");
+    if (!Number.isInteger(version) || version < 1) local.push("version must be a whole number from 1");
+    if (!isDate(updated)) local.push("updated must be a YYYY-MM-DD date");
+    listDocument(id, document, local);
+    for (const e of local) errors.push(`${where}: ${e}`);
+    lists.push({ type: "list", id, name: typeof name === "string" ? name.trim() : id, version, updated, document });
+  }
+}
+
 if (errors.length) {
   for (const e of errors) console.error(e);
   process.exit(1);
@@ -1099,12 +1379,18 @@ const outputs = [
   { file: "plugins.json", items: items.filter((i) => i.type === "plugin") },
   // Starter sets (D-315): a new kind, so its own file.
   { file: "sets.json", items: items.filter((i) => i.type === "set") },
+  // Content lists (D-372): their own file, so no older reader sees them.
+  { file: "lists.json", items: lists },
 ];
 const bodies = outputs.map((out) => ({ file: out.file, body: `${JSON.stringify({ schema: 1, items: out.items }, null, 2)}\n`, count: `${out.items.length} items` }));
 const authors = buildAuthors(items);
 bodies.push({ file: "authors.json", body: `${JSON.stringify(authors, null, 2)}\n`, count: `${authors.authors.length} authors` });
+// Hand-written: read as it is, never rewritten; only its hash goes in the manifest.
+bodies.push({ file: CODING_AGENTS_FILE, body: codingAgentsBody, source: true });
+bodies.push({ file: "prompts.json", body: `${JSON.stringify({ schema: 1, items: prompts.items }, null, 2)}\n`, count: `${prompts.items.length} prompts` });
+bodies.push({ file: "prompts/versions.json", body: `${JSON.stringify(prompts.versions, null, 2)}\n`, count: `${prompts.items.length} versions` });
 // The manifest's date is the newest change in the catalog, so it only moves when the catalog does.
-const created = items.reduce((max, i) => (i.updated > max ? i.updated : max), "");
+const created = [...items, ...lists].reduce((max, i) => (i.updated > max ? i.updated : max), "");
 const manifest = {
   schema: 1,
   created,
@@ -1113,6 +1399,7 @@ const manifest = {
 bodies.push({ file: "manifest.json", body: `${JSON.stringify(manifest, null, 2)}\n`, count: `${MANIFEST_FILES.length} files` });
 let stale = false;
 for (const out of bodies) {
+  if (out.source) continue;
   const body = out.body;
   const path = join(root, out.file);
   if (checkOnly) {
