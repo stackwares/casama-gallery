@@ -1,0 +1,11 @@
+{
+  "description": "A code reviewer bot: reviews pull requests, helps debug, and a weekday digest of open pull requests.",
+  "url": "https://github.com/stackwares/casama/tree/main/packs/dev-kit",
+  "commit": "ca3813c705e42aaf297493a2d889207c79cf657b",
+  "icon": "git-pull-request",
+  "adds": [
+    "A code reviewer bot",
+    "Pull request reviews and debugging help",
+    "A weekday digest of open pull requests"
+  ]
+}

@@ -156,8 +156,7 @@ ${noindex ? '<meta name="robots" content="noindex">\n' : ""}<meta property="og:t
 <header class="bar">
   <div class="wrap bar-inner">
     <a class="logo" href="https://casama.ai" aria-label="Casama home"><span data-casama-mark></span><span>Casama</span></a>
-    <span class="crumb" aria-hidden="true">/</span>
-    <a class="crumb-page" href="/">Gallery</a>
+    <a class="brand-tag" href="/">Gallery</a>
     <nav class="bar-nav" aria-label="Gallery">
       <a href="/make.html">Make a look</a>
       <a href="/#contribute">Contribute</a>

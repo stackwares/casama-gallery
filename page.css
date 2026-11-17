@@ -12,7 +12,7 @@
 .item-info { min-width: 0; }
 .kind { color: var(--muted); margin: 0 0 8px; font-size: 15px; }
 .kind a { color: inherit; }
-.item h1 { font-size: clamp(32px, 4vw, 46px); margin: 0 0 12px; }
+.item h1 { font-size: clamp(32px, 4vw, 46px); line-height: 1.05; margin: 0 0 12px; }
 .about { font-size: 18px; line-height: 1.5; margin: 0 0 20px; }
 .item .actions { margin: 0 0 12px; padding: 0; }
 .item .stats-line { margin: -4px 0 12px; }
@@ -31,7 +31,7 @@ a.tag { text-decoration: none; display: inline-block; }
 .row-link .row-mark { width: 64px; }
 /* /add/ */
 .doc { max-width: 760px; }
-.doc h2 { font-size: 26px; margin: 40px 0 10px; }
+.doc h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.12; margin: 40px 0 10px; }
 .doc p, .doc li { max-width: 68ch; }
 .doc table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 8px 0 16px; }
 .doc th, .doc td { text-align: left; padding: 9px 12px 9px 0; border-top: 1px solid var(--border); vertical-align: top; }

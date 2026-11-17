@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "created": "2026-11-16",
+  "created": "2026-11-17",
   "files": {
     "index.json": "b822c3d960e7f10da495cddbe0d01978f449d0e6edee91da2d0def6c7db7b43e",
     "apps.json": "443915a22b0edca9489ab6ae1446e515e644568f5a652619719c331a30f7f499",
     "bots.json": "8170dc2afef7d58cba6c7a3ae5e77b439ca7ce53a4469371cab3978405f6d00b",
     "routines.json": "f26ebe7c6eeec99adda2c24806b82e6e325f123f02aeb4b2dbba8e64be3cfbca",
-    "plugins.json": "f4a073047178db7cf85a5c491db26a60406a3c3a97b052f572e504ec74607ae2",
+    "plugins.json": "4f5999718f31a8868b2e75e5edff1c60047b352854d2bba8f834f9fadb24fecb",
     "sets.json": "672a29e5833d691b707d75a642867d7e1e9c1259731abbc2f278d3777d24df19",
-    "authors.json": "36c018bd15fba6b0958319afe51f65dedb391de4c31a59f0f47efe2846cab19f"
+    "authors.json": "51dde31da739db71ccd576b93971ded5bc8c3ce97388e77f06c38b901b8e66c3"
   }
 }

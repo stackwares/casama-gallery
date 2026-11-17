@@ -303,7 +303,19 @@
         },
         {
           "type": "plugin",
+          "id": "dev-kit"
+        },
+        {
+          "type": "plugin",
+          "id": "founder-kit"
+        },
+        {
+          "type": "plugin",
           "id": "hello-casama"
+        },
+        {
+          "type": "plugin",
+          "id": "meetings-handled"
         },
         {
           "type": "routine",
