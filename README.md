@@ -48,6 +48,10 @@ colors need a luminance of at least 0.55 and dark ones at most 0.05, so text on 
 `palette` is the fallback that apps from before mesh support draw, so it has to be one of the first ten
 (`theme` to `graphite`). A theme's `wallpaper` can carry a `mesh` the same way. See `wallpapers/petal`.
 
+A theme's `wallpaper` can also name one of the gallery's image wallpapers: `"image": "lavender-hills"`.
+It keeps its `pattern` and `palette` as the fallback. The catalog resolves the name into the wallpaper's
+file, in a form apps from before this field can load too. See `themes/casama`.
+
 ### Doodles
 
 A pattern or mesh wallpaper (and a theme's `wallpaper`) can bring its own doodles instead of a built-in

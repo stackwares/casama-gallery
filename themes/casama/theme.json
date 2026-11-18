@@ -2,33 +2,34 @@
   "v": 2,
   "scheme": {
     "light": {
-      "seed": "#9C3A9E",
-      "background": "#FDF3F8",
-      "onBackground": "#201A1E",
-      "primary": "#9C3A9E",
-      "primaryContainer": "#FADDF5",
-      "secondary": "#B8407F",
-      "secondaryContainer": "#FFD9EA",
-      "tertiary": "#5562CF",
-      "tertiaryContainer": "#E0E2FF",
-      "appBar": "#FCF3FB"
+      "seed": "#6941A1",
+      "background": "#FBF9FE",
+      "onBackground": "#1B191F",
+      "primary": "#6941A1",
+      "primaryContainer": "#EBE3FE",
+      "secondary": "#8A3A64",
+      "secondaryContainer": "#FFDDEC",
+      "tertiary": "#315C92",
+      "tertiaryContainer": "#D9EAFF",
+      "appBar": "#F7F4FD"
     },
     "dark": {
-      "seed": "#F2B0EC",
-      "background": "#211920",
-      "onBackground": "#EBDFE6",
-      "primary": "#F2B0EC",
-      "primaryContainer": "#6B1F69",
-      "secondary": "#FFB1D4",
-      "secondaryContainer": "#7A2152",
-      "tertiary": "#BDC2FF",
-      "tertiaryContainer": "#323C8A",
-      "appBar": "#25102F"
+      "seed": "#CEB5FE",
+      "background": "#121016",
+      "onBackground": "#E9E6EF",
+      "primary": "#CEB5FE",
+      "primaryContainer": "#3E2E59",
+      "secondary": "#EFAECC",
+      "secondaryContainer": "#4F2A3C",
+      "tertiary": "#A6C7F1",
+      "tertiaryContainer": "#263951",
+      "appBar": "#18151F"
     }
   },
-  "headingFont": "Libre Baskerville",
-  "bodyFont": "Lato",
+  "headingFont": "Google Sans",
+  "bodyFont": "Google Sans",
   "wallpaper": {
+    "image": "lavender-hills",
     "pattern": "clouds",
     "palette": "theme",
     "intensity": 0.5

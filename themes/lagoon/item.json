@@ -12,6 +12,13 @@
   ],
   "featured": true,
   "pick": "Sea colors, Fraunces headings and a playful sea pattern.",
-  "version": 1,
-  "added": "2026-11-11"
+  "version": 2,
+  "added": "2026-11-11",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "Redesigned around the Koi pond painting: new colors and fonts."
+    }
+  ]
 }

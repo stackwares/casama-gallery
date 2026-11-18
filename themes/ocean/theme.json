@@ -2,19 +2,34 @@
   "v": 2,
   "scheme": {
     "light": {
-      "seed": "#023047",
-      "background": "#F0F4FA",
-      "onBackground": "#181C20"
+      "seed": "#056774",
+      "background": "#F6FBFC",
+      "onBackground": "#141C1E",
+      "primary": "#056774",
+      "primaryContainer": "#CAF0F7",
+      "secondary": "#74542C",
+      "secondaryContainer": "#F4E5D4",
+      "tertiary": "#295F8A",
+      "tertiaryContainer": "#D5EBFF",
+      "appBar": "#EDF8FA"
     },
     "dark": {
-      "seed": "#57859D",
-      "background": "#13191D",
-      "onBackground": "#DFE3E8"
+      "seed": "#8DD1DD",
+      "background": "#0B1314",
+      "onBackground": "#DFEAEC",
+      "primary": "#8DD1DD",
+      "primaryContainer": "#113F46",
+      "secondary": "#D9BFA2",
+      "secondaryContainer": "#443524",
+      "tertiary": "#A3C9EB",
+      "tertiaryContainer": "#233A4E",
+      "appBar": "#0C1A1C"
     }
   },
-  "headingFont": "Libre Baskerville",
-  "bodyFont": "Lato",
+  "headingFont": "Outfit",
+  "bodyFont": "Figtree",
   "wallpaper": {
+    "image": "tide",
     "pattern": "sea",
     "palette": "ocean",
     "intensity": 0.5

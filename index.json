@@ -2788,6 +2788,75 @@
       ]
     },
     {
+      "id": "candy",
+      "type": "theme",
+      "name": "Candy",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "pink",
+        "playful"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "199055ae7af9870b78bc8b5a2e21055601b287c7ee8d6d7260dc2a3223ed1fa3",
+      "size": 1124,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#942D66",
+            "background": "#FEF8FB",
+            "onBackground": "#1F181B",
+            "primary": "#942D66",
+            "primaryContainer": "#FFDDEC",
+            "secondary": "#125F94",
+            "secondaryContainer": "#D5EBFF",
+            "tertiary": "#8B4501",
+            "tertiaryContainer": "#FFE1CE",
+            "appBar": "#FDF3F7"
+          },
+          "dark": {
+            "seed": "#F8A8CE",
+            "background": "#160F12",
+            "onBackground": "#EFE5E9",
+            "primary": "#F8A8CE",
+            "primaryContainer": "#54263D",
+            "secondary": "#9ACAF3",
+            "secondaryContainer": "#1D3B53",
+            "tertiary": "#EFB690",
+            "tertiaryContainer": "#502F17",
+            "appBar": "#1E1318"
+          }
+        },
+        "headingFont": "Baloo 2",
+        "bodyFont": "Nunito",
+        "wallpaper": {
+          "image": "candy-sky",
+          "pattern": "clouds",
+          "palette": "cotton",
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../candy-sky/candy-sky.jpg",
+          "thumb": "../candy-sky/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/candy/item.json",
+        "themes/candy/theme.json"
+      ]
+    },
+    {
       "id": "casama",
       "type": "theme",
       "name": "Casama",
@@ -2803,48 +2872,59 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "cf889cb19adf480f3f5b2f0c07979e756a2cb33c7b4acddbe0ab43144f58bce9",
-      "size": 1107,
+      "sha256": "5da259e0a42b03aace4a6f7de740a059f4aa8979c74a7398e89419c7d31e1d57",
+      "size": 1306,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Lavender hills painting: new colors and fonts."
+        }
       ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#9C3A9E",
-            "background": "#FDF3F8",
-            "onBackground": "#201A1E",
-            "primary": "#9C3A9E",
-            "primaryContainer": "#FADDF5",
-            "secondary": "#B8407F",
-            "secondaryContainer": "#FFD9EA",
-            "tertiary": "#5562CF",
-            "tertiaryContainer": "#E0E2FF",
-            "appBar": "#FCF3FB"
+            "seed": "#6941A1",
+            "background": "#FBF9FE",
+            "onBackground": "#1B191F",
+            "primary": "#6941A1",
+            "primaryContainer": "#EBE3FE",
+            "secondary": "#8A3A64",
+            "secondaryContainer": "#FFDDEC",
+            "tertiary": "#315C92",
+            "tertiaryContainer": "#D9EAFF",
+            "appBar": "#F7F4FD"
           },
           "dark": {
-            "seed": "#F2B0EC",
-            "background": "#211920",
-            "onBackground": "#EBDFE6",
-            "primary": "#F2B0EC",
-            "primaryContainer": "#6B1F69",
-            "secondary": "#FFB1D4",
-            "secondaryContainer": "#7A2152",
-            "tertiary": "#BDC2FF",
-            "tertiaryContainer": "#323C8A",
-            "appBar": "#25102F"
+            "seed": "#CEB5FE",
+            "background": "#121016",
+            "onBackground": "#E9E6EF",
+            "primary": "#CEB5FE",
+            "primaryContainer": "#3E2E59",
+            "secondary": "#EFAECC",
+            "secondaryContainer": "#4F2A3C",
+            "tertiary": "#A6C7F1",
+            "tertiaryContainer": "#263951",
+            "appBar": "#18151F"
           }
         },
-        "headingFont": "Libre Baskerville",
-        "bodyFont": "Lato",
+        "headingFont": "Google Sans",
+        "bodyFont": "Google Sans",
         "wallpaper": {
+          "image": "lavender-hills",
           "pattern": "clouds",
           "palette": "theme",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../lavender-hills/lavender-hills.jpg",
+          "thumb": "../lavender-hills/thumb.jpg"
         }
       },
       "files": [
@@ -2868,31 +2948,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "b180cf7f5948077a419f6bd0cb47f896967e6cd4fffa201f20de480ccb89ca60",
-      "size": 651,
+      "sha256": "3d7204612f659158898085c2b96dcbe21053af5f4fea570b466277a936a54852",
+      "size": 1277,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Aurora painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#4527A0",
-            "background": "#F9F2FD",
-            "onBackground": "#1C1B20"
+            "seed": "#5D43AC",
+            "background": "#FAF9FE",
+            "onBackground": "#1A1A20",
+            "primary": "#5D43AC",
+            "primaryContainer": "#E7E4FF",
+            "secondary": "#016C46",
+            "secondaryContainer": "#D0F2DE",
+            "tertiary": "#345A98",
+            "tertiaryContainer": "#DCE9FE",
+            "appBar": "#F5F5FE"
           },
           "dark": {
-            "seed": "#B39DDB",
-            "background": "#1B1921",
-            "onBackground": "#E6E1E9"
+            "seed": "#C3BAFF",
+            "background": "#111117",
+            "onBackground": "#E7E7F0",
+            "primary": "#C3BAFF",
+            "primaryContainer": "#382F5E",
+            "secondary": "#98D4B3",
+            "secondaryContainer": "#1B412E",
+            "tertiary": "#A7C6F7",
+            "tertiaryContainer": "#273854",
+            "appBar": "#171620"
           }
         },
-        "headingFont": "Libre Baskerville",
-        "bodyFont": "Lato",
+        "headingFont": "Sora",
+        "bodyFont": "Inter",
         "wallpaper": {
+          "image": "aurora",
           "pattern": "space",
           "palette": "lavender",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../aurora/aurora.jpg",
+          "thumb": "../aurora/thumb.jpg"
         }
       },
       "files": [
@@ -2916,31 +3024,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "f1f855abaea3ae00a5d3ed0eaeca654e4981e616c97bb874a977e8a0f834517a",
-      "size": 642,
+      "sha256": "1c3a4653d44087f988054b030c55aa668f3ecab99ccb0c6e67cf50a59d091a1d",
+      "size": 1280,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Margins painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#413D32",
-            "background": "#FBF4EB",
-            "onBackground": "#1E1B13"
+            "seed": "#5D5479",
+            "background": "#FAF9FE",
+            "onBackground": "#1B1A20",
+            "primary": "#5D5479",
+            "primaryContainer": "#E9E5F7",
+            "secondary": "#804462",
+            "secondaryContainer": "#FCDFEB",
+            "tertiary": "#755421",
+            "tertiaryContainer": "#F5E5D1",
+            "appBar": "#F6F4FD"
           },
           "dark": {
-            "seed": "#F1E8D9",
-            "background": "#201D15",
-            "onBackground": "#E9E2D4"
+            "seed": "#C5BFDD",
+            "background": "#121116",
+            "onBackground": "#E8E6EF",
+            "primary": "#C5BFDD",
+            "primaryContainer": "#393546",
+            "secondary": "#E5B4CA",
+            "secondaryContainer": "#4A2E3B",
+            "tertiary": "#DAC09C",
+            "tertiaryContainer": "#443520",
+            "appBar": "#18151F"
           }
         },
         "headingFont": "Fraunces",
-        "bodyFont": "Figtree",
+        "bodyFont": "Inter",
         "wallpaper": {
+          "image": "margins",
           "pattern": "none",
           "palette": "peach",
-          "intensity": 0.3
+          "intensity": 0.3,
+          "kind": "image",
+          "file": "../margins/margins.jpg",
+          "thumb": "../margins/thumb.jpg"
         }
       },
       "files": [
@@ -2964,31 +3100,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "ef0b1de887274fccd9d583a599d34d32c80799cca8bad1b3beefe5ad53141a1d",
-      "size": 655,
+      "updated": "2026-11-18",
+      "sha256": "072bb33c81c09781568c947310299e7bbedafeacaa6871978da830e876259258",
+      "size": 1289,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Dusk painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#C4552A",
-            "background": "#FFF8F3",
-            "onBackground": "#2A140C"
+            "seed": "#9D3013",
+            "background": "#FEF9F7",
+            "onBackground": "#201917",
+            "primary": "#9D3013",
+            "primaryContainer": "#FFE0D8",
+            "secondary": "#834163",
+            "secondaryContainer": "#FEDEEC",
+            "tertiary": "#864900",
+            "tertiaryContainer": "#FFE2CB",
+            "appBar": "#FEF3F0"
           },
           "dark": {
-            "seed": "#FFB089",
-            "background": "#2A140C",
-            "onBackground": "#FFF1E8"
+            "seed": "#FFAC97",
+            "background": "#16100E",
+            "onBackground": "#F0E5E2",
+            "primary": "#FFAC97",
+            "primaryContainer": "#58281C",
+            "secondary": "#E8B2CA",
+            "secondaryContainer": "#4C2D3C",
+            "tertiary": "#EDB88D",
+            "tertiaryContainer": "#4E3015",
+            "appBar": "#1F1411"
           }
         },
         "headingFont": "Bricolage Grotesque",
         "bodyFont": "Onest",
         "wallpaper": {
+          "image": "dusk",
           "pattern": "doodles",
           "palette": "sunset",
-          "intensity": 0.45
+          "intensity": 0.45,
+          "kind": "image",
+          "file": "../dusk/dusk.jpg",
+          "thumb": "../dusk/thumb.jpg"
         }
       },
       "files": [
@@ -3012,31 +3176,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "0ca0b38af5450b7dfad7ab77d304397d302d5eee8cad71b7f84ab1815cef1ed6",
-      "size": 649,
+      "sha256": "e7a00d5def0080c44295c276353b144e3ea38f3b0caf17901be7c5350a0a57ae",
+      "size": 1300,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Northern pines painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#004E15",
-            "background": "#F1F7EC",
-            "onBackground": "#181D17"
+            "seed": "#2B684B",
+            "background": "#F7FBF9",
+            "onBackground": "#161C19",
+            "primary": "#2B684B",
+            "primaryContainer": "#D7EFE1",
+            "secondary": "#2C656B",
+            "secondaryContainer": "#D6EDEF",
+            "tertiary": "#50632E",
+            "tertiaryContainer": "#E3ECD5",
+            "appBar": "#EFF8F3"
           },
           "dark": {
-            "seed": "#519E67",
-            "background": "#131A13",
-            "onBackground": "#E0E4DB"
+            "seed": "#A5D0B8",
+            "background": "#0D1310",
+            "onBackground": "#E1EAE5",
+            "primary": "#A5D0B8",
+            "primaryContainer": "#253E31",
+            "secondary": "#A5CDD1",
+            "secondaryContainer": "#253D3F",
+            "tertiary": "#BCCBA4",
+            "tertiaryContainer": "#333C25",
+            "appBar": "#0F1A14"
           }
         },
-        "headingFont": "Libre Baskerville",
+        "headingFont": "Source Serif 4",
         "bodyFont": "Lato",
         "wallpaper": {
+          "image": "northern-pines",
           "pattern": "garden",
           "palette": "forest",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../northern-pines/northern-pines.jpg",
+          "thumb": "../northern-pines/thumb.jpg"
         }
       },
       "files": [
@@ -3060,31 +3252,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "c4d6832158c26b6dd50a72a01b38f665fcdd1e955344bf32ec3e6aac707140fe",
-      "size": 648,
+      "sha256": "2ce25b294ccb11d9b2de963b16144d53dbd32b592c563a38bcad9986b62663e0",
+      "size": 1275,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Fog painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#18181B",
-            "background": "#F6F3FA",
-            "onBackground": "#1B1B21"
+            "seed": "#515B6C",
+            "background": "#F8FAFE",
+            "onBackground": "#171B20",
+            "primary": "#515B6C",
+            "primaryContainer": "#E3E8F0",
+            "secondary": "#535C66",
+            "secondaryContainer": "#E4E8ED",
+            "tertiary": "#405F74",
+            "tertiaryContainer": "#DCEAF4",
+            "appBar": "#F1F6FE"
           },
           "dark": {
-            "seed": "#FAFAFA",
-            "background": "#1D1E23",
-            "onBackground": "#E4E1E9"
+            "seed": "#BCC5D2",
+            "background": "#0E1217",
+            "onBackground": "#E3E8F0",
+            "primary": "#BCC5D2",
+            "primaryContainer": "#333840",
+            "secondary": "#BEC5CD",
+            "secondaryContainer": "#34383D",
+            "tertiary": "#B1C8D9",
+            "tertiaryContainer": "#2C3A44",
+            "appBar": "#121720"
           }
         },
-        "headingFont": "Google Sans",
-        "bodyFont": "Lato",
+        "headingFont": "Geist",
+        "bodyFont": "Geist",
         "wallpaper": {
+          "image": "fog",
           "pattern": "tech",
           "palette": "graphite",
-          "intensity": 0.35
+          "intensity": 0.35,
+          "kind": "image",
+          "file": "../fog/fog.jpg",
+          "thumb": "../fog/thumb.jpg"
         }
       },
       "files": [
@@ -3108,37 +3328,134 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "9d4790a817facb5e7ccfc670f20c3959a0c4e54fdef28907927894e27cad2ea5",
-      "size": 649,
+      "updated": "2026-11-18",
+      "sha256": "b3ada4d02f82d00b7ae281dbd568404d9b700860de8830c5d4891258322d2a1e",
+      "size": 1349,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Koi pond painting: new colors and fonts."
+        }
+      ],
       "pick": "Sea colors, Fraunces headings and a playful sea pattern.",
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#0E6E78",
-            "background": "#F4FBFC",
-            "onBackground": "#102226"
+            "seed": "#196958",
+            "background": "#F6FBFA",
+            "onBackground": "#151C1A",
+            "primary": "#196958",
+            "primaryContainer": "#D3EFE7",
+            "secondary": "#8F4100",
+            "secondaryContainer": "#FEE1D2",
+            "tertiary": "#3E6735",
+            "tertiaryContainer": "#DCEED8",
+            "appBar": "#EEF9F5"
           },
           "dark": {
-            "seed": "#8FE8E2",
-            "background": "#0C2428",
-            "onBackground": "#E7F6F5"
+            "seed": "#9FD1C2",
+            "background": "#0C1311",
+            "onBackground": "#E0EBE7",
+            "primary": "#9FD1C2",
+            "primaryContainer": "#203F37",
+            "secondary": "#F5B38F",
+            "secondaryContainer": "#522D17",
+            "tertiary": "#AFCFA8",
+            "tertiaryContainer": "#2B3E27",
+            "appBar": "#0D1A17"
           }
         },
-        "headingFont": "Fraunces",
-        "bodyFont": "Figtree",
+        "headingFont": "Quicksand",
+        "bodyFont": "Nunito",
         "wallpaper": {
+          "image": "koi-pond",
           "pattern": "sea",
           "palette": "ocean",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../koi-pond/koi-pond.jpg",
+          "thumb": "../koi-pond/thumb.jpg"
         }
       },
       "files": [
         "themes/lagoon/item.json",
         "themes/lagoon/theme.json"
+      ]
+    },
+    {
+      "id": "lanterns",
+      "type": "theme",
+      "name": "Lanterns",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "warm",
+        "night"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "abe48509dbf4cf94663ffafe3e876b20d8d780d7817e5985b04a9f522864d4b8",
+      "size": 1127,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#8B4501",
+            "background": "#FDF9F6",
+            "onBackground": "#1F1915",
+            "primary": "#8B4501",
+            "primaryContainer": "#FFE1CE",
+            "secondary": "#7F426C",
+            "secondaryContainer": "#FBDEF0",
+            "tertiary": "#7A5103",
+            "tertiaryContainer": "#FAE4C8",
+            "appBar": "#FDF4EE"
+          },
+          "dark": {
+            "seed": "#F6B386",
+            "background": "#16100D",
+            "onBackground": "#EFE6E0",
+            "primary": "#F6B386",
+            "primaryContainer": "#532D0F",
+            "secondary": "#E4B3D2",
+            "secondaryContainer": "#492D40",
+            "tertiary": "#E2BE8C",
+            "tertiaryContainer": "#493314",
+            "appBar": "#1E150E"
+          }
+        },
+        "headingFont": "Lora",
+        "bodyFont": "DM Sans",
+        "wallpaper": {
+          "image": "lantern-night",
+          "pattern": "space",
+          "palette": "sunset",
+          "intensity": 0.45,
+          "kind": "image",
+          "file": "../lantern-night/lantern-night.jpg",
+          "thumb": "../lantern-night/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/lanterns/item.json",
+        "themes/lanterns/theme.json"
       ]
     },
     {
@@ -3157,31 +3474,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "57c38a5e959ab54d5ca206b858cd233756da9fea861c38c6d5c69d7b25fa3c89",
-      "size": 650,
+      "updated": "2026-11-18",
+      "sha256": "13bbb2f6bb185dbf10ef775a587ecf60b7f5d731ec039adf571caef1a41cbf2a",
+      "size": 1300,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Citrus grove painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#A35F00",
-            "background": "#FFF8EE",
-            "onBackground": "#2B1D08"
+            "seed": "#864900",
+            "background": "#FDF9F6",
+            "onBackground": "#1F1915",
+            "primary": "#864900",
+            "primaryContainer": "#FFE2CB",
+            "secondary": "#46661A",
+            "secondaryContainer": "#DEEED0",
+            "tertiary": "#705800",
+            "tertiaryContainer": "#F3E7C7",
+            "appBar": "#FCF4EE"
           },
           "dark": {
-            "seed": "#FFC266",
-            "background": "#1E1608",
-            "onBackground": "#FBEFDC"
+            "seed": "#F0B688",
+            "background": "#16100C",
+            "onBackground": "#EEE6E0",
+            "primary": "#F0B688",
+            "primaryContainer": "#502F10",
+            "secondary": "#B4CF9A",
+            "secondaryContainer": "#2E3E1E",
+            "tertiary": "#D7C38A",
+            "tertiaryContainer": "#433612",
+            "appBar": "#1E150E"
           }
         },
         "headingFont": "Young Serif",
         "bodyFont": "DM Sans",
         "wallpaper": {
+          "image": "citrus-grove",
           "pattern": "treats",
           "palette": "peach",
-          "intensity": 0.45
+          "intensity": 0.45,
+          "kind": "image",
+          "file": "../citrus-grove/citrus-grove.jpg",
+          "thumb": "../citrus-grove/thumb.jpg"
         }
       },
       "files": [
@@ -3205,32 +3550,60 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "9524b2ceab65eae6e697fbd869adb21676680f7c9c8edb1c65d3391cbdb3ef76",
-      "size": 734,
+      "updated": "2026-11-18",
+      "sha256": "696146a4570519872badbbba3181d024975574227889a5c102270c6c43ccd3c3",
+      "size": 1382,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Rain window painting: new colors and fonts."
+        }
+      ],
       "pick": "A dark theme for late work, with calm colors and clear type.",
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#3A3F47",
-            "background": "#F6F6F5",
-            "onBackground": "#161718"
+            "seed": "#42598D",
+            "background": "#F8FAFE",
+            "onBackground": "#181B20",
+            "primary": "#42598D",
+            "primaryContainer": "#DDE8FE",
+            "secondary": "#864900",
+            "secondaryContainer": "#FFE2CB",
+            "tertiary": "#61527C",
+            "tertiaryContainer": "#EAE4F8",
+            "appBar": "#F2F6FE"
           },
           "dark": {
-            "seed": "#C9CDD4",
-            "background": "#121314",
-            "onBackground": "#ECEDEE"
+            "seed": "#B0C4EE",
+            "background": "#0F1217",
+            "onBackground": "#E4E8F0",
+            "primary": "#B0C4EE",
+            "primaryContainer": "#2C3850",
+            "secondary": "#EDB88D",
+            "secondaryContainer": "#4E3015",
+            "tertiary": "#C9BEE0",
+            "tertiaryContainer": "#3B3448",
+            "appBar": "#131720"
           }
         },
         "headingFont": "Space Grotesk",
         "bodyFont": "IBM Plex Sans",
         "wallpaper": {
+          "image": "rain-window",
           "pattern": "tech",
           "palette": "graphite",
-          "intensity": 0.4
+          "intensity": 0.4,
+          "kind": "image",
+          "file": "../rain-window/rain-window.jpg",
+          "thumb": "../rain-window/thumb.jpg"
         }
       },
       "files": [
@@ -3254,31 +3627,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "071d9fb02d7b6913f2c222878818eff7291998051a6c0085450e6542acc4b299",
-      "size": 648,
+      "updated": "2026-11-18",
+      "sha256": "b19fdd5b86d28d6605353324ca4d4a059d97ad86e4c2bdccccb4a5b753bf2dff",
+      "size": 1290,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Snow day painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#2F5DA8",
-            "background": "#F3F6FB",
-            "onBackground": "#121B2C"
+            "seed": "#305E8B",
+            "background": "#F7FAFE",
+            "onBackground": "#161B20",
+            "primary": "#305E8B",
+            "primaryContainer": "#D7EAFE",
+            "secondary": "#3E6073",
+            "secondaryContainer": "#DCEAF4",
+            "tertiary": "#804D0C",
+            "tertiaryContainer": "#FBE3CD",
+            "appBar": "#F0F7FE"
           },
           "dark": {
-            "seed": "#9DBDF5",
-            "background": "#0D1420",
-            "onBackground": "#E3EBF8"
+            "seed": "#A6C8EC",
+            "background": "#0E1217",
+            "onBackground": "#E2E9F0",
+            "primary": "#A6C8EC",
+            "primaryContainer": "#263A4E",
+            "secondary": "#AFC8D8",
+            "secondaryContainer": "#2B3A43",
+            "tertiary": "#E4BB95",
+            "tertiaryContainer": "#4A321B",
+            "appBar": "#101820"
           }
         },
         "headingFont": "Newsreader",
         "bodyFont": "Source Sans 3",
         "wallpaper": {
+          "image": "snow-day",
           "pattern": "clouds",
           "palette": "ocean",
-          "intensity": 0.4
+          "intensity": 0.4,
+          "kind": "image",
+          "file": "../snow-day/snow-day.jpg",
+          "thumb": "../snow-day/thumb.jpg"
         }
       },
       "files": [
@@ -3302,31 +3703,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "1a3690cf4bce6461ae2070ad308cc095a29faba3378c45b6c6cd32b7f41863a8",
-      "size": 643,
+      "sha256": "551b3f9811ed158810acf98f3801d9aef10becd6731b03643a9cdda31c4894b2",
+      "size": 1269,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Tide painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#023047",
-            "background": "#F0F4FA",
-            "onBackground": "#181C20"
+            "seed": "#056774",
+            "background": "#F6FBFC",
+            "onBackground": "#141C1E",
+            "primary": "#056774",
+            "primaryContainer": "#CAF0F7",
+            "secondary": "#74542C",
+            "secondaryContainer": "#F4E5D4",
+            "tertiary": "#295F8A",
+            "tertiaryContainer": "#D5EBFF",
+            "appBar": "#EDF8FA"
           },
           "dark": {
-            "seed": "#57859D",
-            "background": "#13191D",
-            "onBackground": "#DFE3E8"
+            "seed": "#8DD1DD",
+            "background": "#0B1314",
+            "onBackground": "#DFEAEC",
+            "primary": "#8DD1DD",
+            "primaryContainer": "#113F46",
+            "secondary": "#D9BFA2",
+            "secondaryContainer": "#443524",
+            "tertiary": "#A3C9EB",
+            "tertiaryContainer": "#233A4E",
+            "appBar": "#0C1A1C"
           }
         },
-        "headingFont": "Libre Baskerville",
-        "bodyFont": "Lato",
+        "headingFont": "Outfit",
+        "bodyFont": "Figtree",
         "wallpaper": {
+          "image": "tide",
           "pattern": "sea",
           "palette": "ocean",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../tide/tide.jpg",
+          "thumb": "../tide/thumb.jpg"
         }
       },
       "files": [
@@ -3350,37 +3779,134 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "370155e2487c4d6b29f41ec4a2eec4b8756f84b3541ddf7670ea8ecc3304a78b",
-      "size": 697,
+      "updated": "2026-11-18",
+      "sha256": "adb7d0a79720b914b967320c273bc3eb6c984e118ea8bac57fab0267169e7685",
+      "size": 1343,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Greenhouse painting: new colors and fonts."
+        }
+      ],
       "pick": "Warm and friendly, like a sunny afternoon.",
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#3F6B2A",
-            "background": "#F5F8F1",
-            "onBackground": "#1B2414"
+            "seed": "#416729",
+            "background": "#F8FBF7",
+            "onBackground": "#181C16",
+            "primary": "#416729",
+            "primaryContainer": "#DDEED4",
+            "secondary": "#326659",
+            "secondaryContainer": "#D8EDE7",
+            "tertiary": "#6F571E",
+            "tertiaryContainer": "#F2E7D0",
+            "appBar": "#F2F8F0"
           },
           "dark": {
-            "seed": "#A8D88A",
-            "background": "#121A0E",
-            "onBackground": "#E6F0DE"
+            "seed": "#B1CFA1",
+            "background": "#0F130E",
+            "onBackground": "#E4EAE2",
+            "primary": "#B1CFA1",
+            "primaryContainer": "#2D3E23",
+            "secondary": "#A9CDC2",
+            "secondaryContainer": "#273D37",
+            "tertiary": "#D5C29B",
+            "tertiaryContainer": "#41361F",
+            "appBar": "#131910"
           }
         },
         "headingFont": "Lora",
         "bodyFont": "Work Sans",
         "wallpaper": {
+          "image": "greenhouse",
           "pattern": "garden",
           "palette": "forest",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../greenhouse/greenhouse.jpg",
+          "thumb": "../greenhouse/thumb.jpg"
         }
       },
       "files": [
         "themes/orchard/item.json",
         "themes/orchard/theme.json"
+      ]
+    },
+    {
+      "id": "picnic",
+      "type": "theme",
+      "name": "Picnic",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "bright",
+        "playful"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "11e8768a8e0c207809a7b73d3900414864b4b25c6f6290847265470d519c8c2e",
+      "size": 1120,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#9D2A3F",
+            "background": "#FEF9F9",
+            "onBackground": "#201819",
+            "primary": "#9D2A3F",
+            "primaryContainer": "#FEDFE0",
+            "secondary": "#705800",
+            "secondaryContainer": "#F3E7C7",
+            "tertiary": "#3A6830",
+            "tertiaryContainer": "#DAEFD6",
+            "appBar": "#FEF3F3"
+          },
+          "dark": {
+            "seed": "#FFA9AF",
+            "background": "#170F10",
+            "onBackground": "#F0E5E5",
+            "primary": "#FFA9AF",
+            "primaryContainer": "#58262B",
+            "secondary": "#D7C38A",
+            "secondaryContainer": "#433612",
+            "tertiary": "#ADD0A5",
+            "tertiaryContainer": "#2A3E25",
+            "appBar": "#1F1314"
+          }
+        },
+        "headingFont": "Rubik",
+        "bodyFont": "Rubik",
+        "wallpaper": {
+          "image": "picnic",
+          "pattern": "treats",
+          "palette": "peach",
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../picnic/picnic.jpg",
+          "thumb": "../picnic/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/picnic/item.json",
+        "themes/picnic/theme.json"
       ]
     },
     {
@@ -3399,36 +3925,134 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "4bdcd6641eebaa0a51881611148b2f7d1e4fe3e29a1af79fa082784f08822ab2",
-      "size": 647,
+      "updated": "2026-11-18",
+      "sha256": "565deb39a169430d253ffaa0d57b6f5deed7f92363111438555660953e8f9d3e",
+      "size": 1297,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Desert bloom painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#C2412D",
-            "background": "#FFF6F3",
-            "onBackground": "#2E1410"
+            "seed": "#953922",
+            "background": "#FEF9F7",
+            "onBackground": "#201917",
+            "primary": "#953922",
+            "primaryContainer": "#FFE0D8",
+            "secondary": "#446630",
+            "secondaryContainer": "#DEEED6",
+            "tertiary": "#903952",
+            "tertiaryContainer": "#FEDEE4",
+            "appBar": "#FEF3F0"
           },
           "dark": {
-            "seed": "#FF9E8A",
-            "background": "#1F0F0C",
-            "onBackground": "#FCE9E4"
+            "seed": "#F9AF9C",
+            "background": "#16100E",
+            "onBackground": "#F0E5E2",
+            "primary": "#F9AF9C",
+            "primaryContainer": "#542A20",
+            "secondary": "#B3CEA5",
+            "secondaryContainer": "#2E3D25",
+            "tertiary": "#F4AEBD",
+            "tertiaryContainer": "#522A34",
+            "appBar": "#1F1411"
           }
         },
         "headingFont": "DM Serif Display",
         "bodyFont": "Nunito",
         "wallpaper": {
+          "image": "desert-bloom",
           "pattern": "sea",
           "palette": "sunset",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../desert-bloom/desert-bloom.jpg",
+          "thumb": "../desert-bloom/thumb.jpg"
         }
       },
       "files": [
         "themes/postcard/item.json",
         "themes/postcard/theme.json"
+      ]
+    },
+    {
+      "id": "purr",
+      "type": "theme",
+      "name": "Purr",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "cozy",
+        "orange",
+        "cats"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "cbfe3f5ed63ec96eb809697f5359d3662b6d7d4dddfc5198f0045f4ed92bc9ab",
+      "size": 1126,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#953B01",
+            "background": "#FEF9F7",
+            "onBackground": "#201916",
+            "primary": "#953B01",
+            "primaryContainer": "#FFE1D3",
+            "secondary": "#745338",
+            "secondaryContainer": "#F5E5D8",
+            "tertiary": "#8B3D58",
+            "tertiaryContainer": "#FFDEE7",
+            "appBar": "#FDF3EF"
+          },
+          "dark": {
+            "seed": "#FAB08F",
+            "background": "#16100D",
+            "onBackground": "#EFE6E1",
+            "primary": "#FAB08F",
+            "primaryContainer": "#552B17",
+            "secondary": "#D9BEA9",
+            "secondaryContainer": "#443428",
+            "tertiary": "#EFB0C2",
+            "tertiaryContainer": "#4F2B37",
+            "appBar": "#1F1410"
+          }
+        },
+        "headingFont": "Fredoka",
+        "bodyFont": "Nunito",
+        "wallpaper": {
+          "image": "purr",
+          "pattern": "pets",
+          "palette": "peach",
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../purr/purr.jpg",
+          "thumb": "../purr/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/purr/item.json",
+        "themes/purr/theme.json"
       ]
     },
     {
@@ -3447,36 +4071,203 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "c08985d45352079b1620dc86ec65d7e193fa78460d96a32c803d7f5719f14350",
-      "size": 651,
+      "sha256": "b90ae33554ec8d88ba0312d652da458ee6b902d15ecf8154355d8da9b63a995c",
+      "size": 1286,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Petal painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#CE5B78",
-            "background": "#FEF4F4",
-            "onBackground": "#22191B"
+            "seed": "#953058",
+            "background": "#FEF8FA",
+            "onBackground": "#20181A",
+            "primary": "#953058",
+            "primaryContainer": "#FFDEE7",
+            "secondary": "#73477D",
+            "secondaryContainer": "#F4E0F9",
+            "tertiary": "#3B5C87",
+            "tertiaryContainer": "#DAE9FE",
+            "appBar": "#FDF3F5"
           },
           "dark": {
-            "seed": "#EEC4D8",
-            "background": "#23191C",
-            "onBackground": "#EFDEE0"
+            "seed": "#F9AAC1",
+            "background": "#160F11",
+            "onBackground": "#EFE5E7",
+            "primary": "#F9AAC1",
+            "primaryContainer": "#542736",
+            "secondary": "#D9B6E1",
+            "secondaryContainer": "#432F48",
+            "tertiary": "#ACC7E9",
+            "tertiaryContainer": "#2A394D",
+            "appBar": "#1F1317"
           }
         },
-        "headingFont": "Libre Baskerville",
-        "bodyFont": "Lato",
+        "headingFont": "Crimson Pro",
+        "bodyFont": "Quicksand",
         "wallpaper": {
+          "image": "petal",
           "pattern": "treats",
           "palette": "cotton",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../petal/petal.jpg",
+          "thumb": "../petal/thumb.jpg"
         }
       },
       "files": [
         "themes/sakura/item.json",
         "themes/sakura/theme.json"
+      ]
+    },
+    {
+      "id": "stargazer",
+      "type": "theme",
+      "name": "Stargazer",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "purple",
+        "dreamy"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "3f0d1d20d01f721042c66a36331159b7990ceb1b3e6d57428ae7fa641fa44152",
+      "size": 1133,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#6343A4",
+            "background": "#FAF9FE",
+            "onBackground": "#1B1A20",
+            "primary": "#6343A4",
+            "primaryContainer": "#E9E4FE",
+            "secondary": "#823D75",
+            "secondaryContainer": "#FDDCF5",
+            "tertiary": "#2B5C97",
+            "tertiaryContainer": "#D9EAFF",
+            "appBar": "#F6F4FD"
+          },
+          "dark": {
+            "seed": "#C8B7FF",
+            "background": "#121116",
+            "onBackground": "#E8E6EF",
+            "primary": "#C8B7FF",
+            "primaryContainer": "#3B2F5A",
+            "secondary": "#E7B0DA",
+            "secondaryContainer": "#4B2B44",
+            "tertiary": "#A3C7F6",
+            "tertiaryContainer": "#243954",
+            "appBar": "#18151F"
+          }
+        },
+        "headingFont": "Urbanist",
+        "bodyFont": "Urbanist",
+        "wallpaper": {
+          "image": "stargazer",
+          "pattern": "space",
+          "palette": "lavender",
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../stargazer/stargazer.jpg",
+          "thumb": "../stargazer/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/stargazer/item.json",
+        "themes/stargazer/theme.json"
+      ]
+    },
+    {
+      "id": "starlit",
+      "type": "theme",
+      "name": "Starlit",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "blue",
+        "night",
+        "calm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "74a0eaf2db31d712843c6b66cad19bf755d20ac2639b9611f27efb0b92116f8e",
+      "size": 1145,
+      "requires": [
+        "scheme-colors"
+      ],
+      "document": {
+        "v": 2,
+        "scheme": {
+          "light": {
+            "seed": "#435698",
+            "background": "#F8FAFE",
+            "onBackground": "#181A20",
+            "primary": "#435698",
+            "primaryContainer": "#DFE7FE",
+            "secondary": "#5F5088",
+            "secondaryContainer": "#E9E4FE",
+            "tertiary": "#1D676A",
+            "tertiaryContainer": "#D3EEEF",
+            "appBar": "#F2F6FE"
+          },
+          "dark": {
+            "seed": "#B0C2F7",
+            "background": "#0F1117",
+            "onBackground": "#E5E8F0",
+            "primary": "#B0C2F7",
+            "primaryContainer": "#2D3655",
+            "secondary": "#C6BDE9",
+            "secondaryContainer": "#39334D",
+            "tertiary": "#9FCED1",
+            "tertiaryContainer": "#213E3F",
+            "appBar": "#141720"
+          }
+        },
+        "headingFont": "EB Garamond",
+        "bodyFont": "Work Sans",
+        "wallpaper": {
+          "image": "starlit-lake",
+          "pattern": "space",
+          "palette": "ocean",
+          "intensity": 0.45,
+          "kind": "image",
+          "file": "../starlit-lake/starlit-lake.jpg",
+          "thumb": "../starlit-lake/thumb.jpg"
+        }
+      },
+      "files": [
+        "themes/starlit/item.json",
+        "themes/starlit/theme.json"
       ]
     },
     {
@@ -3495,31 +4286,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "aadce7e66040d863166a28f983403cc6175e3e797f36584ca41cc3bc04826e15",
-      "size": 643,
+      "sha256": "50e5b731d51a2d60feadfc6514cf40e09ec063a1d504f8e93ddd17c103c9377c",
+      "size": 1307,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Tea morning painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#C78D20",
-            "background": "#FEF5EE",
-            "onBackground": "#201B13"
+            "seed": "#8B4501",
+            "background": "#FDF9F6",
+            "onBackground": "#1F1915",
+            "primary": "#8B4501",
+            "primaryContainer": "#FFE1CE",
+            "secondary": "#8A4148",
+            "secondaryContainer": "#FEDFE0",
+            "tertiary": "#72560F",
+            "tertiaryContainer": "#F3E7CD",
+            "appBar": "#FDF4EE"
           },
           "dark": {
-            "seed": "#DEB059",
-            "background": "#211A0F",
-            "onBackground": "#ECE1D4"
+            "seed": "#F3B58B",
+            "background": "#16100D",
+            "onBackground": "#EFE6E0",
+            "primary": "#F3B58B",
+            "primaryContainer": "#512E13",
+            "secondary": "#EEB2B5",
+            "secondaryContainer": "#4F2D2F",
+            "tertiary": "#D7C296",
+            "tertiaryContainer": "#43361B",
+            "appBar": "#1E150E"
           }
         },
-        "headingFont": "Fraunces",
-        "bodyFont": "Lato",
+        "headingFont": "Young Serif",
+        "bodyFont": "Plus Jakarta Sans",
         "wallpaper": {
+          "image": "tea-morning",
           "pattern": "doodles",
           "palette": "sunset",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../tea-morning/tea-morning.jpg",
+          "thumb": "../tea-morning/thumb.jpg"
         }
       },
       "files": [
@@ -3543,31 +4362,59 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-11",
-      "updated": "2026-11-11",
-      "sha256": "f9793640fef4a0121e8ffa728342198e4875ad8b95d90f70af1663b42015d4cf",
-      "size": 652,
+      "updated": "2026-11-18",
+      "sha256": "5708085966dca65a699552f710d327d5cd42779c6bd1b1d52f6942cedd70e960",
+      "size": 1306,
+      "requires": [
+        "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "Redesigned around the Moonlit garden painting: new colors and fonts."
+        }
+      ],
       "document": {
         "v": 2,
         "scheme": {
           "light": {
-            "seed": "#7A3F8F",
-            "background": "#FAF5FB",
-            "onBackground": "#24122A"
+            "seed": "#76408C",
+            "background": "#FCF9FD",
+            "onBackground": "#1D191E",
+            "primary": "#76408C",
+            "primaryContainer": "#F4DFFF",
+            "secondary": "#893D5E",
+            "secondaryContainer": "#FFDDE9",
+            "tertiary": "#72560F",
+            "tertiaryContainer": "#F3E7CD",
+            "appBar": "#F9F3FB"
           },
           "dark": {
-            "seed": "#DDB0EE",
-            "background": "#1B1020",
-            "onBackground": "#F3E6F7"
+            "seed": "#DBB3ED",
+            "background": "#141015",
+            "onBackground": "#EBE6ED",
+            "primary": "#DBB3ED",
+            "primaryContainer": "#452D4F",
+            "secondary": "#EDB0C7",
+            "secondaryContainer": "#4E2B39",
+            "tertiary": "#D7C296",
+            "tertiaryContainer": "#43361B",
+            "appBar": "#1B141E"
           }
         },
         "headingFont": "Playfair Display",
         "bodyFont": "Manrope",
         "wallpaper": {
+          "image": "moonlit-garden",
           "pattern": "space",
           "palette": "casama",
-          "intensity": 0.5
+          "intensity": 0.5,
+          "kind": "image",
+          "file": "../moonlit-garden/moonlit-garden.jpg",
+          "thumb": "../moonlit-garden/thumb.jpg"
         }
       },
       "files": [

@@ -803,6 +803,10 @@
         },
         {
           "type": "theme",
+          "id": "candy"
+        },
+        {
+          "type": "theme",
           "id": "casama"
         },
         {
@@ -831,6 +835,10 @@
         },
         {
           "type": "theme",
+          "id": "lanterns"
+        },
+        {
+          "type": "theme",
           "id": "marigold"
         },
         {
@@ -851,11 +859,27 @@
         },
         {
           "type": "theme",
+          "id": "picnic"
+        },
+        {
+          "type": "theme",
           "id": "postcard"
         },
         {
           "type": "theme",
+          "id": "purr"
+        },
+        {
+          "type": "theme",
           "id": "sakura"
+        },
+        {
+          "type": "theme",
+          "id": "stargazer"
+        },
+        {
+          "type": "theme",
+          "id": "starlit"
         },
         {
           "type": "theme",

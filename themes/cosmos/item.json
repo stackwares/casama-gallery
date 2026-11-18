@@ -11,6 +11,13 @@
     "dark"
   ],
   "featured": false,
-  "version": 1,
-  "added": "2026-11-18"
+  "version": 2,
+  "added": "2026-11-18",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "Redesigned around the Aurora painting: new colors and fonts."
+    }
+  ]
 }

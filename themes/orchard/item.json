@@ -12,6 +12,13 @@
   ],
   "featured": true,
   "pick": "Warm and friendly, like a sunny afternoon.",
-  "version": 1,
-  "added": "2026-11-11"
+  "version": 2,
+  "added": "2026-11-11",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "Redesigned around the Greenhouse painting: new colors and fonts."
+    }
+  ]
 }

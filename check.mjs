@@ -221,12 +221,36 @@ const resolveGlyphs = (names) =>
     return [tag, rest];
   }));
 
-// The document as index.json carries it: `glyphs` resolved into `doodles`.
+/** A gallery image wallpaper's document (`wallpapers/<id>/wallpaper.json`), or null when there is none. */
+function imageWallpaper(id) {
+  if (typeof id !== "string" || !ID.test(id)) return null;
+  try {
+    const doc = JSON.parse(readFileSync(join(root, "wallpapers", id, "wallpaper.json"), "utf8"));
+    return isRecord(doc) && doc.kind === "image" && typeof doc.file === "string" ? doc : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * A theme's wallpaper can name a gallery image wallpaper: `"image": "<wallpaper id>"`. The index
+ * carries it resolved, as the image wallpaper's own fields with paths that start at the theme's
+ * folder (`../<id>/<file>`), because apps build an image address as `wallpapers/<item id>/<file>`.
+ * That way apps from before this field draw the picture too. `pattern` and `palette` stay as the
+ * fallback for anything that can't show a picture.
+ */
+function withImage(w) {
+  const doc = imageWallpaper(w.image);
+  if (!doc) return w;
+  return { ...w, kind: "image", file: `../${w.image}/${doc.file}`, ...(doc.thumb ? { thumb: `../${w.image}/${doc.thumb}` } : {}) };
+}
+
+// The document as index.json carries it: `glyphs` resolved into `doodles`, a theme's `image` into a file.
 function indexDocument(type, raw) {
   if (!isRecord(raw)) return raw;
   const withDoodles = (w) => (Array.isArray(w.glyphs) && w.doodles === undefined ? { ...w, doodles: resolveGlyphs(w.glyphs) } : w);
   if (type === "wallpaper") return withDoodles(raw);
-  if (type === "theme" && isRecord(raw.wallpaper)) return { ...raw, wallpaper: withDoodles(raw.wallpaper) };
+  if (type === "theme" && isRecord(raw.wallpaper)) return { ...raw, wallpaper: withImage(withDoodles(raw.wallpaper)) };
   return raw;
 }
 
@@ -261,6 +285,8 @@ function wallpaperFields(raw, errors) {
     if (typeof raw.palette === "string" && !FALLBACK_PALETTES.includes(raw.palette))
       errors.push(`with a mesh, wallpaper.palette is the fallback and must be one of ${FALLBACK_PALETTES.join(", ")}`);
   }
+  if (raw.image !== undefined && !imageWallpaper(raw.image))
+    errors.push("wallpaper.image must be the id of an image wallpaper in the gallery");
   if (!PATTERNS.has(raw.pattern)) errors.push("wallpaper.pattern is not one the app draws");
   if (!PALETTES.has(raw.palette)) errors.push("wallpaper.palette is not one the app draws");
   if (typeof raw.intensity !== "number" || raw.intensity < 0 || raw.intensity > 1)
@@ -995,6 +1021,7 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
         const local = [];
         if (doc.kind === "pattern" && doc.mesh !== undefined) local.push('a wallpaper with a mesh is kind "mesh"');
         if (doc.kind === "mesh" && doc.mesh === undefined) local.push("a mesh wallpaper needs a mesh");
+        if (doc.image !== undefined) local.push("only a theme's wallpaper can name an image wallpaper");
         wallpaperFields(doc, local);
         for (const e of local) errors.push(`${where}: ${e}`);
       } else if (doc?.kind === "image") {

@@ -436,7 +436,8 @@ let uid = 0;
 /** A wallpaper's background in a w × h box: mesh (or photo), then its doodles. unit = one app pixel. */
 function wallSvg(item, wall, c, w, h, unit) {
   if (!wall) return `<rect width="${w}" height="${h}" fill="${c.surf}"/>`;
-  if (wall.kind === "image" && item?.type === "wallpaper") {
+  // A theme's image wallpaper carries a path into the wallpaper's own folder (`../<id>/<file>`).
+  if (wall.kind === "image" && (item?.type === "wallpaper" || item?.type === "theme")) {
     const file = join(DIR, "wallpapers", item.id, wall.file || wall.thumb || "");
     if (existsSync(file) && statSync(file).isFile()) {
       const type = /\.png$/i.test(file) ? "png" : "jpeg";

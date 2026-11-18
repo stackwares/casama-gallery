@@ -382,7 +382,7 @@
 
   // ---------------------------------------------------------------- fonts
   var loadedFonts = {};
-  var SYSTEM = { "Google Sans": true };
+  var SYSTEM = {};
   /** Loads Google Fonts for previews; a family without a 600 weight is loaded at its one weight. */
   function ensureFonts(families) {
     families.forEach(function (family) {
