@@ -295,6 +295,10 @@
         },
         {
           "type": "bot",
+          "id": "bookkeeper"
+        },
+        {
+          "type": "bot",
           "id": "bug-triager"
         },
         {
@@ -307,6 +311,10 @@
         },
         {
           "type": "bot",
+          "id": "customer-success"
+        },
+        {
+          "type": "bot",
           "id": "daily-briefing"
         },
         {
@@ -316,6 +324,10 @@
         {
           "type": "bot",
           "id": "designer"
+        },
+        {
+          "type": "bot",
+          "id": "event-planner"
         },
         {
           "type": "bot",
@@ -339,6 +351,22 @@
         },
         {
           "type": "bot",
+          "id": "it-helpdesk"
+        },
+        {
+          "type": "bot",
+          "id": "job-hunt-coach"
+        },
+        {
+          "type": "bot",
+          "id": "language-partner"
+        },
+        {
+          "type": "bot",
+          "id": "legal-reader"
+        },
+        {
+          "type": "bot",
           "id": "marketer"
         },
         {
@@ -351,6 +379,10 @@
         },
         {
           "type": "bot",
+          "id": "newsletter-editor"
+        },
+        {
+          "type": "bot",
           "id": "ops-assistant"
         },
         {
@@ -359,11 +391,23 @@
         },
         {
           "type": "bot",
+          "id": "parenting-organizer"
+        },
+        {
+          "type": "bot",
+          "id": "personal-shopper"
+        },
+        {
+          "type": "bot",
           "id": "product-manager"
         },
         {
           "type": "bot",
           "id": "qa-tester"
+        },
+        {
+          "type": "bot",
+          "id": "real-estate-scout"
         },
         {
           "type": "bot",
@@ -376,6 +420,10 @@
         {
           "type": "bot",
           "id": "sales-researcher"
+        },
+        {
+          "type": "bot",
+          "id": "seo-writer"
         },
         {
           "type": "bot",
@@ -511,6 +559,14 @@
         },
         {
           "type": "scheme",
+          "id": "amber"
+        },
+        {
+          "type": "scheme",
+          "id": "berry"
+        },
+        {
+          "type": "scheme",
           "id": "coral"
         },
         {
@@ -523,6 +579,14 @@
         },
         {
           "type": "scheme",
+          "id": "forest"
+        },
+        {
+          "type": "scheme",
+          "id": "indigo"
+        },
+        {
+          "type": "scheme",
           "id": "ink"
         },
         {
@@ -531,11 +595,31 @@
         },
         {
           "type": "scheme",
+          "id": "lavender"
+        },
+        {
+          "type": "scheme",
           "id": "marigold"
         },
         {
           "type": "scheme",
+          "id": "mint"
+        },
+        {
+          "type": "scheme",
+          "id": "mocha"
+        },
+        {
+          "type": "scheme",
+          "id": "mono"
+        },
+        {
+          "type": "scheme",
           "id": "moss"
+        },
+        {
+          "type": "scheme",
+          "id": "olive"
         },
         {
           "type": "scheme",
@@ -544,6 +628,26 @@
         {
           "type": "scheme",
           "id": "plum"
+        },
+        {
+          "type": "scheme",
+          "id": "rose"
+        },
+        {
+          "type": "scheme",
+          "id": "sand"
+        },
+        {
+          "type": "scheme",
+          "id": "sky"
+        },
+        {
+          "type": "scheme",
+          "id": "slate"
+        },
+        {
+          "type": "scheme",
+          "id": "teal"
         },
         {
           "type": "set",

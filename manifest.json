@@ -2,13 +2,13 @@
   "schema": 1,
   "created": "2026-11-18",
   "files": {
-    "index.json": "5770f02b5b0c0ec6f6e76b9ede9ebfe223e8244b3b0bb7ec93a6bcf9b06c9cb8",
+    "index.json": "54577c429a028b0880e97a7876fbf537c273779fd28cba957d5626e2a3087c48",
     "apps.json": "443915a22b0edca9489ab6ae1446e515e644568f5a652619719c331a30f7f499",
-    "bots.json": "9f368c06642132723ed2464fe728460aef84aa9732cf72cb77dc09422147c2ab",
+    "bots.json": "8421097ed570ee76437670d17268e56e31995ef42e23b59e2cd4edd166421eb5",
     "routines.json": "dc0c1fd1770596dc7bffb1694f31d77738b5bfe095ecc7680b8235b21073881a",
     "plugins.json": "6bf8b4ecdfad5871c07c658b82384d2501f7636d14c7efb0e3f467b3ea10c3e8",
     "sets.json": "ede2943e490e00bae0fcbccbb09f91b4bece7af422859f983990f7ec6c9ca2f7",
-    "authors.json": "e889de59b965910f57f1abbdb92a51c5aea6efb5cdc1463e66f4ef0c68da48dd",
+    "authors.json": "467db97647ba2d687e4490b59836f72dcf29321e434289a82206fd6dcbca268e",
     "lists.json": "f68b4c6a0c51b1be592c01d8d9a1464fcd2b7f27c916b43efbe3013812d7239e",
     "coding-agents.json": "49e6d8d61310c25c911bb307edf3991c316538ed16833bb997c20ea65a426af1",
     "prompts.json": "11232e8c1cbcb1549b96496e3b7eeaaee2bf86e80c83f90fd8fba5365e56d6c2"

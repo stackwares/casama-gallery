@@ -2,6 +2,82 @@
   "schema": 1,
   "items": [
     {
+      "id": "amber",
+      "type": "scheme",
+      "name": "Amber",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "yellow",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "7f9e7635078d7f736411f413793e95df19664e9f17c82f0abd9e300fbbad4900",
+      "size": 448,
+      "document": {
+        "light": {
+          "seed": "#856000",
+          "background": "#FFFFFF",
+          "onBackground": "#1F1D19"
+        },
+        "dark": {
+          "seed": "#FFD25E",
+          "background": "#1C1C1E",
+          "onBackground": "#F5F3EF"
+        }
+      },
+      "files": [
+        "schemes/amber/item.json",
+        "schemes/amber/scheme.json"
+      ]
+    },
+    {
+      "id": "berry",
+      "type": "scheme",
+      "name": "Berry",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "pink",
+        "magenta"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "ea2f129bd8a2cbb4806b6bd5ca11a0a1e033e3343154156bda104dc47e1cc616",
+      "size": 449,
+      "document": {
+        "light": {
+          "seed": "#A3247A",
+          "background": "#FFFFFF",
+          "onBackground": "#201B1F"
+        },
+        "dark": {
+          "seed": "#FFADDD",
+          "background": "#1C1C1E",
+          "onBackground": "#F5F1F4"
+        }
+      },
+      "files": [
+        "schemes/berry/item.json",
+        "schemes/berry/scheme.json"
+      ]
+    },
+    {
       "id": "coral",
       "type": "scheme",
       "name": "Coral",
@@ -116,6 +192,82 @@
       ]
     },
     {
+      "id": "forest",
+      "type": "scheme",
+      "name": "Forest",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "green",
+        "deep"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "4d961291de92576105fb4867cc5767f77832d517594dd49de7e220c4545b7ddb",
+      "size": 448,
+      "document": {
+        "light": {
+          "seed": "#24643A",
+          "background": "#FFFFFF",
+          "onBackground": "#1A1E1B"
+        },
+        "dark": {
+          "seed": "#9BDBA8",
+          "background": "#1C1C1E",
+          "onBackground": "#F0F4F1"
+        }
+      },
+      "files": [
+        "schemes/forest/item.json",
+        "schemes/forest/scheme.json"
+      ]
+    },
+    {
+      "id": "indigo",
+      "type": "scheme",
+      "name": "Indigo",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "blue",
+        "deep"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "d6273e83db7b0a03c3e910093f35215dab9f790e3ed098913bcb48ca88007cc4",
+      "size": 447,
+      "document": {
+        "light": {
+          "seed": "#4450C4",
+          "background": "#FFFFFF",
+          "onBackground": "#1B1C21"
+        },
+        "dark": {
+          "seed": "#B5BDFF",
+          "background": "#1C1C1E",
+          "onBackground": "#F1F2F5"
+        }
+      },
+      "files": [
+        "schemes/indigo/item.json",
+        "schemes/indigo/scheme.json"
+      ]
+    },
+    {
       "id": "ink",
       "type": "scheme",
       "name": "Ink",
@@ -192,6 +344,44 @@
       ]
     },
     {
+      "id": "lavender",
+      "type": "scheme",
+      "name": "Lavender",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "purple",
+        "soft"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "afd077c89853c113bf2e62e2b00d43fdce07ad3bd0f2bc48e78070a3f982e8de",
+      "size": 451,
+      "document": {
+        "light": {
+          "seed": "#6B57C9",
+          "background": "#FFFFFF",
+          "onBackground": "#1C1B21"
+        },
+        "dark": {
+          "seed": "#C4B8FF",
+          "background": "#1C1C1E",
+          "onBackground": "#F2F1F5"
+        }
+      },
+      "files": [
+        "schemes/lavender/item.json",
+        "schemes/lavender/scheme.json"
+      ]
+    },
+    {
       "id": "marigold",
       "type": "scheme",
       "name": "Marigold",
@@ -227,6 +417,120 @@
       "files": [
         "schemes/marigold/item.json",
         "schemes/marigold/scheme.json"
+      ]
+    },
+    {
+      "id": "mint",
+      "type": "scheme",
+      "name": "Mint",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "green",
+        "fresh"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "441cb4316a47de99d3d9b53af24709daeb30f53e54471cf9c63d907bbe7773ef",
+      "size": 447,
+      "document": {
+        "light": {
+          "seed": "#17794F",
+          "background": "#FFFFFF",
+          "onBackground": "#1A1E1C"
+        },
+        "dark": {
+          "seed": "#8EE8B8",
+          "background": "#1C1C1E",
+          "onBackground": "#F0F4F2"
+        }
+      },
+      "files": [
+        "schemes/mint/item.json",
+        "schemes/mint/scheme.json"
+      ]
+    },
+    {
+      "id": "mocha",
+      "type": "scheme",
+      "name": "Mocha",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "brown",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "5e32f0470fc4505b6e00c552e19378cd0f1c09f7a104e908e825c41d4367e63a",
+      "size": 447,
+      "document": {
+        "light": {
+          "seed": "#7A4F3A",
+          "background": "#FFFFFF",
+          "onBackground": "#201C1A"
+        },
+        "dark": {
+          "seed": "#E3BCA6",
+          "background": "#1C1C1E",
+          "onBackground": "#F5F2F0"
+        }
+      },
+      "files": [
+        "schemes/mocha/item.json",
+        "schemes/mocha/scheme.json"
+      ]
+    },
+    {
+      "id": "mono",
+      "type": "scheme",
+      "name": "Mono",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "neutral",
+        "grey"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "8a92afb629d0ee7c179b0a9c41bb00ba6570b39ab5affc10618f252496f853d4",
+      "size": 448,
+      "document": {
+        "light": {
+          "seed": "#1F1F1F",
+          "background": "#FFFFFF",
+          "onBackground": "#1A1A1A"
+        },
+        "dark": {
+          "seed": "#EDEDED",
+          "background": "#1C1C1C",
+          "onBackground": "#F2F2F2"
+        }
+      },
+      "files": [
+        "schemes/mono/item.json",
+        "schemes/mono/scheme.json"
       ]
     },
     {
@@ -266,6 +570,44 @@
       "files": [
         "schemes/moss/item.json",
         "schemes/moss/scheme.json"
+      ]
+    },
+    {
+      "id": "olive",
+      "type": "scheme",
+      "name": "Olive",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "green",
+        "earthy"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "23d85df2b8209dfb5edbd18e84d356911c9b1105120666785b79719530a65b8f",
+      "size": 449,
+      "document": {
+        "light": {
+          "seed": "#636A1E",
+          "background": "#FFFFFF",
+          "onBackground": "#1D1E19"
+        },
+        "dark": {
+          "seed": "#CFD67E",
+          "background": "#1C1C1E",
+          "onBackground": "#F3F4EF"
+        }
+      },
+      "files": [
+        "schemes/olive/item.json",
+        "schemes/olive/scheme.json"
       ]
     },
     {
@@ -358,6 +700,196 @@
       "files": [
         "schemes/plum/item.json",
         "schemes/plum/scheme.json"
+      ]
+    },
+    {
+      "id": "rose",
+      "type": "scheme",
+      "name": "Rose",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "pink",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "1e81f1015bd553164b2902d354f7b1a2724f7461ff24b3409eac92765a191192",
+      "size": 445,
+      "document": {
+        "light": {
+          "seed": "#B8305F",
+          "background": "#FFFFFF",
+          "onBackground": "#201B1C"
+        },
+        "dark": {
+          "seed": "#FFB0C6",
+          "background": "#1C1C1E",
+          "onBackground": "#F5F1F2"
+        }
+      },
+      "files": [
+        "schemes/rose/item.json",
+        "schemes/rose/scheme.json"
+      ]
+    },
+    {
+      "id": "sand",
+      "type": "scheme",
+      "name": "Sand",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "neutral",
+        "warm"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "25a8fc4ebf5eabc6c384e9656ca6469fbee303a3504da8670b68359d5808554b",
+      "size": 448,
+      "document": {
+        "light": {
+          "seed": "#806640",
+          "background": "#FFFFFF",
+          "onBackground": "#1F1D1A"
+        },
+        "dark": {
+          "seed": "#E0C79E",
+          "background": "#1C1C1E",
+          "onBackground": "#F4F2EF"
+        }
+      },
+      "files": [
+        "schemes/sand/item.json",
+        "schemes/sand/scheme.json"
+      ]
+    },
+    {
+      "id": "sky",
+      "type": "scheme",
+      "name": "Sky",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "blue",
+        "bright"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "0b59613e1ac078cfa88124984d6719db3838bb87f8610d3d8b817e8f6db34416",
+      "size": 446,
+      "document": {
+        "light": {
+          "seed": "#0A6CA6",
+          "background": "#FFFFFF",
+          "onBackground": "#191D20"
+        },
+        "dark": {
+          "seed": "#8FD0FF",
+          "background": "#1C1C1E",
+          "onBackground": "#EFF3F5"
+        }
+      },
+      "files": [
+        "schemes/sky/item.json",
+        "schemes/sky/scheme.json"
+      ]
+    },
+    {
+      "id": "slate",
+      "type": "scheme",
+      "name": "Slate",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "neutral",
+        "cool"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "51d4dfaefb377a4c7c59866791dc0911e0b5426b570c5ce1bc0f20ed181b806e",
+      "size": 449,
+      "document": {
+        "light": {
+          "seed": "#4B5E75",
+          "background": "#FFFFFF",
+          "onBackground": "#1B1D20"
+        },
+        "dark": {
+          "seed": "#B4C4D8",
+          "background": "#1C1C1E",
+          "onBackground": "#F1F2F4"
+        }
+      },
+      "files": [
+        "schemes/slate/item.json",
+        "schemes/slate/scheme.json"
+      ]
+    },
+    {
+      "id": "teal",
+      "type": "scheme",
+      "name": "Teal",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "CC0-1.0",
+      "tags": [
+        "teal",
+        "cool"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "c791db8ca3cf971f8b5447cee017968c8538cc09f331cb17677ff0b05c5a3d61",
+      "size": 445,
+      "document": {
+        "light": {
+          "seed": "#00756B",
+          "background": "#FFFFFF",
+          "onBackground": "#191E1D"
+        },
+        "dark": {
+          "seed": "#6FDCCB",
+          "background": "#1C1C1E",
+          "onBackground": "#EFF4F3"
+        }
+      },
+      "files": [
+        "schemes/teal/item.json",
+        "schemes/teal/scheme.json"
       ]
     },
     {
