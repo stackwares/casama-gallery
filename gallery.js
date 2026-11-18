@@ -404,8 +404,10 @@
     if (item.type === "theme") return doc.wallpaper || null;
     return null;
   }
-  function imageUrl(item, doc, thumb) {
+  // With dark, the painting's night version when it has one (D-388).
+  function imageUrl(item, doc, thumb, dark) {
     var file = thumb ? doc.thumb || doc.file : doc.file;
+    if (dark && doc.dark) file = thumb ? doc.darkThumb || doc.dark : doc.dark;
     return HOST + "/wallpapers/" + item.id + "/" + file;
   }
 
@@ -446,7 +448,7 @@
     if (wall.kind === "image" && opts.item) {
       var photo = el("div", "cg-photo" + (opts.sharp ? "" : " is-blurred"));
       var img = el("img");
-      img.src = imageUrl(opts.item, wall, opts.thumb);
+      img.src = imageUrl(opts.item, wall, opts.thumb, dark);
       img.alt = "";
       img.loading = "lazy";
       img.decoding = "async";

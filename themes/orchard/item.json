@@ -12,9 +12,14 @@
   ],
   "featured": true,
   "pick": "Warm and friendly, like a sunny afternoon.",
-  "version": 2,
+  "version": 3,
   "added": "2026-11-11",
   "changelog": [
+    {
+      "version": 3,
+      "date": "2026-11-18",
+      "note": "The painting has a night version now, for dark mode."
+    },
     {
       "version": 2,
       "date": "2026-11-18",

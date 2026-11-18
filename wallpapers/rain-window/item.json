@@ -11,6 +11,18 @@
     "city"
   ],
   "featured": false,
-  "version": 1,
-  "added": "2026-11-18"
+  "version": 2,
+  "added": "2026-11-18",
+  "changelog": [
+    {
+      "version": 2,
+      "date": "2026-11-18",
+      "note": "A day and a night version: it follows light and dark mode."
+    },
+    {
+      "version": 1,
+      "date": "2026-11-18",
+      "note": "First version."
+    }
+  ]
 }

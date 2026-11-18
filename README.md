@@ -39,7 +39,10 @@ pass WCAG AA. Fonts have to be ones the app already ships. Photos from Unsplash'
 and are not copied here.
 
 An image wallpaper can add a `thumb` (a small copy, at most 200 KB) that cards load instead of the full
-image. A skill's `item.json` can name a Lucide `icon` (`notebook-pen`) for its tile.
+image. It can also add `dark` (at most 2 MB) and `darkThumb` (at most 200 KB): the same picture for dark
+mode, such as a painting's night version. Apps draw `dark` when dark mode is on and `file` otherwise; apps
+from before dark versions draw `file` in both. A theme that names the wallpaper with `image` gets both.
+A skill's `item.json` can name a Lucide `icon` (`notebook-pen`) for its tile.
 
 A mesh wallpaper (`"kind": "mesh"`) is a pattern wallpaper plus a `mesh`: nine light and nine dark
 `#RRGGBB` colors, row by row from the top left, and optionally nine `[x, y]` points as fractions of the

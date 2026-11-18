@@ -2803,13 +2803,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "199055ae7af9870b78bc8b5a2e21055601b287c7ee8d6d7260dc2a3223ed1fa3",
-      "size": 1124,
+      "sha256": "e8608690a6c7322622ef80c89f9c764148b50fcd540ed9f01f26c154f065d270",
+      "size": 1367,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -2848,7 +2860,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../candy-sky/candy-sky.jpg",
-          "thumb": "../candy-sky/thumb.jpg"
+          "thumb": "../candy-sky/thumb.jpg",
+          "dark": "../candy-sky/candy-sky-dark.jpg",
+          "darkThumb": "../candy-sky/thumb-dark.jpg"
         }
       },
       "files": [
@@ -2872,15 +2886,20 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "5da259e0a42b03aace4a6f7de740a059f4aa8979c74a7398e89419c7d31e1d57",
-      "size": 1306,
+      "sha256": "c56a0249acbabbc309b8a7d395a88eec0c67395cb6cf2f4c633b9b3b1b45db3f",
+      "size": 1436,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -2924,7 +2943,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../lavender-hills/lavender-hills.jpg",
-          "thumb": "../lavender-hills/thumb.jpg"
+          "thumb": "../lavender-hills/thumb.jpg",
+          "dark": "../lavender-hills/lavender-hills-dark.jpg",
+          "darkThumb": "../lavender-hills/thumb-dark.jpg"
         }
       },
       "files": [
@@ -2948,15 +2969,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "3d7204612f659158898085c2b96dcbe21053af5f4fea570b466277a936a54852",
-      "size": 1277,
+      "sha256": "21d971679f995a28ff298c7bf72b4bd74f7577473eb0f6abd55730c5a603fde6",
+      "size": 1407,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3000,7 +3026,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../aurora/aurora.jpg",
-          "thumb": "../aurora/thumb.jpg"
+          "thumb": "../aurora/thumb.jpg",
+          "dark": "../aurora/aurora-dark.jpg",
+          "darkThumb": "../aurora/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3024,15 +3052,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "1c3a4653d44087f988054b030c55aa668f3ecab99ccb0c6e67cf50a59d091a1d",
-      "size": 1280,
+      "sha256": "5eda9b1daa09add80f79e0a6c3ea22bb97bb13e7167f3f225e88536dde5c1800",
+      "size": 1410,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3076,7 +3109,9 @@
           "intensity": 0.3,
           "kind": "image",
           "file": "../margins/margins.jpg",
-          "thumb": "../margins/thumb.jpg"
+          "thumb": "../margins/thumb.jpg",
+          "dark": "../margins/margins-dark.jpg",
+          "darkThumb": "../margins/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3100,15 +3135,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "072bb33c81c09781568c947310299e7bbedafeacaa6871978da830e876259258",
-      "size": 1289,
+      "sha256": "d2a7fe7477fa72f1bbe66e00112b82ff0c0e527a164d2cf2cbd71d76c1ea24df",
+      "size": 1419,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3152,7 +3192,9 @@
           "intensity": 0.45,
           "kind": "image",
           "file": "../dusk/dusk.jpg",
-          "thumb": "../dusk/thumb.jpg"
+          "thumb": "../dusk/thumb.jpg",
+          "dark": "../dusk/dusk-dark.jpg",
+          "darkThumb": "../dusk/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3176,15 +3218,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "e7a00d5def0080c44295c276353b144e3ea38f3b0caf17901be7c5350a0a57ae",
-      "size": 1300,
+      "sha256": "e43f236cbbeb3a252155f04039181f986a298be7df274ae5f93cf6f30f620fcd",
+      "size": 1430,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3228,7 +3275,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../northern-pines/northern-pines.jpg",
-          "thumb": "../northern-pines/thumb.jpg"
+          "thumb": "../northern-pines/thumb.jpg",
+          "dark": "../northern-pines/northern-pines-dark.jpg",
+          "darkThumb": "../northern-pines/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3252,15 +3301,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "2ce25b294ccb11d9b2de963b16144d53dbd32b592c563a38bcad9986b62663e0",
-      "size": 1275,
+      "sha256": "a467650fee0c03c66f7f97dcb905f1d159464a0ccb78b38b8460bb27d3b76001",
+      "size": 1405,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3304,7 +3358,9 @@
           "intensity": 0.35,
           "kind": "image",
           "file": "../fog/fog.jpg",
-          "thumb": "../fog/thumb.jpg"
+          "thumb": "../fog/thumb.jpg",
+          "dark": "../fog/fog-dark.jpg",
+          "darkThumb": "../fog/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3328,15 +3384,20 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "b3ada4d02f82d00b7ae281dbd568404d9b700860de8830c5d4891258322d2a1e",
-      "size": 1349,
+      "sha256": "90ef2a8f4aac617431eaeddc82a907fe878eed9da240c0ce08961be6b46436d0",
+      "size": 1479,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3381,7 +3442,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../koi-pond/koi-pond.jpg",
-          "thumb": "../koi-pond/thumb.jpg"
+          "thumb": "../koi-pond/thumb.jpg",
+          "dark": "../koi-pond/koi-pond-dark.jpg",
+          "darkThumb": "../koi-pond/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3405,13 +3468,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "abe48509dbf4cf94663ffafe3e876b20d8d780d7817e5985b04a9f522864d4b8",
-      "size": 1127,
+      "sha256": "e0f7e83e1f3fef9029c8e6e71b5d6c31e745bd8c637edc9e72271226b3c49120",
+      "size": 1370,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -3450,7 +3525,9 @@
           "intensity": 0.45,
           "kind": "image",
           "file": "../lantern-night/lantern-night.jpg",
-          "thumb": "../lantern-night/thumb.jpg"
+          "thumb": "../lantern-night/thumb.jpg",
+          "dark": "../lantern-night/lantern-night-dark.jpg",
+          "darkThumb": "../lantern-night/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3474,15 +3551,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "13bbb2f6bb185dbf10ef775a587ecf60b7f5d731ec039adf571caef1a41cbf2a",
-      "size": 1300,
+      "sha256": "9a710b042af0ec56234938f0490091d7d7f45eff4912824a4b7cf526a8cb2d39",
+      "size": 1430,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3526,7 +3608,9 @@
           "intensity": 0.45,
           "kind": "image",
           "file": "../citrus-grove/citrus-grove.jpg",
-          "thumb": "../citrus-grove/thumb.jpg"
+          "thumb": "../citrus-grove/thumb.jpg",
+          "dark": "../citrus-grove/citrus-grove-dark.jpg",
+          "darkThumb": "../citrus-grove/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3550,15 +3634,20 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "696146a4570519872badbbba3181d024975574227889a5c102270c6c43ccd3c3",
-      "size": 1382,
+      "sha256": "71c02522220fdba2cd1b4dacb56fbf3f0257d79731ab686074d6defdfe9438f2",
+      "size": 1512,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3603,7 +3692,9 @@
           "intensity": 0.4,
           "kind": "image",
           "file": "../rain-window/rain-window.jpg",
-          "thumb": "../rain-window/thumb.jpg"
+          "thumb": "../rain-window/thumb.jpg",
+          "dark": "../rain-window/rain-window-dark.jpg",
+          "darkThumb": "../rain-window/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3627,15 +3718,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "b19fdd5b86d28d6605353324ca4d4a059d97ad86e4c2bdccccb4a5b753bf2dff",
-      "size": 1290,
+      "sha256": "27c797d9dd491d9b7b1cc60a40dd521bdf6f30cf5eb37f58684b1945fcf5ae9d",
+      "size": 1420,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3679,7 +3775,9 @@
           "intensity": 0.4,
           "kind": "image",
           "file": "../snow-day/snow-day.jpg",
-          "thumb": "../snow-day/thumb.jpg"
+          "thumb": "../snow-day/thumb.jpg",
+          "dark": "../snow-day/snow-day-dark.jpg",
+          "darkThumb": "../snow-day/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3703,15 +3801,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "551b3f9811ed158810acf98f3801d9aef10becd6731b03643a9cdda31c4894b2",
-      "size": 1269,
+      "sha256": "a9e45e8d40063a04f3c48653cf9b2cbf815ab1b9e8273dfbd983eba51d38439c",
+      "size": 1399,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3755,7 +3858,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../tide/tide.jpg",
-          "thumb": "../tide/thumb.jpg"
+          "thumb": "../tide/thumb.jpg",
+          "dark": "../tide/tide-dark.jpg",
+          "darkThumb": "../tide/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3779,15 +3884,20 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "adb7d0a79720b914b967320c273bc3eb6c984e118ea8bac57fab0267169e7685",
-      "size": 1343,
+      "sha256": "daea322811b73353ba1e84c0377a9f5753035011492a3e549d614c6421c59533",
+      "size": 1473,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3832,7 +3942,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../greenhouse/greenhouse.jpg",
-          "thumb": "../greenhouse/thumb.jpg"
+          "thumb": "../greenhouse/thumb.jpg",
+          "dark": "../greenhouse/greenhouse-dark.jpg",
+          "darkThumb": "../greenhouse/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3856,13 +3968,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "11e8768a8e0c207809a7b73d3900414864b4b25c6f6290847265470d519c8c2e",
-      "size": 1120,
+      "sha256": "43ac434ce2857ede05bd25aee129e7c02ca518aca184514996e50e85cbf81104",
+      "size": 1363,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -3901,7 +4025,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../picnic/picnic.jpg",
-          "thumb": "../picnic/thumb.jpg"
+          "thumb": "../picnic/thumb.jpg",
+          "dark": "../picnic/picnic-dark.jpg",
+          "darkThumb": "../picnic/thumb-dark.jpg"
         }
       },
       "files": [
@@ -3925,15 +4051,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "565deb39a169430d253ffaa0d57b6f5deed7f92363111438555660953e8f9d3e",
-      "size": 1297,
+      "sha256": "b85b7085301e6105f2726ebdf6b17883d9d33c26a7d2267fadae9529131e6458",
+      "size": 1427,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -3977,7 +4108,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../desert-bloom/desert-bloom.jpg",
-          "thumb": "../desert-bloom/thumb.jpg"
+          "thumb": "../desert-bloom/thumb.jpg",
+          "dark": "../desert-bloom/desert-bloom-dark.jpg",
+          "darkThumb": "../desert-bloom/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4002,13 +4135,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "cbfe3f5ed63ec96eb809697f5359d3662b6d7d4dddfc5198f0045f4ed92bc9ab",
-      "size": 1126,
+      "sha256": "3aa6e87a0b48ebd5322eb52240f2bd75254c6a25aa373fc999bb04de7cbb65b8",
+      "size": 1369,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -4047,7 +4192,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../purr/purr.jpg",
-          "thumb": "../purr/thumb.jpg"
+          "thumb": "../purr/thumb.jpg",
+          "dark": "../purr/purr-dark.jpg",
+          "darkThumb": "../purr/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4071,15 +4218,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "b90ae33554ec8d88ba0312d652da458ee6b902d15ecf8154355d8da9b63a995c",
-      "size": 1286,
+      "sha256": "86346eb1ab46c4d328a99136e6dc9398167a43ca0e8b78db980830dacbea1ed2",
+      "size": 1416,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4123,7 +4275,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../petal/petal.jpg",
-          "thumb": "../petal/thumb.jpg"
+          "thumb": "../petal/thumb.jpg",
+          "dark": "../petal/petal-dark.jpg",
+          "darkThumb": "../petal/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4147,13 +4301,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "3f0d1d20d01f721042c66a36331159b7990ceb1b3e6d57428ae7fa641fa44152",
-      "size": 1133,
+      "sha256": "fff79daa44d12eddad9e7bb61cb3eb094e19eb13a721d0218ded281066ba92ac",
+      "size": 1376,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -4192,7 +4358,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../stargazer/stargazer.jpg",
-          "thumb": "../stargazer/thumb.jpg"
+          "thumb": "../stargazer/thumb.jpg",
+          "dark": "../stargazer/stargazer-dark.jpg",
+          "darkThumb": "../stargazer/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4217,13 +4385,25 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "74a0eaf2db31d712843c6b66cad19bf755d20ac2639b9611f27efb0b92116f8e",
-      "size": 1145,
+      "sha256": "cd2c2dc94a85d4414685f686b811cd3da645749ed1d238d9bf3c5838122d55db",
+      "size": 1388,
       "requires": [
         "scheme-colors"
+      ],
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
       ],
       "document": {
         "v": 2,
@@ -4262,7 +4442,9 @@
           "intensity": 0.45,
           "kind": "image",
           "file": "../starlit-lake/starlit-lake.jpg",
-          "thumb": "../starlit-lake/thumb.jpg"
+          "thumb": "../starlit-lake/thumb.jpg",
+          "dark": "../starlit-lake/starlit-lake-dark.jpg",
+          "darkThumb": "../starlit-lake/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4286,15 +4468,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "50e5b731d51a2d60feadfc6514cf40e09ec063a1d504f8e93ddd17c103c9377c",
-      "size": 1307,
+      "sha256": "ef0b653d099fa5d8a4c35f381553599ebd292e89b4c549512ad9f15cb7e46391",
+      "size": 1437,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4338,7 +4525,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../tea-morning/tea-morning.jpg",
-          "thumb": "../tea-morning/thumb.jpg"
+          "thumb": "../tea-morning/thumb.jpg",
+          "dark": "../tea-morning/tea-morning-dark.jpg",
+          "darkThumb": "../tea-morning/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4362,15 +4551,20 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "5708085966dca65a699552f710d327d5cd42779c6bd1b1d52f6942cedd70e960",
-      "size": 1306,
+      "sha256": "31543c25c3d0ae3e0bc037a7461872179c9d512b4ffac3999cb7f7bbcab18573",
+      "size": 1436,
       "requires": [
         "scheme-colors"
       ],
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "The painting has a night version now, for dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4414,7 +4608,9 @@
           "intensity": 0.5,
           "kind": "image",
           "file": "../moonlit-garden/moonlit-garden.jpg",
-          "thumb": "../moonlit-garden/thumb.jpg"
+          "thumb": "../moonlit-garden/thumb.jpg",
+          "dark": "../moonlit-garden/moonlit-garden-dark.jpg",
+          "darkThumb": "../moonlit-garden/thumb-dark.jpg"
         }
       },
       "files": [
@@ -4438,12 +4634,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "18006d5d79476339cfc3677b3c339ed1018fd304d6771aabbd12049d1167ead1",
-      "size": 606085,
+      "sha256": "337f374b1be09de484482c5062c9f878f95d7db1a26f9ea38d14f0c11be71460",
+      "size": 1039731,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4459,11 +4660,15 @@
       "document": {
         "kind": "image",
         "file": "aurora.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "aurora-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/aurora/aurora-dark.jpg",
         "wallpapers/aurora/aurora.jpg",
         "wallpapers/aurora/item.json",
+        "wallpapers/aurora/thumb-dark.jpg",
         "wallpapers/aurora/thumb.jpg",
         "wallpapers/aurora/wallpaper.json"
       ]
@@ -4484,19 +4689,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "6cf36ce0e791b3130c9c8e25593a6966556c3c7d7fb590baf7ec39094168840a",
-      "size": 495213,
+      "sha256": "468c4fbd59182a8f6ac2b1b9cefa5a86735332f9fff1a4e305a3c96a9199eb96",
+      "size": 922541,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "candy-sky.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "candy-sky-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/candy-sky/candy-sky-dark.jpg",
         "wallpapers/candy-sky/candy-sky.jpg",
         "wallpapers/candy-sky/item.json",
+        "wallpapers/candy-sky/thumb-dark.jpg",
         "wallpapers/candy-sky/thumb.jpg",
         "wallpapers/candy-sky/wallpaper.json"
       ]
@@ -4562,19 +4783,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "0114eae1edc8ac623e7044bec21db2bed08c37a7307494be67ae87d64aeb183f",
-      "size": 572621,
+      "sha256": "bb44fb619ff8d5546bb9f76a9ec5d847a0599fe62363b882cc70b4e37d189ba3",
+      "size": 1071848,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "citrus-grove.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "citrus-grove-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/citrus-grove/citrus-grove-dark.jpg",
         "wallpapers/citrus-grove/citrus-grove.jpg",
         "wallpapers/citrus-grove/item.json",
+        "wallpapers/citrus-grove/thumb-dark.jpg",
         "wallpapers/citrus-grove/thumb.jpg",
         "wallpapers/citrus-grove/wallpaper.json"
       ]
@@ -4628,19 +4865,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "a79ed7578bf61f49bc307ff33a8ba19d84cc8ad858b8edb8132ea36b61563deb",
-      "size": 523036,
+      "sha256": "e57056c3529742b0438e2da7eea1aadea0a50806faf0aa83d9080887aa50b948",
+      "size": 991540,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "desert-bloom.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "desert-bloom-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/desert-bloom/desert-bloom-dark.jpg",
         "wallpapers/desert-bloom/desert-bloom.jpg",
         "wallpapers/desert-bloom/item.json",
+        "wallpapers/desert-bloom/thumb-dark.jpg",
         "wallpapers/desert-bloom/thumb.jpg",
         "wallpapers/desert-bloom/wallpaper.json"
       ]
@@ -4706,12 +4959,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 3,
+      "version": 4,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "5a06673c336e9e2b006d4c9017953de84cab14c69ea521e98ed131d4fc117a5f",
-      "size": 557965,
+      "sha256": "f9d5351a1919473fdce2e62911ccc1d43ee0768a3bae45d01160779354d973cf",
+      "size": 959198,
       "changelog": [
+        {
+          "version": 4,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 3,
           "date": "2026-11-18",
@@ -4732,11 +4990,15 @@
       "document": {
         "kind": "image",
         "file": "dusk.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "dusk-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/dusk/dusk-dark.jpg",
         "wallpapers/dusk/dusk.jpg",
         "wallpapers/dusk/item.json",
+        "wallpapers/dusk/thumb-dark.jpg",
         "wallpapers/dusk/thumb.jpg",
         "wallpapers/dusk/wallpaper.json"
       ]
@@ -4757,12 +5019,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "c9876c5a734af4d631e825e3da5199415aba43b297c4499867c7707f3b60ccf8",
-      "size": 535065,
+      "sha256": "71338617c8d495500d684271d29eef4182f227c58e435a385edb7854487bb68c",
+      "size": 937922,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4777,11 +5044,15 @@
       "document": {
         "kind": "image",
         "file": "fog.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "fog-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/fog/fog-dark.jpg",
         "wallpapers/fog/fog.jpg",
         "wallpapers/fog/item.json",
+        "wallpapers/fog/thumb-dark.jpg",
         "wallpapers/fog/thumb.jpg",
         "wallpapers/fog/wallpaper.json"
       ]
@@ -4802,12 +5073,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "be43ac86390c9e9e495ffb16e7da1e53c2d58b94863a21af2ae98d72a4204f8e",
-      "size": 632828,
+      "sha256": "4d89d2ab6bd9f415948c688dd5408b0ed6a0c599922f55873a86b1699db359c4",
+      "size": 1231430,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4822,11 +5098,15 @@
       "document": {
         "kind": "image",
         "file": "greenhouse.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "greenhouse-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
+        "wallpapers/greenhouse/greenhouse-dark.jpg",
         "wallpapers/greenhouse/greenhouse.jpg",
         "wallpapers/greenhouse/item.json",
+        "wallpapers/greenhouse/thumb-dark.jpg",
         "wallpapers/greenhouse/thumb.jpg",
         "wallpapers/greenhouse/wallpaper.json"
       ]
@@ -4847,19 +5127,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "4ab158fcca6b7f39c3962e28c4ae9d790f453ac0aca3f4a369dacf3b6f916448",
-      "size": 508313,
+      "sha256": "0bf5eb6ae087e1b827798272a33c0adcd8ffa3fc009feaa9500a5f46ce163add",
+      "size": 944347,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "koi-pond.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "koi-pond-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/koi-pond/item.json",
+        "wallpapers/koi-pond/koi-pond-dark.jpg",
         "wallpapers/koi-pond/koi-pond.jpg",
+        "wallpapers/koi-pond/thumb-dark.jpg",
         "wallpapers/koi-pond/thumb.jpg",
         "wallpapers/koi-pond/wallpaper.json"
       ]
@@ -4880,19 +5176,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "84789ceba8d6c9aab6e1dbf62015a962dc7c96c501d01ad1e4069afefece8a19",
-      "size": 360664,
+      "sha256": "20d72125e08637e42950bd207b8202a10b0d4224d49204a3a604e750c99b6c7b",
+      "size": 753091,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "lantern-night.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "lantern-night-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/lantern-night/item.json",
+        "wallpapers/lantern-night/lantern-night-dark.jpg",
         "wallpapers/lantern-night/lantern-night.jpg",
+        "wallpapers/lantern-night/thumb-dark.jpg",
         "wallpapers/lantern-night/thumb.jpg",
         "wallpapers/lantern-night/wallpaper.json"
       ]
@@ -4913,19 +5225,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "9cb6fc0d50ce6a23f5d718391acab8e1ea7e141082c1af2ac959a69617fb181f",
-      "size": 691635,
+      "sha256": "c407197dc17166786d771fa5b393c9d60c77cd822f2f28d2809c3f10a3a502f3",
+      "size": 1157424,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "lavender-hills.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "lavender-hills-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/lavender-hills/item.json",
+        "wallpapers/lavender-hills/lavender-hills-dark.jpg",
         "wallpapers/lavender-hills/lavender-hills.jpg",
+        "wallpapers/lavender-hills/thumb-dark.jpg",
         "wallpapers/lavender-hills/thumb.jpg",
         "wallpapers/lavender-hills/wallpaper.json"
       ]
@@ -4945,12 +5273,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "499c2d47d1c5cd495f8285549fb34f4666d4210cd100330384e623f783135ee9",
-      "size": 569999,
+      "sha256": "d27ece30610ae9b5f7568ba5706f4d6d6f3c099ac3b0c5df4186eea55a3a9c90",
+      "size": 1013170,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -4965,11 +5298,15 @@
       "document": {
         "kind": "image",
         "file": "margins.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "margins-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/margins/item.json",
+        "wallpapers/margins/margins-dark.jpg",
         "wallpapers/margins/margins.jpg",
+        "wallpapers/margins/thumb-dark.jpg",
         "wallpapers/margins/thumb.jpg",
         "wallpapers/margins/wallpaper.json"
       ]
@@ -4990,19 +5327,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "955de97b71df375b946b170c6d35cd4b5a66d304dfb84985e595044cf40db945",
-      "size": 685365,
+      "sha256": "65f82f88fb16fbf1a0ea272e67cc46bb1a08a81685d61e0e4427a285eb6c4d39",
+      "size": 1375549,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "moonlit-garden.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "moonlit-garden-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/moonlit-garden/item.json",
+        "wallpapers/moonlit-garden/moonlit-garden-dark.jpg",
         "wallpapers/moonlit-garden/moonlit-garden.jpg",
+        "wallpapers/moonlit-garden/thumb-dark.jpg",
         "wallpapers/moonlit-garden/thumb.jpg",
         "wallpapers/moonlit-garden/wallpaper.json"
       ]
@@ -5101,19 +5454,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "e024c377c80641ad5d487671a6ce9cd3f02e21451c11cc3cac8b925b7c2308ef",
-      "size": 758128,
+      "sha256": "6654e9e7b3586f257c4f7defaa01e0acf67e36a27ee30b2ea36534aeed607eab",
+      "size": 1333334,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "northern-pines.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "northern-pines-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/northern-pines/item.json",
+        "wallpapers/northern-pines/northern-pines-dark.jpg",
         "wallpapers/northern-pines/northern-pines.jpg",
+        "wallpapers/northern-pines/thumb-dark.jpg",
         "wallpapers/northern-pines/thumb.jpg",
         "wallpapers/northern-pines/wallpaper.json"
       ]
@@ -5167,12 +5536,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-12",
       "updated": "2026-11-18",
-      "sha256": "d4d5f8cc72581f50812994b7bcbb3cf4ea06f448591f76b30924a2ed97131332",
-      "size": 412748,
+      "sha256": "46bb6c02c8bbbd61c5d85f484bc812dc5c241eda9f7ef1307adca44885651f6d",
+      "size": 780751,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -5188,11 +5562,15 @@
       "document": {
         "kind": "image",
         "file": "petal.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "petal-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/petal/item.json",
+        "wallpapers/petal/petal-dark.jpg",
         "wallpapers/petal/petal.jpg",
+        "wallpapers/petal/thumb-dark.jpg",
         "wallpapers/petal/thumb.jpg",
         "wallpapers/petal/wallpaper.json"
       ]
@@ -5213,12 +5591,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "c1354db07870333f862b780fe2574963e4dac8c711cad7fddfae074f2fd25a9d",
-      "size": 534334,
+      "sha256": "a06a6abc09d23d8201b2bd83b870e74ebef6c6565ef67a86fa3fbbbe12b87e32",
+      "size": 1024856,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -5233,11 +5616,15 @@
       "document": {
         "kind": "image",
         "file": "picnic.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "picnic-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/picnic/item.json",
+        "wallpapers/picnic/picnic-dark.jpg",
         "wallpapers/picnic/picnic.jpg",
+        "wallpapers/picnic/thumb-dark.jpg",
         "wallpapers/picnic/thumb.jpg",
         "wallpapers/picnic/wallpaper.json"
       ]
@@ -5258,12 +5645,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "37bac03b003199dcddef8cbed247735efcb6c246aabdd0d5cf4b3a15e1633d41",
-      "size": 715395,
+      "sha256": "8c7e38efb329c5756f5a7a9c1986eb2ab2016c4beb9d09b6e23c305835e82a1c",
+      "size": 1215075,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -5278,11 +5670,15 @@
       "document": {
         "kind": "image",
         "file": "purr.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "purr-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/purr/item.json",
+        "wallpapers/purr/purr-dark.jpg",
         "wallpapers/purr/purr.jpg",
+        "wallpapers/purr/thumb-dark.jpg",
         "wallpapers/purr/thumb.jpg",
         "wallpapers/purr/wallpaper.json"
       ]
@@ -5303,19 +5699,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "ea28504a0036e5793e97c1e9c68aa44c8d99a2533e6bd90941aaa4ba26ec1497",
-      "size": 541205,
+      "sha256": "c3e60537771815260175f9be49a120a70a57c732cf129414ab7c6e7990423dce",
+      "size": 918049,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "rain-window.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "rain-window-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/rain-window/item.json",
+        "wallpapers/rain-window/rain-window-dark.jpg",
         "wallpapers/rain-window/rain-window.jpg",
+        "wallpapers/rain-window/thumb-dark.jpg",
         "wallpapers/rain-window/thumb.jpg",
         "wallpapers/rain-window/wallpaper.json"
       ]
@@ -5382,12 +5794,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-16",
       "updated": "2026-11-18",
-      "sha256": "fc36aa3345073daab2b986c011f0db9b26f9775a2f9b47b8a0995640d456a423",
-      "size": 561048,
+      "sha256": "b5300e7a90e61d11ff6f50205919557c078812738ec9d3cea044e8c113ab1227",
+      "size": 1123151,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -5406,11 +5823,15 @@
       "document": {
         "kind": "image",
         "file": "snow-day.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "snow-day-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/snow-day/item.json",
+        "wallpapers/snow-day/snow-day-dark.jpg",
         "wallpapers/snow-day/snow-day.jpg",
+        "wallpapers/snow-day/thumb-dark.jpg",
         "wallpapers/snow-day/thumb.jpg",
         "wallpapers/snow-day/wallpaper.json"
       ]
@@ -5431,12 +5852,17 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 2,
+      "version": 3,
       "added": "2026-11-12",
       "updated": "2026-11-18",
-      "sha256": "f5e08b16c04b6ec23a4addd9ae10d6ffd3bf467aaa22673a1e0ad683c2182d22",
-      "size": 481980,
+      "sha256": "ee67075e70945e9048a28208c1104df48b5819967e946228e99d9d8f8e203bd9",
+      "size": 808118,
       "changelog": [
+        {
+          "version": 3,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 2,
           "date": "2026-11-18",
@@ -5451,11 +5877,15 @@
       "document": {
         "kind": "image",
         "file": "stargazer.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "stargazer-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/stargazer/item.json",
+        "wallpapers/stargazer/stargazer-dark.jpg",
         "wallpapers/stargazer/stargazer.jpg",
+        "wallpapers/stargazer/thumb-dark.jpg",
         "wallpapers/stargazer/thumb.jpg",
         "wallpapers/stargazer/wallpaper.json"
       ]
@@ -5476,19 +5906,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "42c1c76a286ad2b0e4dfa315e73c3e7d28f9dfabdb314bf2955d83128568dba7",
-      "size": 563067,
+      "sha256": "f3dc0bee7b75f6285529cb993c2082f24e949c1a10be905156e54985379df1fe",
+      "size": 1168247,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "starlit-lake.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "starlit-lake-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/starlit-lake/item.json",
+        "wallpapers/starlit-lake/starlit-lake-dark.jpg",
         "wallpapers/starlit-lake/starlit-lake.jpg",
+        "wallpapers/starlit-lake/thumb-dark.jpg",
         "wallpapers/starlit-lake/thumb.jpg",
         "wallpapers/starlit-lake/wallpaper.json"
       ]
@@ -5509,19 +5955,35 @@
       ],
       "featured": false,
       "retired": false,
-      "version": 1,
+      "version": 2,
       "added": "2026-11-18",
       "updated": "2026-11-18",
-      "sha256": "9e041c43941f9c0a8f1438f57eeaeb21b24b73baee9f45f83a4e078e71975a69",
-      "size": 333132,
+      "sha256": "2191d5204072c875b31cb9e30fdf0abc9907c233525c14383e05231ff2c6f49c",
+      "size": 633112,
+      "changelog": [
+        {
+          "version": 2,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
+        {
+          "version": 1,
+          "date": "2026-11-18",
+          "note": "First version."
+        }
+      ],
       "document": {
         "kind": "image",
         "file": "tea-morning.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "tea-morning-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/tea-morning/item.json",
+        "wallpapers/tea-morning/tea-morning-dark.jpg",
         "wallpapers/tea-morning/tea-morning.jpg",
+        "wallpapers/tea-morning/thumb-dark.jpg",
         "wallpapers/tea-morning/thumb.jpg",
         "wallpapers/tea-morning/wallpaper.json"
       ]
@@ -5541,12 +6003,17 @@
       ],
       "featured": true,
       "retired": false,
-      "version": 3,
+      "version": 4,
       "added": "2026-11-11",
       "updated": "2026-11-18",
-      "sha256": "871ff6ecf76241d15b969b906b83e372051ecac0fe404ab3de60b254aef2caa4",
-      "size": 657064,
+      "sha256": "47b7f55c09eebeb2503cd525837dcf83169aaeb84e80a658d7a0b9e632e79d27",
+      "size": 1154688,
       "changelog": [
+        {
+          "version": 4,
+          "date": "2026-11-18",
+          "note": "A day and a night version: it follows light and dark mode."
+        },
         {
           "version": 3,
           "date": "2026-11-18",
@@ -5567,11 +6034,15 @@
       "document": {
         "kind": "image",
         "file": "tide.jpg",
-        "thumb": "thumb.jpg"
+        "thumb": "thumb.jpg",
+        "dark": "tide-dark.jpg",
+        "darkThumb": "thumb-dark.jpg"
       },
       "files": [
         "wallpapers/tide/item.json",
+        "wallpapers/tide/thumb-dark.jpg",
         "wallpapers/tide/thumb.jpg",
+        "wallpapers/tide/tide-dark.jpg",
         "wallpapers/tide/tide.jpg",
         "wallpapers/tide/wallpaper.json"
       ]

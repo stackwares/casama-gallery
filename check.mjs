@@ -237,12 +237,14 @@ function imageWallpaper(id) {
  * carries it resolved, as the image wallpaper's own fields with paths that start at the theme's
  * folder (`../<id>/<file>`), because apps build an image address as `wallpapers/<item id>/<file>`.
  * That way apps from before this field draw the picture too. `pattern` and `palette` stay as the
- * fallback for anything that can't show a picture.
+ * fallback for anything that can't show a picture. `dark` and `darkThumb`, the painting's night
+ * version, come along the same way (D-388).
  */
 function withImage(w) {
   const doc = imageWallpaper(w.image);
   if (!doc) return w;
-  return { ...w, kind: "image", file: `../${w.image}/${doc.file}`, ...(doc.thumb ? { thumb: `../${w.image}/${doc.thumb}` } : {}) };
+  const at = (key) => (typeof doc[key] === "string" ? { [key]: `../${w.image}/${doc[key]}` } : {});
+  return { ...w, kind: "image", ...at("file"), ...at("thumb"), ...at("dark"), ...at("darkThumb") };
 }
 
 // The document as index.json carries it: `glyphs` resolved into `doodles`, a theme's `image` into a file.
@@ -1027,6 +1029,12 @@ for (const [dir, type] of [["themes", "theme"], ["schemes", "scheme"], ["wallpap
       } else if (doc?.kind === "image") {
         image("file", 2 * 1024 * 1024);
         if (doc.thumb !== undefined) image("thumb", 200 * 1024);
+        // The same painting for dark mode (D-388). Apps without it draw `file` in both modes.
+        if (doc.dark !== undefined) image("dark", 2 * 1024 * 1024);
+        if (doc.darkThumb !== undefined) {
+          if (doc.dark === undefined) errors.push(`${where}: darkThumb needs dark`);
+          image("darkThumb", 200 * 1024);
+        }
       } else if (doc) errors.push(`${where}: wallpaper kind must be "pattern", "mesh" or "image"`);
     } else {
       const skill = files.find((f) => f.relative === "SKILL.md");

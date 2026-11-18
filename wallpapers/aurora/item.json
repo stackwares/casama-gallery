@@ -12,9 +12,14 @@
   ],
   "featured": true,
   "pick": "Northern lights colors in a soft gradient.",
-  "version": 2,
+  "version": 3,
   "added": "2026-11-11",
   "changelog": [
+    {
+      "version": 3,
+      "date": "2026-11-18",
+      "note": "A day and a night version: it follows light and dark mode."
+    },
     {
       "version": 2,
       "date": "2026-11-18",
