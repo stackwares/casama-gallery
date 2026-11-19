@@ -181,7 +181,7 @@ A starter bot is offered when someone makes a new bot. `bot.json`:
 - `skills` (up to 10) and `routines` (up to 5, five-field cron) are optional.
 - License: MIT, Apache-2.0, CC0-1.0 or CC-BY-4.0. Built-in starter bots keep their ids.
 
-The 26 starter bots built into Casama have copies here under the same ids (D-372). The gallery copy
+The 27 starter bots built into Casama have copies here under the same ids (D-372). The gallery copy
 wins: change `bots/<id>/bot.json` and every server offers the new version without a release. The
 built-in copy only stands in when the gallery can't be read.
 

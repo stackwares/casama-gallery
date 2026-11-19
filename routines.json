@@ -139,6 +139,108 @@
       ]
     },
     {
+      "id": "brand-mentions",
+      "type": "routine",
+      "name": "Brand mentions",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "mentions",
+        "reputation",
+        "marketing"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "68fa889d6a4e262d31ca1ac6f757a4c6ed900afc66090468886409681eac72c4",
+      "size": 1430,
+      "description": "Every morning: new mentions of your name or product on the web, forums and news, with the ones worth answering first.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "writes": [
+          "saves seen mentions to memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "names",
+          "label": "Names to look for",
+          "type": "text",
+          "default": "the names in your memory",
+          "help": "Your company, product or your own name."
+        }
+      ],
+      "document": {
+        "description": "Every morning: new mentions of your name or product on the web, forums and news, with the ones worth answering first.",
+        "category": "research",
+        "icon": "radar",
+        "instructions_md": "Search for new mentions of the names in your memory from the last 24 hours: news, blogs, forums such as Reddit and Hacker News, and review sites you can read without signing in. For each: where, who, the date, one line on what they said, whether it's positive, negative or a question, and a link. Put questions and complaints first, and suggest a short reply for each, as a draft. Leave out my own posts and pages, and mentions you've shown me before (keep a list in memory). Don't post or reply anywhere. If there's nothing new, say so in one line.",
+        "schedule_cron": "0 8 * * *"
+      },
+      "template": {
+        "instructions_md": "Search for new mentions of {{names}} from the last 24 hours: news, blogs, forums such as Reddit and Hacker News, and review sites you can read without signing in. For each: where, who, the date, one line on what they said, whether it's positive, negative or a question, and a link. Put questions and complaints first, and suggest a short reply for each, as a draft. Leave out my own posts and pages, and mentions you've shown me before (keep a list in memory). Don't post or reply anywhere. If there's nothing new, say so in one line.",
+        "schedule_cron": "0 8 * * *"
+      },
+      "files": [
+        "routines/brand-mentions/item.json",
+        "routines/brand-mentions/routine.json"
+      ]
+    },
+    {
+      "id": "cash-flow-check",
+      "type": "routine",
+      "name": "Cash flow check",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "cashflow",
+        "money",
+        "business"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "aae4f0c96ccf38b57ca193eca746bbb22b4a2a5b19f9919fb6296bd2dd15190d",
+      "size": 1235,
+      "description": "Monday mornings: money in and out last week, what's due in the next 30 days, and a warning if cash runs short.",
+      "access": {
+        "reads": [
+          "payments",
+          "invoices",
+          "files you share",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "document": {
+        "description": "Monday mornings: money in and out last week, what's due in the next 30 days, and a warning if cash runs short.",
+        "category": "work",
+        "icon": "wallet",
+        "instructions_md": "Check my business's cash flow. Use the connected tools (such as Stripe, Zoho Books, Mercury or Wise), bank exports I've shared and what's in memory. Give me: money in and money out last week, the current balance where you can see it, invoices due to be paid to me in the next 30 days, and bills, payroll and subscriptions I have to pay in that time. Then show the expected balance at the end of the 30 days and warn me clearly if it drops below what I told you is my minimum. Show your sums. Don't pay, move or request any money. If you don't have enough to go on, ask me what to share.",
+        "schedule_cron": "0 9 * * 1"
+      },
+      "files": [
+        "routines/cash-flow-check/item.json",
+        "routines/cash-flow-check/routine.json"
+      ]
+    },
+    {
       "id": "competitor-watch",
       "type": "routine",
       "name": "Competitor watch",
@@ -197,6 +299,167 @@
       ]
     },
     {
+      "id": "content-ideas",
+      "type": "routine",
+      "name": "Content ideas",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "content",
+        "blog",
+        "marketing"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "4aa2b3789e43564972607ff99237d4939ed63602d27eb71877fd0928f121fec9",
+      "size": 1349,
+      "description": "Every Monday: five things your audience is asking about this week, each with a title and an outline you could write.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "topic",
+          "label": "What do you write about?",
+          "type": "text",
+          "default": "my work, from your memory",
+          "help": "Your field or product, such as bookkeeping for freelancers."
+        }
+      ],
+      "document": {
+        "description": "Every Monday: five things your audience is asking about this week, each with a title and an outline you could write.",
+        "category": "create",
+        "icon": "lightbulb",
+        "instructions_md": "Find five things people are asking about my work, from your memory this week. Look at search suggestions, forums, Reddit, question sites and recent news, and at what I've already written (from memory) so you don't repeat it. For each idea: a working title, the question it answers, who it's for, three to five points for an outline, and links to two places where people are asking. Prefer specific questions over broad topics. Don't write or publish the articles. If you don't know what I write about, ask me.",
+        "schedule_cron": "0 9 * * 1"
+      },
+      "template": {
+        "instructions_md": "Find five things people are asking about {{topic}} this week. Look at search suggestions, forums, Reddit, question sites and recent news, and at what I've already written (from memory) so you don't repeat it. For each idea: a working title, the question it answers, who it's for, three to five points for an outline, and links to two places where people are asking. Prefer specific questions over broad topics. Don't write or publish the articles. If you don't know what I write about, ask me.",
+        "schedule_cron": "0 9 * * 1"
+      },
+      "files": [
+        "routines/content-ideas/item.json",
+        "routines/content-ideas/routine.json"
+      ]
+    },
+    {
+      "id": "customer-health",
+      "type": "routine",
+      "name": "Customer health check",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "customers",
+        "retention",
+        "business"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "093bbc3f0ea1772234b4469c536ca07379b90ce3b8371a095f409da059927774",
+      "size": 1234,
+      "description": "Every Tuesday: customers who went quiet, complained or are up for renewal, with a check-in drafted for each.",
+      "access": {
+        "reads": [
+          "crm",
+          "email",
+          "tickets",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "document": {
+        "description": "Every Tuesday: customers who went quiet, complained or are up for renewal, with a check-in drafted for each.",
+        "category": "work",
+        "icon": "heart-pulse",
+        "instructions_md": "Check on my customers. From the CRM, support tickets and mail (whichever are connected) and what's in memory, list the accounts that need attention: no contact in 30 days, more support tickets than usual, an unhappy message, a drop in use if I can see it, or a renewal in the next 60 days. For each: the customer, the reason, the last contact and one suggested next step. Draft a short, personal check-in for the five most urgent. Don't send anything or change any records. If every account looks fine, say so in one line. If you don't know who my customers are, ask me where to look.",
+        "schedule_cron": "0 9 * * 2"
+      },
+      "files": [
+        "routines/customer-health/item.json",
+        "routines/customer-health/routine.json"
+      ]
+    },
+    {
+      "id": "dependency-check",
+      "type": "routine",
+      "name": "Dependency check",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "dependencies",
+        "security",
+        "developers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "8ab1b61bb7d950426f5803a0349dc57306959e476d8f699ca776462f3d60d49c",
+      "size": 1562,
+      "description": "Monday mornings: outdated packages and published security advisories in your repositories, most urgent first.",
+      "access": {
+        "reads": [
+          "code repositories",
+          "the web"
+        ],
+        "runs_code": true,
+        "computer": true,
+        "credits": "medium"
+      },
+      "needs": {
+        "apps": [
+          "github"
+        ]
+      },
+      "inputs": [
+        {
+          "key": "repos",
+          "label": "Which repositories?",
+          "type": "text",
+          "default": "the repositories in your memory",
+          "help": "Such as acme/web and acme/api."
+        }
+      ],
+      "document": {
+        "description": "Monday mornings: outdated packages and published security advisories in your repositories, most urgent first.",
+        "category": "build",
+        "icon": "package",
+        "instructions_md": "Check the dependencies of the repositories in your memory. Clone each repository on your computer, read its lock files and use the package manager's own audit and outdated commands where you can. Report, most urgent first: packages with a published security advisory (the advisory id, how serious it is, the fixed version and a link), then packages a major version behind, then minor updates worth taking. Say which updates look safe and which have breaking changes, from the release notes. Don't open pull requests, push or change anything. If nothing needs attention, say so in one line. If you don't know which repositories to check, ask me.",
+        "schedule_cron": "0 9 * * 1"
+      },
+      "template": {
+        "instructions_md": "Check the dependencies of {{repos}}. Clone each repository on your computer, read its lock files and use the package manager's own audit and outdated commands where you can. Report, most urgent first: packages with a published security advisory (the advisory id, how serious it is, the fixed version and a link), then packages a major version behind, then minor updates worth taking. Say which updates look safe and which have breaking changes, from the release notes. Don't open pull requests, push or change anything. If nothing needs attention, say so in one line. If you don't know which repositories to check, ask me.",
+        "schedule_cron": "0 9 * * 1"
+      },
+      "files": [
+        "routines/dependency-check/item.json",
+        "routines/dependency-check/routine.json"
+      ]
+    },
+    {
       "id": "end-of-day-wrap",
       "type": "routine",
       "name": "End of day wrap",
@@ -250,6 +513,53 @@
       "files": [
         "routines/end-of-day-wrap/item.json",
         "routines/end-of-day-wrap/routine.json"
+      ]
+    },
+    {
+      "id": "error-digest",
+      "type": "routine",
+      "name": "Error digest",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "errors",
+        "monitoring",
+        "developers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "da0ed33b38928ad662ab7b394918c7a609b09c89c3fb67d63353c2fef1679964",
+      "size": 1173,
+      "description": "Each weekday morning: new and growing errors from the last day, grouped, with a likely cause for the worst ones.",
+      "access": {
+        "reads": [
+          "error reports",
+          "code repositories"
+        ],
+        "credits": "medium"
+      },
+      "needs": {
+        "apps": [
+          "sentry"
+        ]
+      },
+      "document": {
+        "description": "Each weekday morning: new and growing errors from the last day, grouped, with a likely cause for the worst ones.",
+        "category": "build",
+        "icon": "bug",
+        "instructions_md": "Look at the errors reported in the last 24 hours. List the new issues and the ones that grew the most: the title, how many times it happened, how many users it hit, when it started, the release it appeared in and a link. For the three worst, read the stack trace and say in two sentences where the cause probably is, and how sure you are. Leave out issues that are marked resolved or ignored. Don't resolve, assign, ignore or comment on anything. If nothing new happened, say so in one line.",
+        "schedule_cron": "0 8 * * 1-5"
+      },
+      "files": [
+        "routines/error-digest/item.json",
+        "routines/error-digest/routine.json"
       ]
     },
     {
@@ -552,6 +862,70 @@
       ]
     },
     {
+      "id": "language-practice",
+      "type": "routine",
+      "name": "Language practice",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "languages",
+        "learning",
+        "practice"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "08b02399f4297cb1c3515a0bc17108c490254e334545857f566cfa82ff83af42",
+      "size": 1526,
+      "description": "Every day: a five-minute lesson in the language you're learning, built on the words you got wrong before.",
+      "access": {
+        "reads": [
+          "memory"
+        ],
+        "writes": [
+          "saves progress to memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "language",
+          "label": "Which language?",
+          "type": "text",
+          "default": "the language in your memory",
+          "help": "Such as Spanish or Japanese."
+        },
+        {
+          "key": "time",
+          "label": "What time should it arrive?",
+          "type": "time",
+          "default": "08:00",
+          "help": "Every day, in your workspace's time zone."
+        }
+      ],
+      "document": {
+        "description": "Every day: a five-minute lesson in the language you're learning, built on the words you got wrong before.",
+        "category": "life",
+        "icon": "languages",
+        "instructions_md": "Give me today's five-minute the language in your memory practice, at my level from memory. Include five new words or phrases with an example sentence each, two words I got wrong before, one short grammar point with two examples, and three sentences for me to translate. Wait for my answers, then correct them gently and explain each mistake in one line. Save the words I got wrong in memory for next time. If you don't know my level yet, start with three questions to find it.",
+        "schedule_cron": "0 8 * * *"
+      },
+      "template": {
+        "instructions_md": "Give me today's five-minute {{language}} practice, at my level from memory. Include five new words or phrases with an example sentence each, two words I got wrong before, one short grammar point with two examples, and three sentences for me to translate. Wait for my answers, then correct them gently and explain each mistake in one line. Save the words I got wrong in memory for next time. If you don't know my level yet, start with three questions to find it.",
+        "schedule_cron": "{{time.minute}} {{time.hour}} * * *"
+      },
+      "files": [
+        "routines/language-practice/item.json",
+        "routines/language-practice/routine.json"
+      ]
+    },
+    {
       "id": "meeting-notes",
       "type": "routine",
       "name": "Meeting notes",
@@ -668,6 +1042,52 @@
       "files": [
         "routines/meeting-prep/item.json",
         "routines/meeting-prep/routine.json"
+      ]
+    },
+    {
+      "id": "month-end-books",
+      "type": "routine",
+      "name": "Month-end books",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "bookkeeping",
+        "accounting",
+        "money"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "5c02bd18fabec69a169e846792ab88c4007a78543586c2b382d4ec29b0e928a2",
+      "size": 1446,
+      "description": "On the 2nd of each month: last month's transactions sorted into categories, missing receipts listed, and a summary for your accountant.",
+      "access": {
+        "reads": [
+          "email",
+          "files you share",
+          "memory"
+        ],
+        "writes": [
+          "saves a spreadsheet of the month"
+        ],
+        "credits": "medium"
+      },
+      "document": {
+        "description": "On the 2nd of each month: last month's transactions sorted into categories, missing receipts listed, and a summary for your accountant.",
+        "category": "work",
+        "icon": "calculator",
+        "instructions_md": "Close last month's books. From my accounting app if one is connected, otherwise from the bank and card exports I've shared, sort last month's transactions into my categories and mark the ones you're unsure about. List transactions over 50 in my currency that have no receipt or invoice yet, and look for the receipts in my mail if it's connected. Save a spreadsheet for the month with every transaction, and write a short summary: income, spending by category, unpaid invoices and anything that looks wrong. You aren't an accountant: for tax questions, say what you found and leave the answer to one. Don't change records in any app, pay or send anything. If I haven't shared last month's statements, ask me for them.",
+        "schedule_cron": "0 9 2 * *"
+      },
+      "files": [
+        "routines/month-end-books/item.json",
+        "routines/month-end-books/routine.json"
       ]
     },
     {
@@ -794,6 +1214,169 @@
       "files": [
         "routines/news-brief/item.json",
         "routines/news-brief/routine.json"
+      ]
+    },
+    {
+      "id": "newsletter-draft",
+      "type": "routine",
+      "name": "Newsletter draft",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "newsletter",
+        "writing",
+        "email"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "b512356ac07f0aefa3f3dc2396c4d5b873292d351905b06e4e6d385569276208",
+      "size": 1418,
+      "description": "Every Thursday: this week's newsletter drafted from the links and notes you sent, with three subject lines to pick from.",
+      "access": {
+        "reads": [
+          "chats",
+          "the web",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "audience",
+          "label": "Who reads your newsletter?",
+          "type": "text",
+          "default": "the readers in your memory",
+          "help": "Such as small shop owners or parents of teenagers."
+        }
+      ],
+      "document": {
+        "description": "Every Thursday: this week's newsletter drafted from the links and notes you sent, with three subject lines to pick from.",
+        "category": "create",
+        "icon": "mail",
+        "instructions_md": "Draft this week's newsletter for the readers in your memory. Use the links, notes and ideas I've sent you since the last issue, and what you know about my voice from memory. Open with a short personal note, then three to five items: a heading, two or three sentences on why it matters to the reader and the link. End with one question for readers. Give me three subject lines and a preview line. Check every link opens. Keep it under 500 words. Don't send or schedule anything. If I haven't sent anything this week, suggest five items and ask me which to use.",
+        "schedule_cron": "0 10 * * 4"
+      },
+      "template": {
+        "instructions_md": "Draft this week's newsletter for {{audience}}. Use the links, notes and ideas I've sent you since the last issue, and what you know about my voice from memory. Open with a short personal note, then three to five items: a heading, two or three sentences on why it matters to the reader and the link. End with one question for readers. Give me three subject lines and a preview line. Check every link opens. Keep it under 500 words. Don't send or schedule anything. If I haven't sent anything this week, suggest five items and ask me which to use.",
+        "schedule_cron": "0 10 * * 4"
+      },
+      "files": [
+        "routines/newsletter-draft/item.json",
+        "routines/newsletter-draft/routine.json"
+      ]
+    },
+    {
+      "id": "pipeline-review",
+      "type": "routine",
+      "name": "Sales pipeline review",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "sales",
+        "crm",
+        "deals"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "18eeea63e49209ee980d163d6921b78d023d8e2e6fe18cf685459756632aaf41",
+      "size": 1292,
+      "description": "Monday mornings: the deals that went quiet, the ones closing soon, and the next step for each.",
+      "access": {
+        "reads": [
+          "crm",
+          "email",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "needs": {
+        "skills": [
+          "email-drafter"
+        ]
+      },
+      "document": {
+        "description": "Monday mornings: the deals that went quiet, the ones closing soon, and the next step for each.",
+        "category": "work",
+        "icon": "target",
+        "instructions_md": "Review my sales pipeline from my CRM if one is connected (such as HubSpot, Zoho CRM, Attio or Close), otherwise from what's in memory. List:\n\n1. Deals expected to close in the next 30 days, with the amount, the stage and the next step.\n2. Deals with no activity for 14 days or more, with the last thing that happened.\n3. Deals missing an amount, a close date or a next step.\n\nFor each quiet deal, suggest one next step and draft a short follow-up I could send. Don't send anything, and don't change stages, amounts or dates in the CRM. End with the total open pipeline. If no CRM is connected, tell me which one to connect.",
+        "schedule_cron": "0 8 * * 1"
+      },
+      "files": [
+        "routines/pipeline-review/item.json",
+        "routines/pipeline-review/routine.json"
+      ]
+    },
+    {
+      "id": "pr-review-queue",
+      "type": "routine",
+      "name": "Pull request queue",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "github",
+        "code-review",
+        "developers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "b91f89c4023db7fd732f06a795284e6360e339b86dbd7cb1c66215737743db40",
+      "size": 1380,
+      "description": "Each weekday morning: the pull requests waiting on a review, oldest first, with what each one changes.",
+      "access": {
+        "reads": [
+          "code repositories"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "apps": [
+          "github"
+        ]
+      },
+      "inputs": [
+        {
+          "key": "repos",
+          "label": "Which repositories?",
+          "type": "text",
+          "default": "the repositories in your memory",
+          "help": "Such as acme/web and acme/api."
+        }
+      ],
+      "document": {
+        "description": "Each weekday morning: the pull requests waiting on a review, oldest first, with what each one changes.",
+        "category": "build",
+        "icon": "git-pull-request",
+        "instructions_md": "List the open pull requests in the repositories in your memory that are waiting on a review. For each, oldest first: the title, the author, how many days it has waited, its size in files and lines, whether the checks pass, and two sentences on what it changes. Mark the ones where I'm a requested reviewer and the ones with failing checks or merge conflicts. Leave out drafts. Don't comment, approve, merge or close anything. If nothing is waiting, say so in one line. If you don't know which repositories to watch, ask me.",
+        "schedule_cron": "30 8 * * 1-5"
+      },
+      "template": {
+        "instructions_md": "List the open pull requests in {{repos}} that are waiting on a review. For each, oldest first: the title, the author, how many days it has waited, its size in files and lines, whether the checks pass, and two sentences on what it changes. Mark the ones where I'm a requested reviewer and the ones with failing checks or merge conflicts. Leave out drafts. Don't comment, approve, merge or close anything. If nothing is waiting, say so in one line. If you don't know which repositories to watch, ask me.",
+        "schedule_cron": "30 8 * * 1-5"
+      },
+      "files": [
+        "routines/pr-review-queue/item.json",
+        "routines/pr-review-queue/routine.json"
       ]
     },
     {
@@ -965,6 +1548,182 @@
       ]
     },
     {
+      "id": "release-notes",
+      "type": "routine",
+      "name": "Release notes",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "changelog",
+        "releases",
+        "developers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "cc3a4a977f1806dcff4de9eccc00ec8ce35b768aa88bec01271e6bb8a099061d",
+      "size": 1422,
+      "description": "Every Friday afternoon: this week's merged changes written up as release notes for your users, as a draft.",
+      "access": {
+        "reads": [
+          "code repositories",
+          "tickets"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "apps": [
+          "github"
+        ]
+      },
+      "inputs": [
+        {
+          "key": "repos",
+          "label": "Which repositories?",
+          "type": "text",
+          "default": "the repositories in your memory",
+          "help": "Such as acme/web and acme/api."
+        }
+      ],
+      "document": {
+        "description": "Every Friday afternoon: this week's merged changes written up as release notes for your users, as a draft.",
+        "category": "build",
+        "icon": "file-text",
+        "instructions_md": "Draft release notes for this week's changes in the repositories in your memory. Read the pull requests merged since last Friday and the tickets they close. Group them into new, improved and fixed, and write each in one plain sentence about what changes for the user, not how it was built. Leave out internal changes such as tests, refactors and dependency bumps, but list them in one line at the end for the team. Link each item to its pull request. Don't publish, tag a release or post anywhere: show me the draft. If nothing was merged, say so in one line.",
+        "schedule_cron": "0 15 * * 5"
+      },
+      "template": {
+        "instructions_md": "Draft release notes for this week's changes in {{repos}}. Read the pull requests merged since last Friday and the tickets they close. Group them into new, improved and fixed, and write each in one plain sentence about what changes for the user, not how it was built. Leave out internal changes such as tests, refactors and dependency bumps, but list them in one line at the end for the team. Link each item to its pull request. Don't publish, tag a release or post anywhere: show me the draft. If nothing was merged, say so in one line.",
+        "schedule_cron": "0 15 * * 5"
+      },
+      "files": [
+        "routines/release-notes/item.json",
+        "routines/release-notes/routine.json"
+      ]
+    },
+    {
+      "id": "review-replies",
+      "type": "routine",
+      "name": "Review replies",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "reviews",
+        "customers",
+        "business"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "07dbb208b2baf2deec61420c60a6a72f246eb8abb326c8d06c1abb985da5afe3",
+      "size": 1581,
+      "description": "Each weekday morning: new reviews of your business, with a reply drafted for each one for you to post.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "writes": [
+          "saves seen reviews to memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "pages",
+          "label": "Where are your reviews?",
+          "type": "text",
+          "default": "the review pages in your memory",
+          "help": "Web addresses, such as your Google Business, Trustpilot or app store page."
+        }
+      ],
+      "document": {
+        "description": "Each weekday morning: new reviews of your business, with a reply drafted for each one for you to post.",
+        "category": "work",
+        "icon": "star",
+        "instructions_md": "Check the review pages in your memory for reviews posted since the last run. For each new review: the site, the star rating, the reviewer's name, the date, the text in one line and a link. Write a reply in my voice for each one: thank people for good reviews by naming what they liked, and for poor ones apologise once, answer the actual complaint and offer a way to reach us. Never argue, never offer refunds or discounts, and never mention the customer's private details. These are drafts: don't post anything. Keep a list of reviews you've shown me in memory so you don't repeat them. If there are no new reviews, say so in one line. If you don't know where my reviews are, ask me.",
+        "schedule_cron": "0 9 * * 1-5"
+      },
+      "template": {
+        "instructions_md": "Check {{pages}} for reviews posted since the last run. For each new review: the site, the star rating, the reviewer's name, the date, the text in one line and a link. Write a reply in my voice for each one: thank people for good reviews by naming what they liked, and for poor ones apologise once, answer the actual complaint and offer a way to reach us. Never argue, never offer refunds or discounts, and never mention the customer's private details. These are drafts: don't post anything. Keep a list of reviews you've shown me in memory so you don't repeat them. If there are no new reviews, say so in one line. If you don't know where my reviews are, ask me.",
+        "schedule_cron": "0 9 * * 1-5"
+      },
+      "files": [
+        "routines/review-replies/item.json",
+        "routines/review-replies/routine.json"
+      ]
+    },
+    {
+      "id": "site-health-check",
+      "type": "routine",
+      "name": "Website health check",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "website",
+        "uptime",
+        "ops"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "a64a5a5b4d2d81e5ef68cbb20e764d7872fda4e1a2da30cd25a805e269f40350",
+      "size": 1442,
+      "description": "Every morning: whether your website's main pages load, how fast, broken links, and certificates or domains about to expire.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "writes": [
+          "saves results to memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "site",
+          "label": "Which website?",
+          "type": "text",
+          "default": "the websites in your memory",
+          "help": "A web address, such as example.com."
+        }
+      ],
+      "document": {
+        "description": "Every morning: whether your website's main pages load, how fast, broken links, and certificates or domains about to expire.",
+        "category": "build",
+        "icon": "globe",
+        "instructions_md": "Check the websites in your memory. Open the home page and the main pages it links to, and report any that fail, redirect in a loop or take more than three seconds. Follow the links on those pages and list the broken ones with the page they're on. Check when the security certificate expires and, if you can find it, when the domain does, and warn me when either is less than 30 days away. Compare with yesterday's results in memory and save today's. Only read: don't submit forms or sign in. If everything is fine, say so in one line. If you don't know which site to check, ask me.",
+        "schedule_cron": "0 7 * * *"
+      },
+      "template": {
+        "instructions_md": "Check {{site}}. Open the home page and the main pages it links to, and report any that fail, redirect in a loop or take more than three seconds. Follow the links on those pages and list the broken ones with the page they're on. Check when the security certificate expires and, if you can find it, when the domain does, and warn me when either is less than 30 days away. Compare with yesterday's results in memory and save today's. Only read: don't submit forms or sign in. If everything is fine, say so in one line. If you don't know which site to check, ask me.",
+        "schedule_cron": "0 7 * * *"
+      },
+      "files": [
+        "routines/site-health-check/item.json",
+        "routines/site-health-check/routine.json"
+      ]
+    },
+    {
       "id": "social-post-planner",
       "type": "routine",
       "name": "Social post planner",
@@ -1022,6 +1781,63 @@
       "files": [
         "routines/social-post-planner/item.json",
         "routines/social-post-planner/routine.json"
+      ]
+    },
+    {
+      "id": "standup-summary",
+      "type": "routine",
+      "name": "Standup summary",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "standup",
+        "team",
+        "developers"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "ce0f5b3a029da64a6982be7a3dccebd11c325adec0c966ae64788ac332dc9411",
+      "size": 1369,
+      "description": "Each weekday morning: what the team shipped yesterday, what's in progress and what's blocked, before the standup.",
+      "access": {
+        "reads": [
+          "code repositories",
+          "tickets",
+          "chats",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "inputs": [
+        {
+          "key": "time",
+          "label": "What time should it arrive?",
+          "type": "time",
+          "default": "09:00",
+          "help": "Weekdays, in your workspace's time zone."
+        }
+      ],
+      "document": {
+        "description": "Each weekday morning: what the team shipped yesterday, what's in progress and what's blocked, before the standup.",
+        "category": "build",
+        "icon": "list-checks",
+        "instructions_md": "Write a summary for this morning's standup. From GitHub, Linear or other connected tools, and from tickets and chats, list since the last weekday:\n\n1. What was merged or finished, with the person and a link.\n2. What's in progress, with the person.\n3. What's blocked or waiting on someone, and on whom.\n\nTen lines at most, grouped by person. Leave out bots and automatic updates. Don't comment on, assign or move anything. If no tool is connected, tell me which one to connect.",
+        "schedule_cron": "0 9 * * 1-5"
+      },
+      "template": {
+        "instructions_md": "Write a summary for this morning's standup. From GitHub, Linear or other connected tools, and from tickets and chats, list since the last weekday:\n\n1. What was merged or finished, with the person and a link.\n2. What's in progress, with the person.\n3. What's blocked or waiting on someone, and on whom.\n\nTen lines at most, grouped by person. Leave out bots and automatic updates. Don't comment on, assign or move anything. If no tool is connected, tell me which one to connect.",
+        "schedule_cron": "{{time.minute}} {{time.hour}} * * 1-5"
+      },
+      "files": [
+        "routines/standup-summary/item.json",
+        "routines/standup-summary/routine.json"
       ]
     },
     {
@@ -1132,6 +1948,345 @@
       "files": [
         "routines/support-inbox-triage/item.json",
         "routines/support-inbox-triage/routine.json"
+      ]
+    },
+    {
+      "id": "trip-prep",
+      "type": "routine",
+      "name": "Trip prep",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "travel",
+        "trips",
+        "packing"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "890c5cdcd9b5109fe89a82c5d725b747506842b33269d47caf5d75899ad0117c",
+      "size": 1196,
+      "description": "Every morning: a check on any trip in the next week, with times, documents, weather and a packing list.",
+      "access": {
+        "reads": [
+          "calendar",
+          "email",
+          "the web",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "skills": [
+          "trip-planner"
+        ]
+      },
+      "document": {
+        "description": "Every morning: a check on any trip in the next week, with times, documents, weather and a packing list.",
+        "category": "life",
+        "icon": "plane",
+        "instructions_md": "Look for trips starting in the next seven days, in my calendar, booking emails (if mail is connected) and what's in memory. For each trip: departure times and how long before to leave for the airport or station, when check-in opens, the bookings I have and any I seem to be missing, documents I need (passport, visa, tickets), the weather at the destination and a packing list for it. Mention anything that needs doing today. Don't book, change or cancel anything. If no trip is coming up, reply in one short line.",
+        "schedule_cron": "0 8 * * *"
+      },
+      "files": [
+        "routines/trip-prep/item.json",
+        "routines/trip-prep/routine.json"
+      ]
+    },
+    {
+      "id": "week-ahead",
+      "type": "routine",
+      "name": "Week ahead",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "planning",
+        "calendar",
+        "work"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "1a2d45128bcb34ea050dbfe5f052c6a15bd9f146b4e2554356e21ebd7e256a93",
+      "size": 1301,
+      "description": "Sunday evenings: next week's meetings, deadlines and clashes, and what to prepare before Monday.",
+      "access": {
+        "reads": [
+          "calendar",
+          "tickets",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "apps": [
+          "google_calendar"
+        ]
+      },
+      "inputs": [
+        {
+          "key": "time",
+          "label": "What time on Sunday?",
+          "type": "time",
+          "default": "18:00",
+          "help": "On Sunday, in your workspace's time zone."
+        }
+      ],
+      "document": {
+        "description": "Sunday evenings: next week's meetings, deadlines and clashes, and what to prepare before Monday.",
+        "category": "work",
+        "icon": "calendar-days",
+        "instructions_md": "Write my week ahead. From my calendar, open tickets and what's in memory, give me each day from Monday to Friday with its meetings and deadlines. Then point out clashes, days with no time for focused work, meetings with no agenda, and anything I should prepare before it happens. End with the three things that matter most this week. Fifteen lines at most. Don't accept, decline, move or create any events.",
+        "schedule_cron": "0 18 * * 0"
+      },
+      "template": {
+        "instructions_md": "Write my week ahead. From my calendar, open tickets and what's in memory, give me each day from Monday to Friday with its meetings and deadlines. Then point out clashes, days with no time for focused work, meetings with no agenda, and anything I should prepare before it happens. End with the three things that matter most this week. Fifteen lines at most. Don't accept, decline, move or create any events.",
+        "schedule_cron": "{{time.minute}} {{time.hour}} * * 0"
+      },
+      "files": [
+        "routines/week-ahead/item.json",
+        "routines/week-ahead/routine.json"
+      ]
+    },
+    {
+      "id": "weekend-ideas",
+      "type": "routine",
+      "name": "Weekend ideas",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "weekend",
+        "events",
+        "family"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "13a8c1902d6d9be73b856d9256c3263a7f75677412318efd9707441ffc9e55b3",
+      "size": 1310,
+      "description": "Thursday afternoons: things to do in your city this weekend that fit what you like, with the weather and links.",
+      "access": {
+        "reads": [
+          "the web",
+          "memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "city",
+          "label": "Your city",
+          "type": "text",
+          "default": "my city",
+          "help": "Leave it as is and the bot uses what it knows."
+        }
+      ],
+      "document": {
+        "description": "Thursday afternoons: things to do in your city this weekend that fit what you like, with the weather and links.",
+        "category": "life",
+        "icon": "map",
+        "instructions_md": "Find things to do in my city this weekend. Look for events, markets, exhibitions, concerts, outdoor activities and new places to eat, and check the weekend's weather forecast. Pick up to six that fit what you know about me and who I do things with from memory, with a mix of free and paid. For each: what it is, when and where, the price if it's given, why it fits and a link. Put indoor options first if it's going to rain. Don't book or buy anything. If nothing fits, say so and suggest one thing to do at home.",
+        "schedule_cron": "0 16 * * 4"
+      },
+      "template": {
+        "instructions_md": "Find things to do in {{city}} this weekend. Look for events, markets, exhibitions, concerts, outdoor activities and new places to eat, and check the weekend's weather forecast. Pick up to six that fit what you know about me and who I do things with from memory, with a mix of free and paid. For each: what it is, when and where, the price if it's given, why it fits and a link. Put indoor options first if it's going to rain. Don't book or buy anything. If nothing fits, say so and suggest one thing to do at home.",
+        "schedule_cron": "0 16 * * 4"
+      },
+      "files": [
+        "routines/weekend-ideas/item.json",
+        "routines/weekend-ideas/routine.json"
+      ]
+    },
+    {
+      "id": "weekly-budget-check",
+      "type": "routine",
+      "name": "Weekly budget check",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "budget",
+        "money",
+        "spending"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "ec113c508561ec7a7f9f6b1ebd9382da7f8c6760853fb89fd7660ff6bb329341",
+      "size": 1192,
+      "description": "Sunday evenings: what you spent this week, how it compares with your budget, and where the month is heading.",
+      "access": {
+        "reads": [
+          "email",
+          "files you share",
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "skills": [
+          "budget-review"
+        ]
+      },
+      "document": {
+        "description": "Sunday evenings: what you spent this week, how it compares with your budget, and where the month is heading.",
+        "category": "life",
+        "icon": "piggy-bank",
+        "instructions_md": "Check my spending this week against my budget. Use the receipts in my mail (if it's connected), statements or exports I've shared and what's in memory. Show what I spent in each budget category this week and so far this month, next to the monthly amount, and which categories will run over at this pace. Point out unusual or one-off spending in a line each. Keep it to ten lines, and be plain, not preachy. Don't move money or change anything. If I haven't set a budget yet, help me set one first.",
+        "schedule_cron": "0 19 * * 0"
+      },
+      "files": [
+        "routines/weekly-budget-check/item.json",
+        "routines/weekly-budget-check/routine.json"
+      ]
+    },
+    {
+      "id": "weekly-meal-plan",
+      "type": "routine",
+      "name": "Weekly meal plan",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "meals",
+        "cooking",
+        "shopping"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "9de3be8dc4b65aa7e005bfa307e7bb911b3fcbd642591628f2222630d76fc821",
+      "size": 1466,
+      "description": "Saturday mornings: next week's dinners for your household, with recipes and one shopping list grouped by aisle.",
+      "access": {
+        "reads": [
+          "memory"
+        ],
+        "credits": "low"
+      },
+      "needs": {
+        "skills": [
+          "meal-planner"
+        ]
+      },
+      "inputs": [
+        {
+          "key": "people",
+          "label": "How many people do you cook for?",
+          "type": "choice",
+          "default": "2",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        }
+      ],
+      "document": {
+        "description": "Saturday mornings: next week's dinners for your household, with recipes and one shopping list grouped by aisle.",
+        "category": "life",
+        "icon": "chef-hat",
+        "instructions_md": "Plan next week's dinners for 2 people. Use what you know from memory about our tastes, allergies, diet, budget and how much time we have on weeknights, and don't repeat last week's meals. Give me five dinners from Monday to Friday, each with the prep time and a short recipe with quantities. Reuse ingredients across meals so less goes to waste. Finish with one shopping list grouped by aisle, leaving out things I've said we always have. Always respect allergies. Don't order anything. If you don't know our tastes yet, ask me three questions first.",
+        "schedule_cron": "0 9 * * 6"
+      },
+      "template": {
+        "instructions_md": "Plan next week's dinners for {{people}} people. Use what you know from memory about our tastes, allergies, diet, budget and how much time we have on weeknights, and don't repeat last week's meals. Give me five dinners from Monday to Friday, each with the prep time and a short recipe with quantities. Reuse ingredients across meals so less goes to waste. Finish with one shopping list grouped by aisle, leaving out things I've said we always have. Always respect allergies. Don't order anything. If you don't know our tastes yet, ask me three questions first.",
+        "schedule_cron": "0 9 * * 6"
+      },
+      "files": [
+        "routines/weekly-meal-plan/item.json",
+        "routines/weekly-meal-plan/routine.json"
+      ]
+    },
+    {
+      "id": "weekly-metrics",
+      "type": "routine",
+      "name": "Weekly metrics",
+      "author": {
+        "name": "Casama",
+        "url": "https://casama.ai",
+        "handle": "casama"
+      },
+      "license": "Apache-2.0",
+      "tags": [
+        "metrics",
+        "reports",
+        "business"
+      ],
+      "featured": false,
+      "retired": false,
+      "version": 1,
+      "added": "2026-11-18",
+      "updated": "2026-11-18",
+      "sha256": "1a3315497e8d8405f00e2c68074e049beee6c0c9ce05f3c3db79b004f7845b37",
+      "size": 1450,
+      "description": "Monday mornings: the numbers you care about for last week, next to the week before, with what changed most.",
+      "access": {
+        "reads": [
+          "payments",
+          "analytics",
+          "files you share",
+          "memory"
+        ],
+        "writes": [
+          "saves numbers to memory"
+        ],
+        "credits": "medium"
+      },
+      "inputs": [
+        {
+          "key": "metrics",
+          "label": "Which numbers?",
+          "type": "text",
+          "default": "revenue, new customers, sign-ups and cancellations",
+          "help": "The few numbers you check every week."
+        }
+      ],
+      "document": {
+        "description": "Monday mornings: the numbers you care about for last week, next to the week before, with what changed most.",
+        "category": "research",
+        "icon": "chart-line",
+        "instructions_md": "Report last week's revenue, new customers, sign-ups and cancellations. Take them from the connected tools (such as Stripe, PostHog, Google Sheets or Zoho Books) or files I've shared. For each number: last week, the week before, the change in per cent and the same week four weeks ago. Then explain the two biggest changes in a sentence each, and say when you're guessing. Save the numbers in memory so you can compare next week. Don't change anything in those tools. If you can't reach a number, say which one and why, and don't estimate it.",
+        "schedule_cron": "0 8 * * 1"
+      },
+      "template": {
+        "instructions_md": "Report last week's {{metrics}}. Take them from the connected tools (such as Stripe, PostHog, Google Sheets or Zoho Books) or files I've shared. For each number: last week, the week before, the change in per cent and the same week four weeks ago. Then explain the two biggest changes in a sentence each, and say when you're guessing. Save the numbers in memory so you can compare next week. Don't change anything in those tools. If you can't reach a number, say which one and why, and don't estimate it.",
+        "schedule_cron": "0 8 * * 1"
+      },
+      "files": [
+        "routines/weekly-metrics/item.json",
+        "routines/weekly-metrics/routine.json"
       ]
     },
     {

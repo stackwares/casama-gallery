@@ -139,6 +139,10 @@
         },
         {
           "type": "app",
+          "id": "higgsfield"
+        },
+        {
+          "type": "app",
           "id": "honeycomb"
         },
         {
@@ -303,6 +307,14 @@
         },
         {
           "type": "bot",
+          "id": "casama"
+        },
+        {
+          "type": "bot",
+          "id": "code-reviewer"
+        },
+        {
+          "type": "bot",
           "id": "coder"
         },
         {
@@ -327,6 +339,10 @@
         },
         {
           "type": "bot",
+          "id": "docs-writer"
+        },
+        {
+          "type": "bot",
           "id": "event-planner"
         },
         {
@@ -348,6 +364,10 @@
         {
           "type": "bot",
           "id": "inbox-triage"
+        },
+        {
+          "type": "bot",
+          "id": "investor-updates"
         },
         {
           "type": "bot",
@@ -395,11 +415,19 @@
         },
         {
           "type": "bot",
+          "id": "people-ops"
+        },
+        {
+          "type": "bot",
           "id": "personal-shopper"
         },
         {
           "type": "bot",
           "id": "product-manager"
+        },
+        {
+          "type": "bot",
+          "id": "proposal-writer"
         },
         {
           "type": "bot",
@@ -419,11 +447,19 @@
         },
         {
           "type": "bot",
+          "id": "review-responder"
+        },
+        {
+          "type": "bot",
           "id": "sales-researcher"
         },
         {
           "type": "bot",
           "id": "seo-writer"
+        },
+        {
+          "type": "bot",
+          "id": "shop-manager"
         },
         {
           "type": "bot",
@@ -448,6 +484,10 @@
         {
           "type": "bot",
           "id": "tutor"
+        },
+        {
+          "type": "bot",
+          "id": "video-scripter"
         },
         {
           "type": "bot",
@@ -483,11 +523,35 @@
         },
         {
           "type": "routine",
+          "id": "brand-mentions"
+        },
+        {
+          "type": "routine",
+          "id": "cash-flow-check"
+        },
+        {
+          "type": "routine",
           "id": "competitor-watch"
         },
         {
           "type": "routine",
+          "id": "content-ideas"
+        },
+        {
+          "type": "routine",
+          "id": "customer-health"
+        },
+        {
+          "type": "routine",
+          "id": "dependency-check"
+        },
+        {
+          "type": "routine",
           "id": "end-of-day-wrap"
+        },
+        {
+          "type": "routine",
+          "id": "error-digest"
         },
         {
           "type": "routine",
@@ -511,6 +575,10 @@
         },
         {
           "type": "routine",
+          "id": "language-practice"
+        },
+        {
+          "type": "routine",
           "id": "meeting-notes"
         },
         {
@@ -519,11 +587,27 @@
         },
         {
           "type": "routine",
+          "id": "month-end-books"
+        },
+        {
+          "type": "routine",
           "id": "morning-plan"
         },
         {
           "type": "routine",
           "id": "news-brief"
+        },
+        {
+          "type": "routine",
+          "id": "newsletter-draft"
+        },
+        {
+          "type": "routine",
+          "id": "pipeline-review"
+        },
+        {
+          "type": "routine",
+          "id": "pr-review-queue"
         },
         {
           "type": "routine",
@@ -539,7 +623,23 @@
         },
         {
           "type": "routine",
+          "id": "release-notes"
+        },
+        {
+          "type": "routine",
+          "id": "review-replies"
+        },
+        {
+          "type": "routine",
+          "id": "site-health-check"
+        },
+        {
+          "type": "routine",
           "id": "social-post-planner"
+        },
+        {
+          "type": "routine",
+          "id": "standup-summary"
         },
         {
           "type": "routine",
@@ -548,6 +648,30 @@
         {
           "type": "routine",
           "id": "support-inbox-triage"
+        },
+        {
+          "type": "routine",
+          "id": "trip-prep"
+        },
+        {
+          "type": "routine",
+          "id": "week-ahead"
+        },
+        {
+          "type": "routine",
+          "id": "weekend-ideas"
+        },
+        {
+          "type": "routine",
+          "id": "weekly-budget-check"
+        },
+        {
+          "type": "routine",
+          "id": "weekly-meal-plan"
+        },
+        {
+          "type": "routine",
+          "id": "weekly-metrics"
         },
         {
           "type": "routine",

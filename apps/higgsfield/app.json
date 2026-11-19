@@ -1,0 +1,17 @@
+{
+  "description": "Generate images and videos with Higgsfield, and manage your creative assets.",
+  "category": "design",
+  "color": "D1FE17",
+  "homepage": "https://higgsfield.ai",
+  "url": "https://mcp.higgsfield.ai/mcp",
+  "auth": [
+    "oauth"
+  ],
+  "oauthClient": "dcr",
+  "note": "Generations use your Higgsfield credits.",
+  "capabilities": [
+    "Generate images",
+    "Generate video",
+    "Edit photos and video"
+  ]
+}
