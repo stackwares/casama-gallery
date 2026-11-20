@@ -176,7 +176,7 @@ ${body}
       <span class="foot-news-row"><input id="foot-news-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com"><button type="submit">Subscribe</button></span>
       <input class="foot-news-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     </form>
-    <p class="small">Community: <a href="https://discord.gg/e86XbXFHwz">Discord</a> · <a href="https://x.com/CasamaAI">X</a> · <a href="https://bsky.app/profile/casama.ai">Bluesky</a> · <a href="https://www.youtube.com/@casamaai">YouTube</a></p>
+    <p class="small">Community: <a href="https://discord.gg/e86XbXFHwz">Discord</a> · <a href="https://x.com/CasamaAI">X</a> · <a href="https://bsky.app/profile/casama.ai">Bluesky</a> · <a href="https://www.youtube.com/@casamaai">YouTube</a> · <a href="https://www.instagram.com/casamaai/">Instagram</a> · <a href="https://www.facebook.com/casamaai">Facebook</a></p>
     <p class="small"><a href="/add/">Add to Casama badge</a> · <a href="https://casama.ai/privacy">Privacy</a> · <a href="https://casama.ai/terms">Terms</a> · <a href="https://github.com/${C.REPO}/issues/new">Report an item</a></p>
   </div>
 </footer>
@@ -316,6 +316,8 @@ ${heroHtml(item)}
     <a class="btn" href="https://casama.ai/download">Get Casama</a>
     <button class="btn quiet" type="button" data-copy="${esc(item.type === "set" ? C.pageUrl(item) : C.shareLink(item))}">${svgIcon("link", 17)}<span>Copy link</span></button>
   </div>
+  <!-- waitlist copy: docs/WAITLIST-PLAN.md §12 -->
+  <p class="small">Casama Cloud is invite-only for now. <a href="https://casama.ai/waitlist">Join the waitlist</a></p>
   ${hint(item.type) ? `<p class="small">${esc(hint(item.type))}</p>` : ""}
   ${extrasHtml(item)}
   ${factsHtml(item)}
